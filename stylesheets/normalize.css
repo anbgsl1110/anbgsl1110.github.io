@@ -426,6 +426,7 @@ th {
 
 ul {
   list-style:none;
+  float:left;
   margin:0;
 }
 
