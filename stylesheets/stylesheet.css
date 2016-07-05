@@ -203,19 +203,19 @@ a {
   background-color: #eff0f1;
   border: 0; }
 
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 60em) {
   .main-content {
     max-width: 60rem;
     padding: 2rem 6rem;
     margin: 0 auto;
     font-size: 1.1rem; } }
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
+@media screen and (min-width: 38em) and (max-width: 60em) {
   .main-content {
     padding: 2rem 4rem;
     font-size: 1.1rem; } }
 
-@media screen and (max-width: 42em) {
+@media screen and (max-width: 38em) {
   .main-content {
     padding: 2rem 1rem;
     font-size: 1rem; } }
