@@ -250,9 +250,7 @@ a {
    }
   
 .main-content .row .text-right{
-  float:right;
-  padding: 0rem;
-  margin: 0rem; }
+  float:right; }
 
 .site-footer {
   padding-top: 2rem;
