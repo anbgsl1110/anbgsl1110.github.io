@@ -426,11 +426,11 @@ th {
 
 ul {
   list-style:none;
-  margin:0px;
+  margin:0 auto;
 }
 
 
 ul li {
   float:left;
-  /**margin:20px;*/
+  margin:0 auto;
 }
