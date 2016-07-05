@@ -244,8 +244,8 @@ a {
   .site-footer {
     font-size: 0.9rem; } }
 
-.main-content navbar-nav {
+.navbar-nav {
     float:left; }
 
-.main-content navbar-nav navar-right {
+.navbar-nav navar-right {
     float:right; }

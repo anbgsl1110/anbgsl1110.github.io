@@ -426,3 +426,7 @@ th {
 ul {
   list-style:none;margin:0px;
 }
+
+ul li {
+  float:right;
+}
