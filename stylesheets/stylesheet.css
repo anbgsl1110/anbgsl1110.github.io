@@ -246,6 +246,11 @@ a {
   margin-top: 2rem;
   border-top: solid 1px #eff0f1; }
 
+.main-content .row text-right{
+  padding: 0rem;
+  margin: 0rem;
+  border-top: solid 1px #eff0f1; }
+
 .site-footer {
   padding-top: 2rem;
   margin-top: 2rem;
