@@ -243,9 +243,7 @@ a {
 @media screen and (max-width: 42em) {
   .site-footer {
     font-size: 0.9rem; } }
-.top {
-  text-align: right; }
-  
+
 /**
 .navbar-nav {
     float:left;margin:0px; }
