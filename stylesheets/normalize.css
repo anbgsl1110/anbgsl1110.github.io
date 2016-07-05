@@ -424,9 +424,5 @@ th {
 }
 
 ul {
-  list-style:none;margin:2px;
-}
-
-ul li {
-  float:left;
+  list-style:none;margin:0px;
 }

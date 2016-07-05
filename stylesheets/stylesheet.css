@@ -245,7 +245,7 @@ a {
     font-size: 0.9rem; } }
 
 .nav navbar-nav {
-    color: #FFF; }
+    float:left;color: #FFF; }
 
 .nav navbar-nav navar-right {
-    color: #FFF; }
+    float:right;color: #FFF; }
