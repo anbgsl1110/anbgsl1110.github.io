@@ -61,15 +61,15 @@ a {
 
 @media screen and (min-width: 64em) {
   .page-header {
-    padding: 5rem 6rem; } }
+    padding: 2.5rem 3rem; } }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .page-header {
-    padding: 3rem 4rem; } }
+    padding: 1.5rem 2rem; } }
 
 @media screen and (max-width: 42em) {
   .page-header {
-    padding: 2rem 1rem; } }
+    padding: 1rem 0.5rem; } }
 
 .project-name {
   margin-top: 0;
@@ -245,7 +245,7 @@ a {
     font-size: 0.9rem; } }
 
 .navbar-nav {
-    float:left; }
+    float:left;margin:0px; }
 
 .navbar-nav navar-right {
-    float:right; }
+    float:right;margin:400px; }
