@@ -441,14 +441,14 @@ ul {
 @media screen and (min-width: 42em) and (max-width: 64em) {
   ul li {
   float:right;
-  margin:0 2rem;
+  margin:0 2.5rem;
   padding-right：0px
 }
 
 @media screen and (max-width: 42em) {
   ul li {
   float:right;
-  margin:0 0.5rem;
+  margin:0 1rem;
   padding-right：0px
 }
 
