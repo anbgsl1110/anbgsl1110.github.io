@@ -165,7 +165,6 @@ a {
   .main-content pre code:before, .main-content pre code:after, .main-content pre tt:before, .main-content pre tt:after {
     content: normal; }
 .main-content ul, .main-content ol {
-  float:left;
   margin-top: 0; }
 .main-content blockquote {
   padding: 0 1rem;
@@ -207,18 +206,18 @@ a {
 @media screen and (min-width: 64em) {
   .main-content {
     max-width: 64rem;
-    padding: 1rem 6rem;
+    padding: 2rem 6rem;
     margin: 0 auto;
     font-size: 1.1rem; } }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .main-content {
-    padding: 1rem 4rem;
+    padding: 2rem 4rem;
     font-size: 1.1rem; } }
 
 @media screen and (max-width: 42em) {
   .main-content {
-    padding: 1rem 1rem;
+    padding: 2rem 1rem;
     font-size: 1rem; } }
 
 .site-footer {
