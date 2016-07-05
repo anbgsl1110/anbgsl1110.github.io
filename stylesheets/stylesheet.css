@@ -220,11 +220,11 @@ a {
     padding: 2rem 1rem;
     font-size: 1rem; } }
     
-.top {
+.main-content .top {
   padding-top: 0.2rem;
   margin-top: 0.2rem; }
 
-.row {
+.main-content .row {
   padding-top: 0.2rem;
   margin-top: 0.2rem;
   border-top: solid 1px #eff0f1; }
