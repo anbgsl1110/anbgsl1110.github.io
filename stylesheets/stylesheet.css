@@ -242,8 +242,8 @@ a {
     font-size: 1rem; } }
     
 .main-content .row {
-  padding-top: 1rem;
-  margin-top: 1rem;
+  padding-top: 2.5rem;
+  margin-top: 0rem;
   border-top: solid 1px #eff0f1; }
 
 .site-footer {
