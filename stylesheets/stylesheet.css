@@ -247,9 +247,7 @@ a {
   border-top: solid 1px #eff0f1; }
 
 .main-content .row .title{
-  float:left;
-  padding: 0rem;
-  margin: 0rem; }
+  float:left; }
   
 .main-content .row .text-right{
   float:right;
