@@ -247,6 +247,7 @@ a {
   border-top: solid 1px #eff0f1; }
 
 .main-content .row text-right{
+  float:right;
   padding: 0rem;
   margin: 0rem;
   border-top: solid 1px #eff0f1; }
