@@ -220,8 +220,8 @@ a {
     padding: 2rem 1rem;
     font-size: 1rem; } }
 .row {
-  padding-top: 2rem;
-  margin-top: 2rem;
+  padding-top: 0.2rem;
+  margin-top: 0.2rem;
   border-top: solid 1px #eff0f1; }
 }
 .site-footer {
