@@ -431,6 +431,7 @@ ul {
 
 
 ul li {
-  float:left;
+  float:right;
   margin:0 20px;
+  padding-right：10px
 }
