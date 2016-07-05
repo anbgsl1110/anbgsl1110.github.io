@@ -423,10 +423,12 @@ th {
   padding: 0;
 }
 
+/**
 ul {
   list-style:none;margin:0px;
 }
+*/
 
 ul li {
-  float:right;
+  float:left;
 }
