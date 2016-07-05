@@ -224,6 +224,23 @@ a {
   padding-top: 0;
   margin-top: 0; }
 
+.top-tagline {
+  margin-bottom: 1rem;
+  font-weight: normal;
+  opacity: 0.7; }
+
+@media screen and (min-width: 64em) {
+  .top-tagline {
+    font-size: 1.25rem; } }
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .top-tagline {
+    font-size: 1.15rem; } }
+
+@media screen and (max-width: 42em) {
+  .top-tagline {
+    font-size: 1rem; } }
+    
 .main-content .row {
   padding-top: 1rem;
   margin-top: 1rem;
