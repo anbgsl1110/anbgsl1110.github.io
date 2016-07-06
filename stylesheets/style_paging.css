@@ -26,9 +26,9 @@
     padding-left: 0px;
   }
   
-  .large li {
+  /**.large li {
     counter-increment: pagination;
-  }
+  }*/
   li:hover a {
     color: #fdfdfd;
     background-color: #1d1f20;
@@ -50,9 +50,9 @@
     text-align: center;
     padding: 0.5rem 0.9rem;
   }
-  .large li a:after {
+  /**.large li a:after {
     content: " " counter(pagination) " ";
-  }
+  }*/
 
   .large li a {
     display: none;
