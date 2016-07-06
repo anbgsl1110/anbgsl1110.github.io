@@ -33,6 +33,7 @@
     color: #FFF;
     background-color: #159957;
     border: solid 1px rgba(255, 255, 255, 0.2);
+    background-image: linear-gradient(120deg, #155799, #159957); 
   }
   li.active a {
     color: #FFF;
