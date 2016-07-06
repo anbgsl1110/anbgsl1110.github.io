@@ -61,11 +61,13 @@ body{
 	height: 110px;
 	background: #f0f0f0;
 	width: 530px;
-	bottom: -30px;
+	bottom: -30px;s
 	left: 0px;
 	-moz-transform:rotate(-3deg);
 	-webkit-transform:rotate(-3deg);
 	transform:rotate(-3deg);
+        border-top: solid 3px #159957;
+        border-bottom: solid 1px red;
 }
 .rm_mask_right{
 	left:auto;
