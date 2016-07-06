@@ -35,8 +35,8 @@
     border: solid 1px #1d1f20;
   }
   li.active a {
-    color: #fdfdfd;
-    background-color: #159957;
+    color: #FFF;
+    background-color: #155799;
     border: solid 1px rgba(255, 255, 255, 0.2);
   }
   
