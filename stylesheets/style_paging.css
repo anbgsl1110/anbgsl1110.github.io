@@ -50,9 +50,9 @@
     text-align: center;
     padding: 0.5rem 0.9rem;
   }
-  /**.large li a:after {
+  .large li a:after {
     content: " " counter(pagination) " ";
-  }*/
+  }
 
   .large li a {
     display: none;
