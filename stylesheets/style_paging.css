@@ -5,6 +5,7 @@
   border-radius: 0.2rem;
   counter-reset: pagination;
   text-align: center;
+  border-bottom: solid 1px #159957;
 }
 
 .container:after {
