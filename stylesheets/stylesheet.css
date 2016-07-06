@@ -266,15 +266,13 @@ a {
 .main-content .row {
   padding: 0.8rem;
   margin-top: 0rem;
-  margin-bottom: 0rem; }
+  margin-bottom: 0rem;
+  border-top: solid 1px #159957;
+  border-bottom: solid 1px red; }
 
 .main-content .row .title{
   margin：0;
   padding：0; }
-
-.main-content .row h3 {
-  margin：0;
-  padding：0;
   border-top: solid 1px #159957;
   border-bottom: solid 1px red;}
 
