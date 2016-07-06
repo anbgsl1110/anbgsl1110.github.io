@@ -424,7 +424,7 @@ th {
 }
 
 
-/**ul {
+ul {
   list-style:none;
   float:right;
   margin:0;
@@ -435,4 +435,4 @@ ul li {
   float:right;
   margin:0 0.5rem;
   padding-right：0px
-}*/
+}
