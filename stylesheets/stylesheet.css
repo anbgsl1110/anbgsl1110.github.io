@@ -265,7 +265,8 @@ a {
     
 .main-content .row {
   padding: 0.8rem;
-  margin-top: 0rem; }
+  margin-top: 0rem;
+  border-top: solid 1px #159957; }
 
 .main-content .row .title{
    }
