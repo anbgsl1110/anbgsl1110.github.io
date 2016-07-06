@@ -77,7 +77,8 @@ a {
   .main-top .right ul li {
     float:right;
     margin:0 0.3rem;
-    padding-right：0px;}
+    padding-right：0px;
+    border:none;}
 
 .top-tagline {
   margin-bottom: 1rem;
