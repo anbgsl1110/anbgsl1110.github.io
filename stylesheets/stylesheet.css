@@ -164,15 +164,6 @@ a {
   border: 0; }
   .main-content pre code:before, .main-content pre code:after, .main-content pre tt:before, .main-content pre tt:after {
     content: normal; }
-.main-content ul {
-  list-style:none;
-  float:right;
-  margin:0;
-  padding-left：0px; }
-.main-content ul li {
-  float:right;
-  margin:0 0.5rem;
-  padding-right：0px;}
 .main-content ul, .main-content ol {
   margin-top: 0; }
 .main-content blockquote {
@@ -232,6 +223,17 @@ a {
 .main-content .top {
   padding-top: 0;
   margin-top: 0; }
+  
+  .main-content .top ul {
+  list-style:none;
+  float:right;
+  margin:0;
+  padding-left：0px; }
+  
+.main-content .top ul li {
+  float:right;
+  margin:0 0.5rem;
+  padding-right：0px;}
 
 .top-tagline {
   margin-bottom: 1rem;
