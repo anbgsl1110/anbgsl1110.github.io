@@ -7,7 +7,7 @@
   margin: 3rem auto;
   border-radius: 0.2rem;
   counter-reset: pagination;
-  text-align: center;
+  text-align: left;
 }
 .container:after {
   clear: both;
