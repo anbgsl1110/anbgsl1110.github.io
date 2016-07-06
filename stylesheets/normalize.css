@@ -455,9 +455,3 @@ li a{
   text-align: center;
   padding: 0.5rem 0.9rem;
 }
-
-/* CSS reset */
-div,ul,li{
-	margin:0;
-	padding:0;
-}
