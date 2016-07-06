@@ -89,9 +89,6 @@
   .large li:nth-child(4) a {
     display: inline-block;
   }
-  .large li:nth-child(5) a {
-    display: inline-block;
-  }
   .large li:last-child a {
     float: right;
     display: inline-block;
