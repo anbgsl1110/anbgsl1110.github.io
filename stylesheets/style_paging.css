@@ -1,13 +1,6 @@
-body {
-  background-color: #f0f0f0;
-  font-family: "Droid Sans","Helvetica Neue", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-
 * {
   box-sizing: border-box;
 }
-
 .container {
   background: #fdfdfd;
   padding: 1rem;
@@ -24,27 +17,9 @@ body {
 .container ul {
   width: 100%;
 }
-
-.xlarge {
-  width: 65rem;
-}
-
 .large {
-  width: 45rem;
+  width: 42rem;
 }
-
-.middle {
-  width: 32rem;
-}
-
-.small {
-  width: 22rem;
-}
-
-.xsmall {
-  width: 14rem;
-}
-
 .container .large ul, li {
   list-style: none;
   display: inline;
@@ -117,12 +92,6 @@ body {
 .large li:nth-child(6) a {
   display: inline-block;
 }
-.large li:nth-child(7) a {
-  display: inline-block;
-}
-.large li:nth-child(8) a {
-  display: inline-block;
-}
 .large li:last-child a {
   display: inline-block;
 }
@@ -138,78 +107,4 @@ body {
 .large li:nth-last-child(3):after {
   padding: 0 1rem;
   content: "...";
-}
-
-.middle li a {
-  display: none;
-}
-.middle li:first-child a {
-  display: inline-block;
-}
-.middle li:first-child a:after {
-  content: "<";
-}
-.middle li:last-child a {
-  display: inline-block;
-}
-.middle li:last-child a:after {
-  content: ">";
-}
-.middle li:nth-child(2) a {
-  display: inline-block;
-}
-.middle li:nth-child(3) a {
-  display: inline-block;
-}
-.middle li:nth-child(4) a {
-  display: inline-block;
-}
-.middle li:nth-child(5) a {
-  display: inline-block;
-}
-.middle li:nth-last-child(2) a {
-  display: inline-block;
-}
-.middle li:nth-last-child(3) {
-  display: inline-block;
-}
-.middle li:nth-last-child(3):after {
-  padding: 0 1rem;
-  content: "...";
-}
-
-.small li {
-  display: none;
-}
-.small li:first-child {
-  width: 50%;
-  display: inline;
-}
-.small li:first-child a:after {
-  content: "Previous Page";
-}
-.small li:last-child {
-  display: inline;
-}
-.small li:last-child a:after {
-  content: "Next Page";
-}
-
-.xsmall li {
-  display: none;
-}
-.xsmall li.active {
-  display: inline;
-}
-.xsmall li:first-child {
-  display: inline;
-}
-.xsmall li:first-child a:after {
-  content: "Prev";
-}
-.xsmall li:last-child {
-  display: inline;
-}
-.xsmall li:last-child a:after {
-  content: "Next";
 }
