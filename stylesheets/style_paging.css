@@ -91,6 +91,24 @@
   .large li:nth-child(4) a {
     display: inline-block;
   }
+  .large li:nth-child(5) a {
+    display: inline-block;
+  }
+  .large li:nth-child(6) a {
+    display: inline-block;
+  }
+  .large li:nth-child(7) a {
+    display: inline-block;
+  }
+  .large li:nth-child(8) a {
+    display: inline-block;
+  }
+  .large li:nth-child(9) a {
+    display: inline-block;
+  }
+  .large li:nth-child(10) a {
+    display: inline-block;
+  }
   .large li:last-child a {
     float: right;
     display: inline-block;
