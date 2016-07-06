@@ -243,6 +243,7 @@ a {
     
 .main-content .row {
   padding-top: 0.5rem;
+  padding-bottom:0.5rem;
   margin-top: 2.5rem; }
 
 .main-content .row .title{
@@ -252,7 +253,7 @@ a {
   float:right; }
 
 .site-footer {
-  padding-top: 3rem;
+  padding-top: 2rem;
   margin-top: 2rem;
   border-top: solid 1px #eff0f1; }
 
