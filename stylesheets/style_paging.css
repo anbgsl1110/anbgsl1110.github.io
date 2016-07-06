@@ -29,6 +29,9 @@
   .large li {
     counter-increment: pagination;
   }
+  .container li:nth-child(2) a {
+    counter-reset: pagination;
+  }
   li:hover a {
     color: #fdfdfd;
     background-color: #1d1f20;
@@ -65,7 +68,6 @@
     content: "<<<";
   }
   .large li:nth-child(2) a {
-    counter-reset: pagination;
     display: inline-block;
   }
   .large li:nth-child(3) a {
