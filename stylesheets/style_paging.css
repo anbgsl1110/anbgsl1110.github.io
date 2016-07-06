@@ -4,10 +4,10 @@
 .container {
   background: #fdfdfd;
   padding: 0rem;
-  margin: 3rem auto;
+  margin: 0.5rem 0rem;
   border-radius: 0.2rem;
   counter-reset: pagination;
-  text-align: left;
+  text-align: center;
 }
 .container:after {
   clear: both;
