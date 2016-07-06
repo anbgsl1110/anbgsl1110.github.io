@@ -54,8 +54,8 @@ a {
       margin-left: 0; } }
 
 .main-top .left {
-  padding: 0;
-  margin: 0; }
+  padding: 0.5rem 0.5rem;
+  margin-bottom: 3rem; }
   
   .main-top .left h3 {
     float:left;
