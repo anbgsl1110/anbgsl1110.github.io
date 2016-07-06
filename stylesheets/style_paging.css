@@ -20,91 +20,91 @@
 .large {
   width: 42rem;
 }
-.container .large ul, li {
-  list-style: none;
-  display: inline;
-  padding-left: 0px;
-}
+  ul, li {
+    list-style: none;
+    display: inline;
+    padding-left: 0px;
+  }
+  
+  li {
+    counter-increment: pagination;
+  }
+  li:hover a {
+    color: #fdfdfd;
+    background-color: #1d1f20;
+    border: solid 1px #1d1f20;
+  }
+  li.active a {
+    color: #fdfdfd;
+    background-color: #1d1f20;
+    border: solid 1px #1d1f20;
+  }
+  li:first-child {
+    float: left;
+  }
+  li:first-child a:after {
+    content: "Previous";
+  }
+  li:nth-child(2) {
+    counter-reset: pagination;
+  }
+  li:last-child {
+    float: right;
+  }
+  li:last-child a:after {
+    content: "Next";
+  }
+  li a {
+    border: solid 1px #d6d6d6;
+    border-radius: 0.2rem;
+    color: #7d7d7d;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    padding: 0.5rem 0.9rem;
+  }
+  li a:after {
+    content: " " counter(pagination) " ";
+  }
 
-.container .large li {
-  counter-increment: pagination;
-}
-.container .large li:hover a {
-  color: #fdfdfd;
-  background-color: #1d1f20;
-  border: solid 1px #1d1f20;
-}
-.container .large li.active a {
-  color: #fdfdfd;
-  background-color: #1d1f20;
-  border: solid 1px #1d1f20;
-}
-.container .large li:first-child {
-  float: left;
-}
-.container .large li:first-child a:after {
-  content: "Previous";
-}
-.container .large li:nth-child(2) {
-  counter-reset: pagination;
-}
-.container .large li:last-child {
-  float: right;
-}
-.container .large li:last-child a:after {
-  content: "Next";
-}
-.container .large li a {
-  border: solid 1px #d6d6d6;
-  border-radius: 0.2rem;
-  color: #7d7d7d;
-  text-decoration: none;
-  text-transform: uppercase;
-  display: inline-block;
-  text-align: center;
-  padding: 0.5rem 0.9rem;
-}
-.container .large li a:after {
-  content: " " counter(pagination) " ";
-}
-
-.large li a {
-  display: none;
-}
-.large li:first-child a {
-  display: inline-block;
-}
-.large li:first-child a:after {
-  content: "Previous";
-}
-.large li:nth-child(2) a {
-  display: inline-block;
-}
-.large li:nth-child(3) a {
-  display: inline-block;
-}
-.large li:nth-child(4) a {
-  display: inline-block;
-}
-.large li:nth-child(5) a {
-  display: inline-block;
-}
-.large li:nth-child(6) a {
-  display: inline-block;
-}
-.large li:last-child a {
-  display: inline-block;
-}
-.large li:last-child a:after {
-  content: "Next";
-}
-.large li:nth-last-child(2) a {
-  display: inline-block;
-}
-.large li:nth-last-child(3) {
-  display: inline-block;
-}
-.large li:nth-last-child(3):after {
-  padding: 0 1rem;
-  content: "...";
-}
+  .large li a {
+    display: none;
+  }
+  .large li:first-child a {
+    display: inline-block;
+  }
+  .large li:first-child a:after {
+    content: "Previous";
+  }
+  .large li:nth-child(2) a {
+    display: inline-block;
+  }
+  .large li:nth-child(3) a {
+    display: inline-block;
+  }
+  .large li:nth-child(4) a {
+    display: inline-block;
+  }
+  .large li:nth-child(5) a {
+    display: inline-block;
+  }
+  .large li:nth-child(6) a {
+    display: inline-block;
+  }
+  .large li:last-child a {
+    display: inline-block;
+  }
+  .large li:last-child a:after {
+    content: "Next";
+  }
+  .large li:nth-last-child(2) a {
+    display: inline-block;
+  }
+  .large li:nth-last-child(3) {
+    display: inline-block;
+  }
+  .large li:nth-last-child(3):after {
+    padding: 0 1rem;
+    content: "...";
+  }
