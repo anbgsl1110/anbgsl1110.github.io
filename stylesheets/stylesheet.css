@@ -266,6 +266,7 @@ a {
 .site-footer {
   padding-top: 2rem;
   margin-top: 2rem;
+  text-align: center;
   border-top: solid 1px #819198; }
 
 .site-footer-owner {
