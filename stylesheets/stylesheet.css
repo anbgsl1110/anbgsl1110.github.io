@@ -251,7 +251,8 @@ a {
     max-width: 64rem;
     padding: 0.5rem 6rem;
     margin: 0 auto;
-    font-size: 1.1rem; } }
+    font-size: 1.1rem;
+    border-bottom: solid 1px #159957;} }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .main-content {
@@ -291,7 +292,6 @@ a {
   padding-top: 1rem;
   margin-top: 1rem;
   text-align: center;
-  border-bottom: solid 1px #159957;
   border-top: solid 1px #159957; }
 
 .site-footer-owner {
