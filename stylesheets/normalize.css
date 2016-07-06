@@ -422,17 +422,3 @@ td,
 th {
   padding: 0;
 }
-
-
-ul {
-  list-style:none;
-  float:right;
-  margin:0;
-  padding-left：0px
-}
-
-ul li {
-  float:right;
-  margin:0 0.5rem;
-  padding-right：0px
-}
