@@ -55,13 +55,11 @@ a {
 
 .main-top .left {
   padding: 0;
-  margin: 0;
-  float:left; }
+  margin: 0; }
       
 .main-top .right {
   padding: 0.5rem 0.5rem;
-  margin-bottom: 3rem;
-  float:right;}
+  margin-bottom: 3rem; }
   
   .main-top .right ul {
     list-style:none;
