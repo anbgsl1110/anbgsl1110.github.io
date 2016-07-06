@@ -60,7 +60,9 @@ a {
   .main-top .left h3 {
     float:left;
     margin:1rem;
-    padding-left：0px; }   
+    padding-left：0px;
+    font-weight: normal;
+    color: #159957; }   
     
 .main-top .right {
   padding: 0.5rem 0.5rem;
