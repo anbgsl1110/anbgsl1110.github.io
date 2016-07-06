@@ -439,7 +439,7 @@ li:hover a {
   background-image: linear-gradient(300deg, #155799, #159957);
 }
 li.active a {
-  color: #606c71;
+  color: #FFF;
   background-color: #159957;
   border: solid 0px rgba(255, 255, 255, 0.2);
   background-image: linear-gradient(180deg, #159957,#D3D3D3 20%);
