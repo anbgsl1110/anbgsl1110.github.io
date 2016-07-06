@@ -4,7 +4,7 @@
 .container {
   background: #fdfdfd;
   padding: 0rem;
-  margin: 1rem 0rem;
+  margin: 1.5rem 0rem;
   border-radius: 0.2rem;
   counter-reset: pagination;
   text-align: center;
