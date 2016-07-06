@@ -26,9 +26,9 @@
     padding-left: 0px;
   }
   
-  /**.large li {
+  .large li {
     counter-increment: pagination;
-  }*/
+  }
   li:hover a {
     color: #fdfdfd;
     background-color: #1d1f20;
