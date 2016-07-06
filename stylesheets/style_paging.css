@@ -39,7 +39,7 @@
     color: #606c71;
     background-color: #159957;
     border: solid 0px rgba(255, 255, 255, 0.2);
-    background-image: linear-gradient(270deg, #CD853F,#D3D3D3 10%); 
+    background-image: linear-gradient(180deg, #CD853F,#D3D3D3 10%); 
   }
   
   .container li:first-child {
