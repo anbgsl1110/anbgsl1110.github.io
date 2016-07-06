@@ -269,9 +269,16 @@ a {
   border-top: solid 1px #159957; }
 
 .main-content .row .title{
-   }
+  margin：0;
+  padding：0; }
+   
+.main-content .row h3 {
+  margin：0;
+  padding：0; }
   
 .main-content .row .text-right{
+  margin：0;
+  padding：0;
   float:right; }
 
 .site-footer {
