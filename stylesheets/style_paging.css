@@ -30,14 +30,14 @@
     counter-increment: pagination;
   }
   li:hover a {
-    color: #fdfdfd;
-    background-color: #1d1f20;
-    border: solid 1px #1d1f20;
+    color: #FFF;
+    background-color: #159957;
+    border: solid 1px rgba(255, 255, 255, 0.2);
   }
   li.active a {
     color: #FFF;
     background-color: #159957;
-    border: solid 1px rgba(255, 255, 255, 0.2);
+    border: solid 0px rgba(255, 255, 255, 0.2);
   }
   
   .container li:first-child {
