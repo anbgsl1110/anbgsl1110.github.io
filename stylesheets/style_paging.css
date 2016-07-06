@@ -3,8 +3,8 @@
 }
 .container {
   background: #fdfdfd;
-  padding: 1rem;
-  margin: 1.5rem 0rem;
+  padding: 0rem;
+  margin-top: 2rem;
   border-radius: 0.2rem;
   counter-reset: pagination;
   text-align: center;
