@@ -26,7 +26,7 @@
     padding-left: 0px;
   }
   
-  .large li {
+ li {
     counter-increment: pagination;
   }
   li:nth-child(2) a {
