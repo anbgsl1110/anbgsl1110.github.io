@@ -60,7 +60,8 @@ a {
       
 .main-top .right {
   padding: 0.5rem 0.5rem;
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem;
+  float:right;}
   
   .main-top .right ul {
     list-style:none;
