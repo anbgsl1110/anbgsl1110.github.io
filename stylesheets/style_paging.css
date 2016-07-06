@@ -40,19 +40,19 @@
     border: solid 1px #1d1f20;
   }
   
-  li:first-child {
+  .container li:first-child {
   float: left;
   }
-  li:first-child a:after {
+  .container li:first-child a:after {
     content: "Previous";
   }
-  li:nth-child(2) {
+  .container li:nth-child(2) {
     counter-reset: pagination;
   }
-  li:last-child {
+  .container li:last-child {
     float: right;
   }
-  li:last-child a:after {
+  .container li:last-child a:after {
     content: "Next";
   }
     
