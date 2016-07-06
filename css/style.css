@@ -86,7 +86,7 @@ body{
 	width:200px;
 	height:100px;
 	bottom:0px;
-	left:-60px;
+	left:-50px;
 	-moz-transform:rotate(45deg);
 	-webkit-transform:rotate(45deg);
 	transform:rotate(45deg);
@@ -95,7 +95,7 @@ body{
 }
 .rm_corner_right{
 	left:auto;
-	right:-60px;
+	right:-50px;
 	-moz-transform:rotate(-45deg);
 	-webkit-transform:rotate(-45deg);
 	transform:rotate(-45deg);
