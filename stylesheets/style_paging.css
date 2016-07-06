@@ -45,41 +45,41 @@ body {
   width: 14rem;
 }
 
-ul, li {
+.container .large ul, li {
   list-style: none;
   display: inline;
   padding-left: 0px;
 }
 
-li {
+.container .large li {
   counter-increment: pagination;
 }
-li:hover a {
+.container .large li:hover a {
   color: #fdfdfd;
   background-color: #1d1f20;
   border: solid 1px #1d1f20;
 }
-li.active a {
+.container .large li.active a {
   color: #fdfdfd;
   background-color: #1d1f20;
   border: solid 1px #1d1f20;
 }
-li:first-child {
+.container .large li:first-child {
   float: left;
 }
-li:first-child a:after {
+.container .large li:first-child a:after {
   content: "Previous";
 }
-li:nth-child(2) {
+.container .large li:nth-child(2) {
   counter-reset: pagination;
 }
-li:last-child {
+.container .large li:last-child {
   float: right;
 }
-li:last-child a:after {
+.container .large li:last-child a:after {
   content: "Next";
 }
-li a {
+.container .large li a {
   border: solid 1px #d6d6d6;
   border-radius: 0.2rem;
   color: #7d7d7d;
@@ -89,7 +89,7 @@ li a {
   text-align: center;
   padding: 0.5rem 0.9rem;
 }
-li a:after {
+.container .large li a:after {
   content: " " counter(pagination) " ";
 }
 
