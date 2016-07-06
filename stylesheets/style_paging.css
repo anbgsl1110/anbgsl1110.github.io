@@ -39,21 +39,7 @@
     background-color: #1d1f20;
     border: solid 1px #1d1f20;
   }
-  li:first-child {
-    float: left;
-  }
-  li:first-child a:after {
-    content: "Previous";
-  }
-  li:nth-child(2) {
-    counter-reset: pagination;
-  }
-  li:last-child {
-    float: right;
-  }
-  li:last-child a:after {
-    content: "Next";
-  }
+  
   li a {
     border: solid 1px #d6d6d6;
     border-radius: 0.2rem;
@@ -72,12 +58,14 @@
     display: none;
   }
   .large li:first-child a {
+    float: left;
     display: inline-block;
   }
   .large li:first-child a:after {
     content: "Previous";
   }
   .large li:nth-child(2) a {
+    counter-reset: pagination;
     display: inline-block;
   }
   .large li:nth-child(3) a {
@@ -89,10 +77,8 @@
   .large li:nth-child(5) a {
     display: inline-block;
   }
-  .large li:nth-child(6) a {
-    display: inline-block;
-  }
   .large li:last-child a {
+    float: right;
     display: inline-block;
   }
   .large li:last-child a:after {
@@ -105,6 +91,6 @@
     display: inline-block;
   }
   .large li:nth-last-child(3):after {
-    padding: 0 1rem;
+    padding: 0 0.5rem;
     content: "...";
   }
