@@ -29,9 +29,6 @@
  li {
     counter-increment: pagination;
   }
-  li:nth-child(2) a {
-    counter-reset: pagination;
-  }
   li:hover a {
     color: #fdfdfd;
     background-color: #1d1f20;
@@ -43,6 +40,22 @@
     border: solid 1px #1d1f20;
   }
   
+  li:first-child {
+  float: left;
+  }
+  li:first-child a:after {
+    content: "Previous";
+  }
+  li:nth-child(2) {
+    counter-reset: pagination;
+  }
+  li:last-child {
+    float: right;
+  }
+  li:last-child a:after {
+    content: "Next";
+  }
+    
   li a {
     border: solid 1px #d6d6d6;
     border-radius: 0.2rem;
