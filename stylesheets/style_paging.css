@@ -26,7 +26,7 @@
     padding-left: 0px;
   }
   
-  li {
+  .large li {
     counter-increment: pagination;
   }
   li:hover a {
@@ -50,7 +50,7 @@
     text-align: center;
     padding: 0.5rem 0.9rem;
   }
-  li a:after {
+  .large li a:after {
     content: " " counter(pagination) " ";
   }
 
@@ -62,7 +62,7 @@
     display: inline-block;
   }
   .large li:first-child a:after {
-    content: "Previous";
+    content: "<<<";
   }
   .large li:nth-child(2) a {
     counter-reset: pagination;
@@ -82,7 +82,7 @@
     display: inline-block;
   }
   .large li:last-child a:after {
-    content: "Next";
+    content: ">>>";
   }
   .large li:nth-last-child(2) a {
     display: inline-block;
