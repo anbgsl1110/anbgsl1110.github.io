@@ -53,20 +53,20 @@ a {
       margin-top: 1rem;
       margin-left: 0; } }
       
-.main-top .top {
+.main-top .right {
   padding: 0.5rem 0.5rem;
   margin-bottom: 3rem; }
   
-  .main-top .top ul {
-  list-style:none;
-  float:right;
-  margin:0;
-  padding-left：0px; }
+  .main-top .right ul {
+    list-style:none;
+    float:right;
+    margin:0;
+    padding-left：0px; }
   
-.main-top .top ul li {
-  float:right;
-  margin:0 0.5rem;
-  padding-right：0px;}
+  .main-top .right ul li {
+    float:right;
+    margin:0 0.5rem;
+    padding-right：0px;}
 
 .top-tagline {
   margin-bottom: 1rem;
