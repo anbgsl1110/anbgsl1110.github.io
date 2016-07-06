@@ -29,7 +29,7 @@
   .large li {
     counter-increment: pagination;
   }
-  .container li:nth-child(2) a {
+  li:nth-child(2) a {
     counter-reset: pagination;
   }
   li:hover a {
