@@ -427,8 +427,8 @@ th {
 
 ul, li {
   list-style: none;
-  /**display: inline;
-  padding-left: 0px;*/
+  display: inline;
+  padding-left: 0px;
 }
 
 li {
