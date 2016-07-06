@@ -62,7 +62,7 @@ body{
 	background: #f0f0f0;
 	width: 530px;
 	bottom: -30px;
-	left: -60px;
+	left: 0px;
 	-moz-transform:rotate(-3deg);
 	-webkit-transform:rotate(-3deg);
 	transform:rotate(-3deg);
@@ -80,14 +80,14 @@ body{
 	width:200px;
 	height:100px;
 	bottom:0px;
-	left:-60px;
+	left:-65px;
 	-moz-transform:rotate(45deg);
 	-webkit-transform:rotate(45deg);
 	transform:rotate(45deg);
 }
 .rm_corner_right{
 	left:auto;
-	right:-60px;
+	right:-65px;
 	-moz-transform:rotate(-45deg);
 	-webkit-transform:rotate(-45deg);
 	transform:rotate(-45deg);
