@@ -52,6 +52,10 @@ a {
     .btn + .btn {
       margin-top: 1rem;
       margin-left: 0; } }
+
+.main-top .left {
+  padding: 0.5rem 0.5rem;
+  margin-bottom: 3rem; }
       
 .main-top .right {
   padding: 0.5rem 0.5rem;
