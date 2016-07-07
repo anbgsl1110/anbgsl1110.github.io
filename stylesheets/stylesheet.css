@@ -58,7 +58,8 @@ a {
 
 .main-top .left h3 {
     float:left;
-    margin:1rem;
+    margin-top:0.7rem;
+    margin-bottom:0.3rem;
     padding: 0.5rem 0.5rem;
     font-weight: normal;
     color: #159957; }
@@ -72,8 +73,8 @@ a {
         background:transparent url(../images/line.png) repeat-x bottom left;}*/
 
 .main-top .right {
-  padding: 0.5rem 0.5rem;
-  margin: 0.7rem; }
+  margin: 0.7rem;
+  padding: 0.5rem 0.5rem;}
 
   .main-top .right ul {
     list-style:none;
