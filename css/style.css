@@ -15,12 +15,12 @@ body{
         background:transparent url(../images/line.png) repeat-x bottom left;
 }
 .rm_wrapper{
-	width:1170px;
+	width:1300px;
 	margin:0 auto;
 	position:relative;
 }
 .rm_container{
-	width:1050px;
+	width:1250px;
 	overflow:hidden;
 	position:relative;
 	height:530px;
