@@ -39,10 +39,11 @@ body{
 }
 .rm_container ul{
 	width:1170px;
+        margin-left:32px;
 }
 .rm_container ul li{
 	float:left;
-	margin-left:20px;
+	margin-left:-80px;
 	position:relative;
 	overflow:hidden;
 	width:310px;
