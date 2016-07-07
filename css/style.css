@@ -28,7 +28,7 @@ body{
 }
 .rm_container h2{
 	background:transparent url(../images/lines.png) repeat top left;
-	padding:10px 30px;
+	padding:5px 10px;
 	position:absolute;
 	bottom:170px;
 	right:0px;
@@ -44,7 +44,6 @@ body{
 	float:left;
 	margin-left:-48px;
         margin-top: 40px
-        margin-right:0px;
 	position:relative;
 	overflow:hidden;
 	width:310px;
