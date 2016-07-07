@@ -42,8 +42,9 @@ body{
 }
 .rm_container ul li{
 	float:left;
-	margin-left:-57px;
-        margin-top:24px;
+	margin-left:-58px;
+        margin-top:23px;
+        padding-left:60px;
 	position:relative;
 	overflow:hidden;
 	width:310px;
