@@ -20,7 +20,7 @@ body{
 	position:relative;
 }
 .rm_container{
-	width:1050px;
+	width:1040px;
 	overflow:hidden;
 	position:relative;
 	height:530px;
@@ -44,7 +44,6 @@ body{
 	float:left;
 	margin-left:-58px;
         margin-top:23px;
-        padding-left:90px;
 	position:relative;
 	overflow:hidden;
 	width:310px;
