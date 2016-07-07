@@ -42,8 +42,7 @@ body{
 }
 .rm_container ul li{
 	float:left;
-	margin-left:-48px;
-        margin-top: 40px
+	margin-left:-80px;
 	position:relative;
 	overflow:hidden;
 	width:310px;
@@ -56,8 +55,6 @@ body{
 }
 .rm_container ul li img{
 	position:absolute;
-        padding-top:50px;
-        padding-bottom:-10px;
 	top:0px;
 	left:0px;
 }
