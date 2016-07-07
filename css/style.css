@@ -44,6 +44,7 @@ body{
 	float:left;
 	margin-left:-48px;
         margin-top: 40px
+        margin-bottom:-10px;
 	position:relative;
 	overflow:hidden;
 	width:310px;
