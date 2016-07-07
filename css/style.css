@@ -53,7 +53,7 @@ body{
 }
 .rm_container ul li img{
         margin-left:60px;
-        margin:100px;
+        margin:-100px;
 	position:absolute;
 	top:0px;
 	left:0px;
