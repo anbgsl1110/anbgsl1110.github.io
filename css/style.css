@@ -35,7 +35,7 @@ body{
 	color:#000;
 	font-size:36px;
 	text-transform:uppercase;
-	text-shadow:1px 0px 1px #fff;
+	text-shadow:1px 0px 1px #159957;
 }
 .rm_container ul{
 	width:1170px;
@@ -67,8 +67,8 @@ body{
 	-moz-transform:rotate(-3deg);
 	-webkit-transform:rotate(-3deg);
 	transform:rotate(-3deg);
-        border-top: solid 3px #159957;
-        border-bottom: solid 3px red;
+        /**border-top: solid 3px #159957;
+        border-bottom: solid 3px red;*/
 }
 .rm_mask_right{
 	left:auto;
@@ -87,8 +87,6 @@ body{
 	-moz-transform:rotate(45deg);
 	-webkit-transform:rotate(45deg);
 	transform:rotate(45deg);
-        border-top: solid 3px #159957;
-        border-bottom: solid 3px red;
 }
 .rm_corner_right{
 	left:auto;
