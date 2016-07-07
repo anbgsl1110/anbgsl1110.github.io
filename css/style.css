@@ -20,7 +20,7 @@ body{
 	position:relative;
 }
 .rm_container{
-	width:1250px;
+	width:1050px;
 	overflow:hidden;
 	position:relative;
 	height:530px;
@@ -39,7 +39,6 @@ body{
 }
 .rm_container ul{
 	width:1170px;
-        margin-left:100px;
 }
 .rm_container ul li{
 	float:left;
