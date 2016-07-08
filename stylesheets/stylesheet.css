@@ -53,37 +53,28 @@ a {
       margin-top: 1rem;
       margin-left: 0; } }
 
-.main-top .left {
+.top-left {
   margin: 0rem; }
 
-.main-top .left h3 {
+.top-left h3 {
     float:left;
     margin-top:0rem;
     margin-bottom:0.3rem;
     padding: 0.3rem 2rem;
     font-weight: bolder;
     font-size:1.8rem;}
-    /**color: #155799;}
-    /**.main-top .left h3 {
-        padding:10px;
-        margin:20px;
-        font-size:40px;
-        text-transform:uppercase;
-        text-shadow:0px 0px 1px #fff;
-        color:#333;
-        background:transparent url(../images/line.png) repeat-x bottom left;}*/
 
-.main-top .right {
+.top-right {
   margin: 0rem;
   padding: 0.3rem 2rem;}
 
-  .main-top .right ul {
+  .top-right ul {
     list-style:none;
     float:right;
     margin:0;
     padding-left：0px; }
 
-  .main-top .right ul li {
+  .top-right ul li {
     float:right;
     margin:0 0.3rem;
     padding-right：0px;
