@@ -70,6 +70,7 @@ a {
 
   .top-right ul {
     list-style:none;
+    display: inline;
     float:right;
     margin:0;
     padding-left：0px; }
