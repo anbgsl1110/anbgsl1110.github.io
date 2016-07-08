@@ -6,7 +6,8 @@ body{
 	font-size:16px;
 }
 .content {
-  background-image: linear-gradient(120deg, #155799, #159957); }
+        color:#fff;
+        background-image: linear-gradient(120deg, #155799, #159957); }
 
 .content h1 {
         padding:10px;
@@ -53,7 +54,7 @@ body{
 	height:465px;
 	border:30px solid #f0f0f0;
 	border-width:50px 30px 0px 30px;
-	background-color:#f0f0f0;
+	/**background-color:#f0f0f0;*/
 }
 .rm_container ul li img{
 	position:absolute;
@@ -63,7 +64,7 @@ body{
 .rm_mask_right, .rm_mask_left{
 	position: absolute;
 	height: 110px;
-	background: #f0f0f0;
+	/**background: #f0f0f0;*/
 	width: 530px;
 	bottom: -30px;s
 	left: 0px;
@@ -81,7 +82,7 @@ body{
 	transform:rotate(3deg);
 }
 .rm_corner_right, .rm_corner_left{
-	background: #f0f0f0;
+	/**background: #f0f0f0;*/
 	position:absolute;
 	width:200px;
 	height:100px;
@@ -124,6 +125,7 @@ body{
 	height:20px;
 }
 .rm_controls a{
+        color: #f0f0f0;
 	cursor:pointer;
 	opacity:0.7;
 	padding-left:24px;
