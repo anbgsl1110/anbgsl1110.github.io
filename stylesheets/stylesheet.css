@@ -60,7 +60,7 @@ a {
     float:left;
     margin-top:0.7rem;
     margin-bottom:0.3rem;
-    padding: 0.5rem 3rem;
+    padding: 0.5rem 2rem;
     font-weight: normal;
     color: #159957; }
     /**.main-top .left h3 {
@@ -74,7 +74,7 @@ a {
 
 .main-top .right {
   margin: 0.7rem;
-  padding: 0.5rem 0.5rem;}
+  padding: 0.5rem 2rem;}
 
   .main-top .right ul {
     list-style:none;
