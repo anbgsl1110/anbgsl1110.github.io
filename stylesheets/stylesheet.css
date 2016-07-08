@@ -57,10 +57,10 @@ a {
   margin: 0rem; }
 
 .main-top .left h3 {
-    float:left;
+    float:center;
     margin-top:0.7rem;
     margin-bottom:0.3rem;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 9rem;
     font-weight: normal;
     color: #159957; }
     /**.main-top .left h3 {
