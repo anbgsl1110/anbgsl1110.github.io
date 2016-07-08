@@ -60,9 +60,9 @@ a {
     float:left;
     margin-top:0rem;
     margin-bottom:0.3rem;
-    padding: 0.4rem 2rem;
+    padding: 0.3rem 2rem;
     font-weight: bolder;
-    font-size:1.6rem;
+    font-size:1.8rem;
     color: #159957; }
     /**.main-top .left h3 {
         padding:10px;
@@ -75,7 +75,7 @@ a {
 
 .main-top .right {
   margin: 0rem;
-  padding: 0.4rem 2rem;}
+  padding: 0.3rem 2rem;}
 
   .main-top .right ul {
     list-style:none;
