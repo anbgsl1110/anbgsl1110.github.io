@@ -58,7 +58,7 @@ a {
 
 .main-top .left h3 {
     float:left;
-    margin-top:0.7rem;
+    margin-top:0.5rem;
     margin-bottom:0.3rem;
     padding: 0.5rem 2rem;
     font-weight: bolder;
@@ -73,7 +73,7 @@ a {
         background:transparent url(../images/line.png) repeat-x bottom left;}*/
 
 .main-top .right {
-  margin: 0.7rem;
+  margin: 0.5rem;
   padding: 0.5rem 2rem;}
 
   .main-top .right ul {
