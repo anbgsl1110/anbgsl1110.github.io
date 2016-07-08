@@ -40,7 +40,7 @@ body{
 }
 .rm_container ul{
 	width:1170px;
-        padding-left:-40px;
+        padding-left:40px;
 }
 .rm_container ul li{
         display: list-item;
