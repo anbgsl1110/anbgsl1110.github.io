@@ -13,9 +13,12 @@
 }
 
 .container ul {
-  display: inline;
   padding-left: 0px;
   width: 100%;
+}
+
+.container ul li{
+  display: inline;
 }
 
 .large {

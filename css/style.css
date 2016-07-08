@@ -39,10 +39,10 @@ body{
 	text-shadow:1px 0px 1px #159957;
 }
 .rm_container ul{
-        display: list-item;
 	width:1170px;
 }
 .rm_container ul li{
+        display: list-item;
 	float:left;
 	margin-left:-80px;
 	position:relative;
