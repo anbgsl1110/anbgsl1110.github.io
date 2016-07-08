@@ -6,7 +6,6 @@ body{
 	font-size:16px;
 }
 .content {
-        color:#fff;
         background-image: #159957; }
 
 .content h1 {
@@ -52,9 +51,9 @@ body{
 	overflow:hidden;
 	width:310px;
 	height:465px;
-	border:30px solid #159957;)  /**#f0f0f0*/
+	border:30px solid #f0f0f0;)  /**#f0f0f0*/
 	border-width:50px 30px 0px 30px;
-	background-color:#159957;
+	background-color:#f0f0f0;
 }
 .rm_container ul li img{
 	position:absolute;
@@ -64,7 +63,7 @@ body{
 .rm_mask_right, .rm_mask_left{
 	position: absolute;
 	height: 110px;
-	background: #159957;
+	background: #f0f0f0;
 	width: 530px;
 	bottom: -30px;s
 	left: 0px;
@@ -125,9 +124,9 @@ body{
 	height:20px;
 }
 .rm_controls a{
-        color: #f0f0f0;
 	cursor:pointer;
 	opacity:0.7;
+        padding-top:24px
 	padding-left:24px;
 	font-size:16px;
 	text-transform:uppercase;
