@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>ALIANG DIARY</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="ALIANG DIARY"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2016-07-12T10:03+0800"/>
+<meta name="author" content="ALIANG"/>
+<meta name="description" content=""/>
+<meta name="keywords" content="DIARY"/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">ALIANG DIARY</h1>
+
+<p>【aliang diary】-青春无限可能，拎得清，爱生活，爱自己
+</p>
+<div id="table-of-contents">
+<h2>目录</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 INFO</a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-1">1 关于代码整洁</a>
+<ul>
+<li><a href="#sec-1-1">1.1 命名</a></li>
+<li><a href="#sec-1-2">1.2 注释</a></li>
+<li><a href="#sec-1-3">1.3 代码格式</a></li>
+<li><a href="#sec-1-4">1.4 null处理</a></li>
+<li><a href="#sec-1-5">1.5 对象和方法</a></li>
+<li><a href="#sec-1-6">1.6 经典语句</a></div>
+</div>
+
+<div id="outline-container-1" class="outline-4">
+<h4 id="sec-1"><span class="section-number-4">1</span> INFO</h4>
+<div class="outline-text-4" id="text-1">
+
+<p>日期：2016-07-12；作者：阿亮；关键字：笔记、编码规范
+</p></div>
+
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> 关于代码整洁</h2>
+<div class="outline-text-2" id="text-1">
+
+<p>代码整洁之道的学习笔记
+</p>
+<p>
+一直记得代码整洁之道中让很多人都认可的一句话，稍后等于永不（Later equals never）
+</p>
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> 命名</h3>
+<div class="outline-text-3" id="text-1-1">
+
+<p>做有意义的命名
+</p>
+<p>
+类名和对象名称应该是名称或者动名词，不是动词。方法应该是动词或者动词短语。
+</p>
+<p>
+名称是可读，可搜索，减少前缀
+</p>
+<p>
+采用问题领域的或者技术性强的词汇
+</p>
+<p>
+为方便后续的维护，一旦发现更好的命名，立马换掉
+</p></div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> 注释</h3>
+<div class="outline-text-3" id="text-1-2">
+
+<p>减少对标题栏进行注释
+</p>
+<p>
+尽量不要把代码直接注释掉，别人看不懂，不要那样做
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> 代码格式</h3>
+<div class="outline-text-3" id="text-1-3">
+
+<p>尽量保证代码行短小
+</p>
+<p>
+空行代表代码的关联性，规范tab和空格
+</p>
+<p>
+确定整个项文档的编码
+</p></div>
+
+</div>
+
+<div id="outline-container-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> null处理</h3>
+<div class="outline-text-3" id="text-1-4">
+
+
+<p>
+返回null只是给调试增加麻烦，尽量别这样做
+</p></div>
+
+</div>
+
+<div id="outline-container-1-5" class="outline-3">
+<h3 id="sec-1-5"><span class="section-number-3">1.5</span> 对象和方法</h3>
+<div class="outline-text-3" id="text-1-5">
+
+<p>做小规模的抽象，做少的重复。
+</p>
+<p>
+代码尽量少，三五行最好，注释都不用去写
+</p>
+<p>
+参数尽量要少，最好没有，不要超过三个
+</p>
+<p>
+DRY原则-don't repeat yourself(不做重复的自己)
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-6" class="outline-3">
+<h3 id="sec-1-6"><span class="section-number-3">1.6</span> 经典语句</h3>
+<div class="outline-text-3" id="text-1-6">
+
+<p>命名良好，代码短小，良好的组织结构，目的让系统变得完美。
+</p>
+<p>
+整洁的代码只做好一件事，讲事实，避免猜测。
+</p></div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2016-07-12T10:03+0800</p>
+<p class="author">Author: ALIANG</p>
+<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>
