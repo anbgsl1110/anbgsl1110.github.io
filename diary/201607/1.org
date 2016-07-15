@@ -1,11 +1,11 @@
-#+TITLE:ALIANG DIARY
+#+TITLE:关于代码整洁
 #+AUTHOR:ALIANG
 #+EMAIL:anbgsl1110@gmail.com
 #+KEYWORDS:DIARY
 【aliang diary】-青春无限可能，拎得清，爱生活，爱自己
-*** INFO
+** INFO
 日期：2016-07-12；作者：阿亮；关键字：笔记、编码规范
-* 关于代码整洁
+
 代码整洁之道的学习笔记
 
 一直记得代码整洁之道中让很多人都认可的一句话，稍后等于永不（Later equals never）
