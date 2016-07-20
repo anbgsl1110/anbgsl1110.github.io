@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>linux 常用命令</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="linux 常用命令"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2016-07-20T10:04+0800"/>
+<meta name="author" content="ALIANG"/>
+<meta name="description" content=""/>
+<meta name="keywords" content="DIARY"/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">linux 常用命令</h1>
+
+<p>【aliang diary】-青春无限可能，拎得清，爱生活，爱自己
+</p>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 INFO</a></li>
+<li><a href="#sec-2">2 "ls"命令</a></li>
+<li><a href="#sec-3">3 "cd"命令</a></li>
+<li><a href="#sec-4">4 "pwd"命令</a></li>
+<li><a href="#sec-5">5 "cp"命令</a></li>
+<li><a href="#sec-6">6 "mv"命令</a></li>
+<li><a href="#sec-7">7 "dd"命令</a></li>
+<li><a href="#sec-8">8 "lsblk"命令</a></li>
+<li><a href="#sec-9">9 "mkdir"命令</a></li>
+<li><a href="#sec-10">10 "touch"命令</a></li>
+<li><a href="#sec-11">11 "cal"命令</a></li>
+<li><a href="#sec-12">12 "date"命令</a></li>
+<li><a href="#sec-13">13 "uname"命令</a></li>
+<li><a href="#sec-14">14 "history"命令</a></li>
+<li><a href="#sec-15">15 "sudo"命令</a></li>
+<li><a href="#sec-16">16 "cat"命令</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-3">
+<h3 id="sec-1"><span class="section-number-3">1</span> INFO</h3>
+<div class="outline-text-3" id="text-1">
+
+<p>日期：2016-07-12；作者：阿亮；关键字：笔记、linux常用命令
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-3">
+<h3 id="sec-2"><span class="section-number-3">2</span> "ls"命令</h3>
+<div class="outline-text-3" id="text-2">
+
+<ul>
+<li id="sec-2-1">"ls"(List Directory Contents)列出文件中的内容，可能是文件也可能是文件夹<br/>
+<ul>
+<li id="sec-2-1-1">"ls -l"(long listing fashion)以详细模式列出文件中的内容<br/>
+</li>
+</ul>
+<ul>
+<li id="sec-2-1-2">"ls -a"列出文件中所有的文件，包括以.开头的隐藏文件<br/>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-3">
+<h3 id="sec-3"><span class="section-number-3">3</span> "cd"命令</h3>
+<div class="outline-text-3" id="text-3">
+
+<ul>
+<li>"cd" 改变工作目录
+</li>
+<li>"cd ~"跳转到root目录
+</li>
+<li>"cd ../"跳转到上层目录
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-3">
+<h3 id="sec-4"><span class="section-number-3">4</span> "pwd"命令</h3>
+<div class="outline-text-3" id="text-4">
+
+<ul>
+<li>"pwd"(print working derictory)显示当前工作目录的全路径
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-3">
+<h3 id="sec-5"><span class="section-number-3">5</span> "cp"命令</h3>
+<div class="outline-text-3" id="text-5">
+
+<ul>
+<li>"cp"(copy)复制文件的命令
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-3">
+<h3 id="sec-6"><span class="section-number-3">6</span> "mv"命令</h3>
+<div class="outline-text-3" id="text-6">
+
+<ul>
+<li>"mv"移动文件的命令
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-3">
+<h3 id="sec-7"><span class="section-number-3">7</span> "dd"命令</h3>
+<div class="outline-text-3" id="text-7">
+
+<ul>
+<li>"dd"转换和复制文件
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-8" class="outline-3">
+<h3 id="sec-8"><span class="section-number-3">8</span> "lsblk"命令</h3>
+<div class="outline-text-3" id="text-8">
+
+<ul>
+<li>"lsblk"列出块设备，以树状结构输出
+</li>
+<li>"lsblk -l"列出块设备。以列表结构输出
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-9" class="outline-3">
+<h3 id="sec-9"><span class="section-number-3">9</span> "mkdir"命令</h3>
+<div class="outline-text-3" id="text-9">
+
+<ul>
+<li>"mkdir"在当前路径下创建新的文件
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-10" class="outline-3">
+<h3 id="sec-10"><span class="section-number-3">10</span> "touch"命令</h3>
+<div class="outline-text-3" id="text-10">
+
+<ul>
+<li>"touch"把文件的访问和修改更新到最新时间，当文件不存在时进行创建。已经存在会更新时间戳不会改变文本内容
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-11" class="outline-3">
+<h3 id="sec-11"><span class="section-number-3">11</span> "cal"命令</h3>
+<div class="outline-text-3" id="text-11">
+
+<ul>
+<li>"cal"(Calender)显示当前或过去或未来的年月日历，例如："cal","cal 07 2016";
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-12" class="outline-3">
+<h3 id="sec-12"><span class="section-number-3">12</span> "date"命令</h3>
+<div class="outline-text-3" id="text-12">
+
+<ul>
+<li>"date"标准格式输出当前日期时间
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-13" class="outline-3">
+<h3 id="sec-13"><span class="section-number-3">13</span> "uname"命令</h3>
+<div class="outline-text-3" id="text-13">
+
+<ul>
+<li>"uname"(unix name)显示机器名，操作系统，内核等信息
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-14" class="outline-3">
+<h3 id="sec-14"><span class="section-number-3">14</span> "history"命令</h3>
+<div class="outline-text-3" id="text-14">
+
+<ul>
+<li>"history"显示执行过命令的历史纪录
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-15" class="outline-3">
+<h3 id="sec-15"><span class="section-number-3">15</span> "sudo"命令</h3>
+<div class="outline-text-3" id="text-15">
+
+<ul>
+<li>"sudo"(super user do)授权执行超级用户(root)或其他用户的命令
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-16" class="outline-3">
+<h3 id="sec-16"><span class="section-number-3">16</span> "cat"命令</h3>
+<div class="outline-text-3" id="text-16">
+
+<ul>
+<li>"cat"(Concatenation)连接连个或多个文本文件或者打印输出文本内容到屏幕
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2016-07-20T10:04+0800</p>
+<p class="author">Author: ALIANG</p>
+<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>
