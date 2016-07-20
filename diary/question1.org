@@ -1,4 +1,4 @@
-* 热爱Emacs，擅长SQL :问题1: 
+* 热爱Emacs，擅长SQL                                                            :问题1: 
 * 【我与Emacs的故事】 
 ** 〔选择与缘由〕 
 - 实用的多窗口Buffer 
