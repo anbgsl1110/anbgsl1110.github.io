@@ -27,7 +27,8 @@
 #+end_src 
 * 【绚彩的未来】 
 ** 〔基于项目，结合框架和中间件深耕现在〕 
-学习本就是一种只有起点，没有终点的事。 
+后面学习Hadoop,以及子项目HDFS,MapReduce,Hbase,Hive,ZOOkeeper,Avro,pig,Ambari
+,Sqoop
 ** 〔学习元数据管理和编程〕 
 在使用org的过程中接触到可以设置元数据内容和嵌入元数据代码，自己也会不断的学习。 
 ** 〔根据工作需求学习Python或者Ruby〕 
