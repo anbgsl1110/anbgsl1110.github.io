@@ -1,0 +1,65 @@
+#+TITLE:github提交代码到github仓库
+#+AUTHOR:ALIANG
+#+EMAIL:anbgsl1110@gmail.com
+#+KEYWORDS:DIARY
+【aliang diary】-青春无限可能，拎得清，爱生活，爱自己
+
+-日期：2016-07-12；作者：阿亮；关键字：笔记、github
+* github提交代码到github仓库
+** 正常使用Push提交
+git remote add origin https://github.com/XXX(username)/YYYY(projectname).git
+
+加上一个remote的地址，名叫origin，地址是github上的地址（Create a new repo就会有）
+
+因为Git是分布式的，所以可以有多个remote.
+#+BEGIN_SRC git
+git push -u origin master
+#+END_SRC
+将本地内容push到github上的那个地址上去。
+
+参数-u
+
+用了参数-u之后，以后就可以直接用不带参数的git pull从之前push到的分支来pull。此时如果origin的master分支上有一些本地没有的提,push会失败.所以解决的办法是, 首先设定本地master的上游分支:
+#+BEGIN_SRC git
+git branch --set-upstream-to=origin/master
+#+END_SRC
+然后pull:
+#+BEGIN_SRC git
+git pull --rebase
+#+END_SRC
+最后再push:
+#+BEGIN_SRC git
+git push
+#+END_SRC
+** push方法1：
+现在如果想直接Push这个develop分支上的内容到github
+#+BEGIN_SRC git
+git push -u origin
+#+END_SRC
+如果是新建分支第一次push，会提示：
+#+BEGIN_SRC git
+fatal: The current branch develop has no upstream branch.
+To push the current branch and set the remote as upstream, use
+git push --set-upstream origin develop
+#+END_SRC
+输入这行命令，然后输入用户名和密码，就push成功了。
+以后的push就只需要输入
+#+BEGIN_SRC git
+git push origin
+#+END_SRC
+** push方法2：
+比如新建了一个叫dev的分支，而github网站上还没有，可以直接：
+#+BEGIN_SRC git
+git push -u origin dev
+#+END_SRC
+这样一个新分支就创建好了。
+** push方法3
+提交到github的分支有多个，提交时可以用这样的格式：
+#+BEGIN_SRC git
+git push -u origin local:remote
+
+比如：git push -u origin master:master
+#+END_SRC
+表明将本地的master分支（冒号前）push到github的master分支（冒号后）。
+
+如果左边不写为空，将会删除远程的右边分支。

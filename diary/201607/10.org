@@ -1,0 +1,387 @@
+#+TITLE:org参考文档
+#+AUTHOR:ALIANG
+#+EMAIL:anbgsl1110@gmail.com
+#+KEYWORDS:DIARY
+【aliang diary】-青春无限可能，拎得清，爱生活，爱自己
+
+-日期：2016-07-12；作者：阿亮；关键字：笔记、org
+* org参考文档
+Org是一个基于快速高效的文本方式来实现做笔记，管理待办事项(TODO list)以及做项目计划的模式。
+** 文档编辑
+*** 用大纲组织内容
+****** 定义标题
+#+BEGIN_SRC org
+* org-mode
+** 大纲
+正在编写大纲
+** 轻量级标记语言
+* 可以导出其他格式
+支持html,pdf等
+#+END_SRC
+注意：
+1. * 要位于每行的行首
+2. * 之后要有一个空格，然后再输入标题
+3. 连续几个*就表示是第几级大纲，最多支持10级
+利用快捷键可以通过大纲操作文档，包括折叠，定位和编辑
+
+****** 大纲的显示方式
+
+默认的大纲显示没有缩进，显得有些乱。可以用M-x-org-indent-mode切换到另一种显示方式
+*** 超链接和显示图片
+Org支持多种超链接，对于符合要求的图片链接，可以形成图文混排。
+
+****** 外部链接
+对于符合链接规则的内容，org-mode会自动将其视为链接，包括文件，网页，邮箱，新闻组，bbdb数据项，irc会话和记录
+等，例如：
+#+BEGIN_SRC org
+http://www.aliang.space
+
+file:/home/2.jpg
+
+file:2.jpg
+#+END_SRC
+对于文件链接，可以用::后面增加定位符的方式链接到文件的特定位置，定位符可以是行号或搜索选项。如：
+#+BEGIN_SRC BASH
+file:~/xx.org::255            进入到255行
+
+file:~/xx.org::My Target      找到目标'<<My Target>>'
+
+file:~/xx.org::#my-id         查找自定义id的项
+#+END_SRC
+除了自动链接外可以用下面格式显示指定链接：
+#+BEGIN_SRC BASH
+[[link][description]]
+[[link]]
+#+END_SRC
+****** 内部链接
+#+BEGIN_SRC BASH
+定义锚点#<<my-anchor>>
+[[my-anchor][内部链接]
+#+END_SRC
+脚注可以看成是一种特殊的内部链接，但是要求具有"fn"前缀,例如：
+#+BEGIN_SRC BASH
+添加脚注链接[[fn:footprint1][脚注1]
+定义脚注[fn:footprint1]
+#+END_SRC
+****** 显示图片
+通过命令
+#+BEGIN_SRC BASH
+M-x iimage-mode Ret
+#+END_SRC
+启动minor mode,可以在org-mode 中显示图片。
+*** 轻量级标记语言
+大纲和超链接都是使用标记来定义的。实际上Org算是一种专门的轻量级标记语言，
+与Markdown,reStructedText,Textile,RDoc,MediaWiki等并列。
+
+下面介绍一些标记：
+****** 字体
+#+BEGIN_SRC bash
+*粗体*
+/斜体/
++删除线+
+_下划线_
+下标:H_2 o
+上标:E=mc^2
+等宽字:=git=或~git~
+#+END_SRC
+****** 表格
+Org能够很容易地处理ASCLL文本表格。任何一"|"为首个非空字符的行都会被认为是表格的一部分。
+"|"也是列的分割符。例如：
+#+BEGIN_SRC org
+| name | Age |
+| lisi |  18 |
+#+END_SRC
+****** 段落
+对于当个回车换行的文本，认为其属于同一个段落。如果要新起一个段落，需要留出一个空行.
+****** 列表
+Org能够识别有序列表、无序列表和描述列表。
+#+BEGIN_SRC org
+/*无序列表项以-、=+=、或者*开头。
+
+/*有序列表以1.或者1)开头。
+
+/*描述列表用::将项和描述分开。
+
+/*有序列表和无序列表都以缩进表示层级。只要对齐缩进，不管是换行还是分块都认为是处于当前列表项。
+#+END_SRC
+同一列表中的项的第一行必须缩进相同程度。当下一行的缩进与列表项的开头的符号或者数字相同或者
+更小时，这一项就结束了。当所有的项都关上时，或者后面有两个空行时，列表就结束了。
+*** tag标签
+****** tag的作用
+对于信息的管理，有分类(categroy)和(tag)两种方式。
+
+通常分类是固定的，很少变化，而tag随时可以增加。
+****** 标记tag
+标记格式：
+#+BEGIN_SRC org
+标题    ：tag标签:
+#+END_SRC
+子标题会自动继承父标题的标签
+
+快捷键：
+#+BEGIN_SRC org
+C-c C-c   标题上使用
+C-c C-q   正文部分使用
+#+END_SRC
+****** 预定义tag
+标记时标签可以从预定义标签中选择
+#+BeGIN_SRC org
+文件头定义：
+#+TAGS:{标签1(1) 标签2(2)} 标签3(3)
+
+.emacs中定义：
+(setq org-tag-alist (
+                    (:startgroup .nil)
+                         ("标签1"  .1)("标签2" .2)
+                    (:endgroup .nil)
+                    ("标签3" . ?3)
+                    ))
+
+同时生效在文件头加入:#+TAGS
+#+END_SRC
+****** 按tag搜索
+| keys    | comment              |
+|---------+----------------------|
+| C-c \   | 按tag搜索标题        |
+|---------+----------------------|
+| C-c / m | 搜索并按树状结构显示 |
+|---------+----------------------|
+| C-c a m | 按标签搜索多个文件   |
+|---------+----------------------|
+| C-c c-c | 退出                 |
+
+利用"+","-","|","&"进行灵活搜索
+*** 元数据
+****** 文档元数据
+#+BEGIN_SRC org
+#+TITLE:       the title to be shown (default is the buffer name)
+#+AUTHOR:      the author (default taken from user-full-name)
+#+DATE:        a date, an Org timestamp1, or a format string for format-time-string
+#+EMAIL:       his/her email address (default from user-mail-address)
+#+DESCRIPTION: the page description, e.g. for the XHTML meta tag
+#+KEYWORDS:    the page keywords, e.g. for the XHTML meta tag
+#+LANGUAGE:    language for HTML, e.g. ‘en’ (org-export-default-language)
+#+TEXT:        Some descriptive text to be inserted at the beginning.
+#+TEXT:        Several lines may be given.
+#+OPTIONS:     H:2 num:t toc:t \n:nil @:t ::t |:t ^:t f:t TeX:t ...
+#+BIND:        lisp-var lisp-val, e.g.: org-export-latex-low-levels itemize
+               You need to confirm using these, or configure org-export-allow-BIND
+#+LINK_UP:     the ``up'' link of an exported page
+#+LINK_HOME:   the ``home'' link of an exported page
+#+LATEX_HEADER: extra line(s) for the LaTeX header, like \usepackage{xyz}
+#+EXPORT_SELECT_TAGS:   Tags that select a tree for export
+#+EXPORT_EXCLUDE_TAGS:  Tags that exclude a tree from export
+#+XSLT:        the XSLT stylesheet used by DocBook exporter to generate FO file
+#+END_SRC
+其中#+OPTIONS选项包括：
+#+BEGIN_SRC org
+H:         set the number of headline levels for export
+num:       turn on/off section-numbers
+toc:       turn on/off table of contents, or set level limit (integer)
+\n:        turn on/off line-break-preservation (DOES NOT WORK)
+@:         turn on/off quoted HTML tags
+::         turn on/off fixed-width sections
+|:         turn on/off tables
+^:         turn on/off TeX-like syntax for sub- and superscripts.  If
+           you write "^:{}", a_{b} will be interpreted, but
+           the simple a_b will be left as it is.
+-:         turn on/off conversion of special strings.
+f:         turn on/off footnotes like this[1].
+todo:      turn on/off inclusion of TODO keywords into exported text
+tasks:     turn on/off inclusion of tasks (TODO items), can be nil to remove
+           all tasks, todo to remove DONE tasks, or list of kwds to keep
+pri:       turn on/off priority cookies
+tags:      turn on/off inclusion of tags, may also be not-in-toc
+<:         turn on/off inclusion of any time/date stamps like DEADLINES
+*:         turn on/off emphasized text (bold, italic, underlined)
+TeX:       turn on/off simple TeX macros in plain text
+LaTeX:     configure export of LaTeX fragments.  Default auto
+skip:      turn on/off skipping the text before the first heading
+author:    turn on/off inclusion of author name/email into exported file
+email:     turn on/off inclusion of author email into exported file
+creator:   turn on/off inclusion of creator info into exported file
+timestamp: turn on/off inclusion creation time into exported file
+d:         turn on/off inclusion of drawers
+#+END_SRC
+****** 内容元数据
+#+BEGIN_SRC org
+#+BEGIN_SRC org
+*** test
+#+END_SRC
+#+END_SRC
+****** 插入html
+#+BEGIN_SRC org
+#+BEGIN_HTML
+  <div class="test">
+  </div>
+#+END_HTML
+#+END_SRC
+****** 插入latex
+#+BEGIN_SRC org
+LaTeX 代码
+#+END_SRC
+特殊设置之后，导出 HTML 时 LaTeX 代码片断会生成图片并包含进来。
+*** 导出
+Orgmode支持的输出格式：*txt*，*html*，*PDF*等
+#+BEGIN_SRC org
+命令：
+C-c C-e
+#+END_SRC
+** 任务管理
+Org-mode能够完美解决任务管理的各种问题，包括任务/子任务的划分，关键时间的设定，任务状态变化的跟踪，以及任务的检索和查询。 再配合Org-mode的强大编辑功能 能够实现很多功能，比如时间管理（GTD），项目计划和管理，工作日志等。
+*** 定义任务和子任务
+Org-mode认为，每一个任务通常会需要附带一些文字说明。所以Org-mode将标题作为任务的载体。通过在标题上增加状态标记，来定义任务。 由于大纲是分级的，所以将标题定义为任务天然支持了子任务：可以在子标题上标记子任务。
+
+使用 C-c C-t 或者 S-LEFT/RIGTH 可以为标题增加或改变任务标记。
+*** 定义任务状态
+Org-mode内置的任务状态有两种：
+- TODO
+- DONE
+可以在文件内部定义任务状态:关键字应该各不相同，这样对于一个选项 Org 才知道该用哪个状态序列（集合）。
+
+快速使用一个关键字的方法，就是在关键字后面括号中给出快捷字母 ——当用 C-c C-t 时，会询问，让你输入一个字母。
+
+要自定义任务状态，可以在文档的任何地方定义使用文档元数据
+#+BEGIN_SRC org
+#+SEQ_TODO
+#+END_SRC
+统一定义在文档头部：
+#+BEGIN_SRC org
+#+SEQ_TODO: REPORT(r) BUG(b) KNOWNCAUSE(k) | FIXED(f)
+#+SEQ_TODO: TODO(T!) | DONE(D@)3  CANCELED(C@/!)
+#+END_SRC
+利用C-c C-c生效。此时再用 C-c C-t 设定任务时，会打开一个新的缓冲区：
+
+可以定义多组状态序列，每个 #+SEQ_TODO 行定义一组
+
+状态之间用空格分隔，可以在（）中定义附加选项，包括：
+- 字符：该状态的快捷键
+- ！：切换到该状态时会自动增加时间戳
+- @ ：切换到该状态时要求输入文字说明
+如果同时设定@和！，使用 @/!
+- 用 | 分隔未完成状态和已完成状态。未完成状态在查询待办事项时会列出。
+- 使用C-c C-t 或者 S-LEFT/RIGTH 切换一些状态后，任务会变成这个样子：会自动生成时间戳，提示填写说明。从而留下完整的记录。
+*** 设置任务优先级
+在Org-mode中，还针对任务设定了A，B，C三种优先级，在安排日程的时候可以按照优先级进行排序。
+
+为任务设定优先级是通过快捷键
+#+BEGIN_SRC org
+S-UP/DOWN
+#+END_SRC
+*** 跟踪子任务完成情况
+对于有多个子任务的上级任务，很常见的一个需求是随时跟踪子任务的完成情况。
+
+Org-mode支持在上级任务上增加标记，当子任务的状态发生改变时自动更新上级任务的完成情况。 支持百分比和分数两种形式，类似 [66%] 或者 [2/3] 。
+可以在上级任务标题中的任意位置插入 [%] 或者 [/], 当子任务的状态发生变化时，会自动更新该位置的值。 比如：
+#+BEGIN_SRC org
+* 任务1 [%]
+** 任务2 [/]
+*** 任务3
+#+END_SRC
+*注意：*
+
+当改变子任务状态时，只更新上一级任务的完成情况，不可级联。
+即使所有的子任务都完成，也只是标记上一级任务的完成情况为100%，而不能自动更新上级任务的完成状态。如果需要自动设定为完成，可以在.emacs中增加如下配置：
+#+BEGIN_SRC LISP
+(defun org-summary-todo (n-done n-not-done)
+  "Switch entry to DONE when all subentries are done, to TODO otherwise."
+  (let (org-log-done org-log-states)   ; turn off logging
+    (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
+
+(add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
+#+END_SRC
+*** 用复选框标记非标题的子任务
+前面的任务和子任务都是标题形式。Org-mode还支持非标题形式的子任务。对于以 [ ] 开头的列表 会被当作复选框。这样就形成了局部的子任务， 适用于将一个任务划分成几个简单的步骤。 下面是一个例子：
+
+*** 一个任务 [0/2]
+该任务包含几个步骤：
+- [-] 步骤1 [1/2]
+  - [X] 步骤1.1
+  - [ ] 步骤1.2
+- [-] 步骤2 [1/2]
+  - [X] 步骤2.1
+  - [ ] 步骤2.2
+与子任务类似，步骤的状态变化会改变上级步骤/任务的完成情况。 下面是复选框相关的命令：
+
+| KEYS    | COMMENT        |
+| C-c C-c | 改变复选框状态 |
+| M-S-RET | 增加一个子项   |
+*** 查询任务
+在Org-mode的编辑功能 中介绍过大纲的检索功能：
+#+BEGIN_SRC org
+C-c /           只列出包含搜索结果的大纲，并高亮，支持多种搜索方式
+#+END_SRC
+该功能可以按照多种方式检索，其中针对任务有两种方式：
+- todo
+- TODO key words
+分别实现高亮所有TODO和具有特定关键字的TODO。
+*** 任务的时间计划
+****** 介绍
+在Org-mode中，将带有日期和时间信息的特定格式的字符串称为时间戳。时间戳使用”< >“进行标记，比如：
+#+BEGIN_SRC org
+<2015-10-01 Tue>
+<2016-06-15 Tue 09:39>
+<2016-06-16 Tue 12:00-12:30>
+#+END_SRC
+时间戳分为两种
+- 上面的例子中的时间戳都标记了一个”时间点“
+- 另外一种时间戳标记重复出现的多个时间点。 使用时间点+ 间隔（ 天（d）、周（w）、月（m）或者年（y））来表示。比如：
+<2016-06-16 Wed 12:30 +1w>
+表示从2016-06-16 12:30开始，每周重复一次。
+
+时间戳可以放在标题或正文的任何部分。
+
+快捷键：
+| keys           | 功能                                                                             |
+| C-c .          | 输入时间戳                                                                       |
+| C-c <          | 如果要快速输入日期无需选择                                                       |
+| C-c >          | 可以查看日历                                                                     |
+| C-c !          | 仅仅输入一个日期/时间，与任务没有任何关系                                        |
+| S-left,S-right | 以天为单位调整时间戳时间                                                         |
+| S-up,S-down    | 调整光标所在时间单位；如果光标在时间戳之外，调整时间戳类型（是否在日程表中显示） |
+****** 时间/日期段
+两个时间戳用 -- 连接起来就定义了一个时间段：
+<2016-06-23 Mon>--<2016-07-26 Thu>
+使用
+| C-c .   | 可以创建时间段   |
+| C-c C-y | 计算时间段的间隔 |
+
+****** 计划时间和截止时间
+Org-mode可以为任务设定一个计划时间(SCHEDULED)
+| C-c C-s | 设定光标所在位置所属的任务的计划时间 |
+| C-c C-d | 输入截止时间（DEADLINE               |
+*** 全局任务文件清单
+前面的内容都是关于单个 .org 文件的任务管理。Org-mode还支持将多个 .org 文件组合起来进行管理。这带来很多好处：
+
+你可以按照不同的用途将任务放在不同的文件中进行组织，比如项目，个人事务，家庭等等。
+
+要让Org-mode知道需要把哪些文件视为全局任务的组成部分，需要设定一个清单，可以在 .emacs 中这样设置：
+#+BEGIN_SRC org
+(setq org-agenda-files (list "~/.todos/work.org"
+                             "~/.todos/projects.org"
+                             "~/.todos/home.org"
+                             "~/Documents/todo/"
+                             ))
+#+END_SRC
+清单中可以加入文件或目录。如果是目录，该目录下的所有 .org 文件都会被加入清单。
+
+除了预定义的清单文件，还可以在编辑任务文件( .org )时可以利用以下快捷键：
+|C-c [ 和 C-c ]| 将文件加入/移出清单|
+|C-c '/ | 循环打开所有的清单文件|
+*** 全局TODO列表
+全局TODO列表列出所有全局任务文件中的未完成任务。
+#+BEGIN_SRC org
+C-c a t 进入全局 TODO 列表。
+#+END_SRC
+在全局TODO列表中，用 t 键改变任务状态，；按 RET 跳到该条目所在的源文件。
+
+如果提示 C-c a 快捷键未定义，是因为Org-mode的快捷键没有启用，需要在 .emacs 中增加配置：
+#+BEGIN_SRC LISP
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+#+END_SRC
+*** 日程表
+有时候可能需要根据未完成任务显示日程安排，通过 C-c a a 可以进入日程表视图。 日程表根据任务的计划时间列出每天的任务。
+在日程表视图中按 "l"(小写字母L) 显示日志。这样就会显示你所有已经完成的任务和他们完成的时间。

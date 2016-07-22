@@ -1,0 +1,27 @@
+#+TITLE:解决git push时non-fast-forward的冲突
+#+AUTHOR:ALIANG
+#+EMAIL:anbgsl1110@gmail.com
+#+KEYWORDS:DIARY
+【aliang diary】-青春无限可能，拎得清，爱生活，爱自己
+
+-日期：2016-07-12；作者：阿亮；关键字：笔记、github
+* 解决git push时non-fast-forward的冲突
+** 错误代码
+#+BEGIN_SRC git
+error:failed to push some refs to ...
+Dealing with “non-fast-forward” errors
+From time to time you may encounter this error while pushing:
+#+END_SRC
+** 分析
+问题（Non-fast-forward）的出现原因在于：git仓库中已经有一部分代码，所以它不允许你直接把你的代码覆盖上去。
+** 解决方案
+1. 强推，即利用强覆盖方式用你本地的代码替代git仓库内的内容
+#+BEGIN_SRC git
+git push -f
+#+END_SRC
+2. 先把git的东西fetch到你本地然后merge后再push
+#+BEGIN_SRC git
+$ git fetch
+$ git merge
+#+END_SRC
+这2句命令等价于:git pull.

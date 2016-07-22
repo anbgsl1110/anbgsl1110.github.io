@@ -1,0 +1,34 @@
+#+TITLE:利用github创建个人博客
+#+AUTHOR:ALIANG
+#+EMAIL:anbgsl1110@gmail.com
+#+KEYWORDS:DIARY
+【aliang diary】-青春无限可能，拎得清，爱生活，爱自己
+
+-日期：2016-07-12；作者：阿亮；关键字：笔记、github
+* 利用github创建个人博客
+** 介绍
+GitHub Pages分两种
+- 以自己的GitHub用户名建立的username.github.io这样的用户&组织页（站）
+- 依附项目的pages。
+建立个人博客是用的第一种，形如anbgsl1110.github.io这样的可访问的站，每个用户名下面只能建立一个。
+** 创建步骤
+*** github上建立仓库
+登录后系统，在github首页，点击页面右下角「New Repository」
+
+*** 填写项目信息
+#+BEGIN_SRC txt
+project name：cnfeat.github.io
+description： Writing 1000 Words a Day Changed My Life
+#+end_src
+*备注：repository名字是特定的
+比如:我的github账号是anbgsl1110，那么我github pages repository名字就是anbgsl1110.github.io。*
+*** 完成创建。
+点击「create repository」
+
+创建完以后, 等半个小时左右, 属于你的个人主页就配置好了。
+
+你可以通过 xxx.github.io 进行访问。其中(xxx为你的github用户名)
+*** 后续完善
+根据自己的需求配置域名，以及利用web技术进行开发
+** 体验链接
+基于github page开发的我的个人主页连接[[http:www.aliang.space][阿亮的空间]]。

@@ -1,0 +1,10 @@
+#+TITLE:github插件octotree
+#+AUTHOR:ALIANG
+#+EMAIL:anbgsl1110@gmail.com
+#+KEYWORDS:DIARY
+【aliang diary】-青春无限可能，拎得清，爱生活，爱自己
+
+-日期：2016-07-12；作者：阿亮；关键字：笔记、github
+* github插件octotree
+** 介绍
+Octotree是国外程序员Buu Nguyen写的一个Chrome插件，安装之后，在浏览Github上的项目时会在左侧出现一个代码目录树，能够很方便的查看代码，支持公有库和私有库。有了这款插件，妈妈再也不用担心看代码找不到目录了。

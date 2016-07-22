@@ -1,0 +1,34 @@
+#+TITLE:linux下安装emacs
+#+AUTHOR:ALIANG
+#+EMAIL:anbgsl1110@gmail.com
+#+KEYWORDS:DIARY
+【aliang diary】-青春无限可能，拎得清，爱生活，爱自己
+
+-日期：2016-07-12；作者：阿亮；关键字：笔记、linux,emacs
+* linux下安装emacs
+** 下载emacs24.3.tag.gz
+
+http://ftp.gnu.org/pub/gnu/emacs/emacs24.3.tar.gz/
+** 解压安装
+cd /opt
+
+//cp emacs.24.3.tar.gz /opt
+
+tar -xvzf emacs.24.3.tar.gz
+
+cd emacs.24.3.tar.gz/
+
+.configure
+
+make
+
+make install
+
+备注-"-xvzf"
+-x 从档案文档中释放文件
+
+-v 报告档案文档的文件信息
+
+-z 与-x联合使用，对文档进行压缩或者解压缩
+
+-f 使用档案文件，在tar 时一般是必选的

@@ -1,0 +1,15 @@
+#+TITLE:删除github上的repository
+#+AUTHOR:ALIANG
+#+EMAIL:anbgsl1110@gmail.com
+#+KEYWORDS:DIARY
+【aliang diary】-青春无限可能，拎得清，爱生活，爱自己
+
+-日期：2016-07-12；作者：阿亮；关键字：笔记、github
+* 删除github上的repository
+1. 登陆后选择需要删除的仓库
+2. 在仓库的主界面的右边菜单栏选择settings
+3. 进入设置页面，一直往下拉，会发现一个红色的危险地区。。
+4. 找到delete
+5. 点击delete弹出确认页面
+6. 要自己输入一次名字进行确认删除，觉得蛮好，可以有效防止点着点着删错了
+7. 会提示删除成功
