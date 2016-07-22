@@ -17,63 +17,63 @@ $ git clone -o github -b 2.0.0 git://github.com/xx/xx.git xx2
 #+END_SRC
 直接检出分支 2.0.0，指定远程仓库名称为 github （默认为 origin）、检出到文件夹 xx2 (默认为 xx)
 ****** 查看远程仓库
-#+BEGIN_SRC git
+#+BEGIN_SRC bash
 $ git remote -v
 #+END_SRC
 ****** 添加远程仓库
-#+BEGIN_SRC git
+#+BEGIN_SRC bash
 $ git remote add [name] [url]
 #+END_SRC
 ****** 删除远程仓库
-#+BEGIN_SRC git
+#+BEGIN_SRC bash
 $ git remote rm [name]
 #+END_SRC
 ****** 修改远程仓库
-#+BEGIN_SRC git
+#+BEGIN_SRC bash
 $ git remote set-url --push [name] [newUrl]
 #+END_SRC
 ****** 拉取远程仓库
-#+BEGIN_SRC git
+#+BEGIN_SRC bash
 $ git pull [remoteName] [localBranchName]
 #+END_SRC
 ****** 推送远程仓库
-#+BEGIN_SRC git
+#+BEGIN_SRC bash
 $ git push [remoteName] [localBranchName]
 #+END_SRC
 ****** 强制推送更改
-#+BEGIN_SRC git
+#+BEGIN_SRC bash
 $ git push --force origin master
 #+END_SRC
 如果想把本地的某个分支test提交到远程仓库，并作为远程仓库的master分支，或者作为另外一个名叫test的分支，如下：
-#+BEGIN_SRC git
+#+BEGIN_SRC org
 $ git push origin test:master         // 提交本地test分支作为远程的master分支
 $ git push origin test:test           // 提交本地test分支作为远程的test分支
 #+END_SRC
 ** 分支(branch)操作相关命令
 ****** 查看本地分支
-#+BEGIN_SRC git
+#+BEGIN_SRC bash
 $ git branch
 #+END_SRC
 ****** 查看远程分支
-#+BEGIN_SRC git
+#+BEGIN_SRC bash
 $ git branch -r
 #+END_SRC
 如果还是看不到就先 git fetch origin
 ****** 先创建本地分支
-#+BEGIN_SRC git
+#+BEGIN_SRC bash
 $ git branch [name]
 #+END_SRC
 注意新分支创建后不会自动切换为当前分支
 ****** 切换分支
-#+BEGIN_SRC git
+#+BEGIN_SRC bash
 $ git checkout [name]
 #+END_SRC
 ****** 创建新分支并立即切换到新分支
-#+BEGIN_SRC git
+#+BEGIN_SRC bash
 $ git checkout -b [name]
 #+END_SRC
 ****** 直接检出远程分支
-#+BEGIN_SRC git
+#+BEGIN_SRC org
 $ git checkout -b [name] [remoteName] (如：git checkout -b myNewBranch origin/dragon)
 #+END_SRC
 ****** 删除分支
@@ -252,7 +252,7 @@ $ git config credential.helper cache
 $ git blame [fileName]
 #+END_SRC
 ****** Git常用操作命令
-- rongjih - 拥有自己的梦想，跟随心的召唤
+- rongjih
 ****** 查看仓库历史记录
 有三个应该知道的选项。
 #+BEGIN_SRC git
@@ -262,14 +262,9 @@ $ git blame [fileName]
 #+END_SRC
 ****** 把这些选项组合起来之后如下
 #+BEGIN_SRC git
-Git常用操作命令 - rongjih - 拥有自己的梦想，跟随心的召唤
-使用
-#+BEGIN_SRC git
  $ git log --oneline --graph
 #+END_SRC
 --name-status 既可以看到简介的日志信息，也可以看到改了哪些文件，一举两得：
-
-Git常用操作命令 - rongjih - 拥有自己的梦想，跟随心的召唤
 ** 有选择的合并 - 这个功能最赞，没有之一
 cherry-pick 可以从不同的分支中捡出一个单独的commit，并把它和你当前的分支合并。如果你以并行方式在处理两个或以上分支，你可能会发现一个在全部分支中都有的bug。如果你在一个分支中解决了它，你可以使用cherry-pick命令把它commit到其它分支上去，而不会弄乱其他的文件或commit。
 #+BEGIN_SRC git
@@ -300,16 +295,16 @@ $ git add -p [fileName]
 #+END_SRC
 ** 压缩多个Commit
 用rebase命令把多个commit压缩成一个
-#+BEGIN_SRC git
+#+BEGIN_SRC org
 git rebase -i HEAD~[number_of_commits]
 #+END_SRC
 如果你想要压缩最后两个commit，你需要运行下列命令：
-#+BEGIN_SRC git
+#+BEGIN_SRC org
 git rebase -i HEAD~2
 #+END_SRC
 Docs: 7.6 Git 工具 - 重写历史 、3.6 Git 分支 - 变基
 ** 差异查看
-#+BEGIN_SRC git
+#+BEGIN_SRC org
 $ git diff --name-status HEAD~2 HEAD~3 <-- 获得两个版本间所有变更的文件列表
 $ git diff HEAD HEAD~1 <-- 查看最近两个提交之间的差异
 $ git diff HEAD HEAD~2 <-- 查看第1个与第3个提交之间的差异
