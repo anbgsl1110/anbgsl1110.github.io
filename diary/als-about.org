@@ -77,21 +77,65 @@
 ** 【其他记录】
 暂无其他事件记录。
 * 博文目录-按年月
-文档总数：0
+文档总数：24
 ** 【2016年07月】
-暂无。
+*** [[http:www.aliang.space/diary/201607/1.html][关于代码整洁]]
+*** [[http:www.aliang.space/diary/201607/2.html][win10快捷键]]
+*** [[http:www.aliang.space/diary/201607/2.html][linux常用命令]]
+*** [[http:www.aliang.space/diary/201607/3.html][linux下安装emacs]]
+*** [[http:www.aliang.space/diary/201607/4.html][linux下配置emacs]]
+*** [[http:www.aliang.space/diary/201607/5.html][emacs常用快捷键]]
+*** [[http:www.aliang.space/diary/201607/6.html][emacs解除read-only时buffer的锁定]]
+*** [[http:www.aliang.space/diary/201607/7.html][emacs的多窗口操作]]
+*** [[http:www.aliang.space/diary/201607/8.html][org常用快捷键]]
+*** [[http:www.aliang.space/diary/201607/9.html][org参考文档]]
+*** [[http:www.aliang.space/diary/201607/10.html][linux下安装texlive2016]]
+*** [[http:www.aliang.space/diary/201607/11.html][解决latex转pdf时不兼容中文]]
+*** [[http:www.aliang.space/diary/201607/12.html][利用github创建个人博客]]
+*** [[http:www.aliang.space/diary/201607/13.html][github添加deploy keys]]
+*** [[http:www.aliang.space/diary/201607/14.html][git常用bash命令]]
+*** [[http:www.aliang.space/diary/201607/15.html][github提交代码到github仓库]]
+*** [[http:www.aliang.space/diary/201607/16.html][删除github上的repository]]
+*** [[http:www.aliang.space/diary/201607/17.html][单独删除github仓库中的某个文件]]
+*** [[http:www.aliang.space/diary/201607/18.html][解决git push时non-fast-forward的问题]]
+*** [[http:www.aliang.space/diary/201607/19.html][github上创建分支]]
+*** [[http:www.aliang.space/diary/201607/20.html][github插件octotree]]
+*** [[http:www.aliang.space/diary/201607/21.html][2016秋招远程查看项目说明]]
+*** [[http:www.aliang.space/diary/201607/22.html][应聘阿里巴巴开放问题1]]
+*** [[http:www.aliang.space/diary/201607/23.html][应聘阿里巴巴开放问题2]]
+*** [[http:www.aliang.space/diary/201607/24.html][应聘阿里巴巴开放问题3]]
 * 博文目录-按标签
-文档总数：0
+文档总数：24
 ** 【笔记】-心灵||信仰（善良&&真诚）
-暂无。
+*** [[http:www.aliang.space/diary/201607/1.html][关于代码整洁]]
 ** 【笔记】-应届生面试准备
-暂无。
+*** [[http:www.aliang.space/diary/201607/21.html][2016秋招远程查看项目说明]]
+*** [[http:www.aliang.space/diary/201607/22.html][应聘阿里巴巴开放问题1]]
+*** [[http:www.aliang.space/diary/201607/23.html][应聘阿里巴巴开放问题2]]
+*** [[http:www.aliang.space/diary/201607/24.html][应聘阿里巴巴开放问题3]]
 ** 【热爱】-逻辑||思维
 暂无。
 ** 【热爱】-Linux
-暂无。
+*** [[http:www.aliang.space/diary/201607/2.html][linux常用命令]]
+*** [[http:www.aliang.space/diary/201607/3.html][linux下安装emacs]]
+*** [[http:www.aliang.space/diary/201607/4.html][linux下配置emacs
 ** 【热爱】-Emacs||Github
-暂无。
+*** [[http:www.aliang.space/diary/201607/5.html][emacs常用快捷键]]
+*** [[http:www.aliang.space/diary/201607/6.html][emacs解除read-only时buffer的锁定]]
+*** [[http:www.aliang.space/diary/201607/7.html][emacs的多窗口操作]]
+*** [[http:www.aliang.space/diary/201607/8.html][org常用快捷键]]
+*** [[http:www.aliang.space/diary/201607/9.html][org参考文档]]
+*** [[http:www.aliang.space/diary/201607/10.html][linux下安装texlive2016]]
+*** [[http:www.aliang.space/diary/201607/11.html][解决latex转pdf时不兼容中文]]
+*** [[http:www.aliang.space/diary/201607/12.html][利用github创建个人博客]]
+*** [[http:www.aliang.space/diary/201607/13.html][github添加deploy keys]]
+*** [[http:www.aliang.space/diary/201607/14.html][git常用bash命令]]
+*** [[http:www.aliang.space/diary/201607/15.html][github提交代码到github仓库]]
+*** [[http:www.aliang.space/diary/201607/16.html][删除github上的repository]]
+*** [[http:www.aliang.space/diary/201607/17.html][单独删除github仓库中的某个文件]]
+*** [[http:www.aliang.space/diary/201607/18.html][解决git push时non-fast-forward的问题]]
+*** [[http:www.aliang.space/diary/201607/19.html][github上创建分支]]
+*** [[http:www.aliang.space/diary/201607/20.html][github插件octotree]]
 ** 【必备】-算法||数据结构
 暂无。
 ** 【技能】-后端：C#
@@ -103,6 +147,6 @@
 ** 【必备】-计算机网络
 暂无。
 ** 【必备】-操作系统||服务器
-暂无。
+*** [[http:www.aliang.space/diary/201607/2.html][win10快捷键]]
 * 感谢
 * 链接
