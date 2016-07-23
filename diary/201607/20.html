@@ -3,11 +3,11 @@
                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>github插件octotree</title>
+<title>github创建分支</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-<meta name="title" content="github插件octotree"/>
+<meta name="title" content="github创建分支"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2016-07-22T20:22+0800"/>
+<meta name="generated" content="2016-07-23T08:12+0800"/>
 <meta name="author" content="ALIANG"/>
 <meta name="description" content=""/>
 <meta name="keywords" content="DIARY"/>
@@ -115,9 +115,9 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="content">
-<h1 class="title">github插件octotree</h1>
+<h1 class="title">github创建分支</h1>
 
-<p>【aliang diary】-青春无限可能，拎得清，爱生活，爱自己
+<p>-【aliang diary】-青春无限可能，拎得清，爱生活，爱自己
 </p>
 <p>
 -日期：2016-07-12；作者：阿亮；关键字：笔记、github
@@ -126,34 +126,47 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1 github插件octotree</a>
-<ul>
-<li><a href="#sec-1-1">1.1 介绍</a></li>
-</ul>
-</li>
+<li><a href="#sec-1">1 github上创建分支</a></li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> github插件octotree</h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> github上创建分支</h2>
 <div class="outline-text-2" id="text-1">
 
+<p>新建好的代码库有且仅有一个主分支（master），它是自动建立的。
+</p>
+<p>
+可以新建分支用于开发：
+</p>
 
-</div>
 
-<div id="outline-container-1-1" class="outline-3">
-<h3 id="sec-1-1"><span class="section-number-3">1.1</span> 介绍</h3>
-<div class="outline-text-3" id="text-1-1">
+<pre class="src src-git">git branch develop master
+</pre>
 
-<p>Octotree是国外程序员Buu Nguyen写的一个Chrome插件，安装之后，在浏览Github上的项目时会在左侧出现一个代码目录树，能够很方便的查看代码，支持公有库和私有库。有了这款插件，妈妈再也不用担心看代码找不到目录了。
+<p>
+新建一个叫develop的分支，基于master分支
+</p>
+<p>
+切换到这个分支：
+</p>
+
+
+<pre class="src src-git">git checkout develop
+</pre>
+
+<p>
+现在可以在这个develop分支上做一些改动，并且提交。
+</p>
+<p>
+注意：切换分支的时候可以发现，在Windows中的repository文件夹中的文件内容也会实时相应改变，变成当前分支的内容。
 </p></div>
-</div>
 </div>
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2016-07-22T20:22+0800</p>
+<p class="date">Date: 2016-07-23T08:12+0800</p>
 <p class="author">Author: ALIANG</p>
 <p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
