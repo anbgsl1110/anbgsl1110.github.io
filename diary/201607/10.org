@@ -2,9 +2,9 @@
 #+AUTHOR:ALIANG
 #+EMAIL:anbgsl1110@gmail.com
 #+KEYWORDS:DIARY
--【aliang diary】-青春无限可能，拎得清，爱生活，爱自己
+【aliang diary】-青春无限可能，拎得清，爱生活，爱自己
 
--日期：2016-07-12；作者：阿亮；关键字：笔记、org
+日期：2016-07-12；作者：阿亮；关键字：笔记、org
 * org参考文档
 Org是一个基于快速高效的文本方式来实现做笔记，管理待办事项(TODO list)以及做项目计划的模式。
 ** 文档编辑
