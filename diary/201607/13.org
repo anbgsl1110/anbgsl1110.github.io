@@ -31,4 +31,4 @@ description： Writing 1000 Words a Day Changed My Life
 *** 后续完善
 根据自己的需求配置域名，以及利用web技术进行开发
 ** 体验链接
-基于github page开发的我的个人主页连接[[http:www.aliang.space][阿亮的空间]]。
+基于github page开发的我的个人主页连接[[file:~/502_XiaoLL_Smile/5001_GitHub/anbgsl1110.github.io/index.html][阿亮的空间]]。
