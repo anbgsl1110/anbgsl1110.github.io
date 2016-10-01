@@ -1,0 +1,25 @@
+{
+  "name": "static",
+  "authors": [
+    "Ochou <mfkddcwy@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "dep",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "jquery-pjax": "^1.9.6",
+    "flat-ui": "^2.3.0",
+    "Chart.js": "^2.1.0"
+  }
+}
