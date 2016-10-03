@@ -49,248 +49,133 @@
       <div class="row clearfix">
         <div class="col-md-12 column">
           <h3>
-	    给会员分配服务人员
+            给会员分配服务人员
           </h3>
         </div>
       </div>
       <div class="row clearfix">
         <div class="col-md-12 column">
-	  <div class="clearfix">
-	    <div class="pull-left tableTools-container">
-	      <span style="float: left; margin-right: 10px;">
-		<asp:DropDownList ID="ddlOrderStatus" AutoPostBack="true" CssClass="form-control" runat="server" OnTextChanged="UpdatePanel1_Load"></asp:DropDownList>
-	      </span>
-	      <span class="input-icon input-icon-right" style="float: left; margin-right: 10px;">
-		<input id="txtSearch" type="text" autocomplete="off" maxlength="150" style="width: 300px;" class="form-control" runat="server" placeholder="输入搜索" />
-		<asp:LinkButton ID="btnSearch" CssClass="ace-icon" runat="server"><i class="fa fa-search"></i></asp:LinkButton>
-	      </span>
-	    </div>
-	      <div class="pull-left tableTools-container">
-		<a href="" role="button" class="btn btn-sm btn-success" title="保存"><i class="ace-icon fa fa-plus-save bigger-130"></i>保存</a>
-	      </div>
-	  </div>
-	  <div class="row clearfix">
-	    <div class="col-md-6 column">
-	      <table class="table table-bordered table-hover">
-		<thead>
-		  <tr>
-		    <th>
-		      编号
-		    </th>
-		    <th>
-		      产品
-		    </th>
-		    <th>
-		      交付时间
-		    </th>
-		    <th>
-		      状态
-		    </th>
-		  </tr>
-		</thead>
-		<tbody>
-		  <tr>
-		    <td>
-		      1
-		    </td>
-		    <td>
-		      TB - Monthly
-		    </td>
-		    <td>
-		      01/04/2012
-		    </td>
-		    <td>
-		      Default
-		    </td>
-		  </tr>
-		  <tr class="success">
-		    <td>
-		      1
-		    </td>
-		    <td>
-		      TB - Monthly
-		    </td>
-		    <td>
-		      01/04/2012
-		    </td>
-		    <td>
-		      Approved
-		    </td>
-		  </tr>
-		  <tr class="error">
-		    <td>
-		      2
-		    </td>
-		    <td>
-		      TB - Monthly
-		    </td>
-		    <td>
-		      02/04/2012
-		    </td>
-		    <td>
-		      Declined
-		    </td>
-		  </tr>
-		  <tr class="warning">
-		    <td>
-		      3
-		    </td>
-		    <td>
-		      TB - Monthly
-		    </td>
-		    <td>
-		      03/04/2012
-		    </td>
-		    <td>
-		      Pending
-		    </td>
-		  </tr>
-		  <tr class="info">
-		    <td>
-		      4
-		    </td>
-		    <td>
-		      TB - Monthly
-		    </td>
-		    <td>
-		      04/04/2012
-		    </td>
-		    <td>
-		      Call in to confirm
-		    </td>
-		  </tr>
-		</tbody>
-	      </table>
-	      <span>
-		<p style="color:red">
-		  【注意】请确保分配了一对客服和一对商务!
-		</p>
-	      </span>
-	    </div>
-	    <div class="col-md-6 column">
-	      <table class="table table-bordered table-hover">
-		<thead>
-		  <tr>
-		    <th>
-		      编号
-		    </th>
-		    <th>
-		      产品
-		    </th>
-		    <th>
-		      交付时间
-		    </th>
-		    <th>
-		      状态
-		    </th>
-		  </tr>
-		</thead>
-		<tbody>
-		  <tr>
-		    <td>
-		      1
-		    </td>
-		    <td>
-		      TB - Monthly
-		    </td>
-		    <td>
-		      01/04/2012
-		    </td>
-		    <td>
-		      Default
-		    </td>
-		  </tr>
-		  <tr class="success">
-		    <td>
-		      1
-		    </td>
-		    <td>
-		      TB - Monthly
-		    </td>
-		    <td>
-		      01/04/2012
-		    </td>
-		    <td>
-		      Approved
-		    </td>
-		  </tr>
-		  <tr class="error">
-		    <td>
-		      2
-		    </td>
-		    <td>
-		      TB - Monthly
-		    </td>
-		    <td>
-		      02/04/2012
-		    </td>
-		    <td>
-		      Declined
-		    </td>
-		  </tr>
-		  <tr class="warning">
-		    <td>
-		      3
-		    </td>
-		    <td>
-		      TB - Monthly
-		    </td>
-		    <td>
-		      03/04/2012
-		    </td>
-		    <td>
-		      Pending
-		    </td>
-		  </tr>
-		  <tr class="info">
-		    <td>
-		      4
-		    </td>
-		    <td>
-		      TB - Monthly
-		    </td>
-		    <td>
-		      04/04/2012
-		    </td>
-		    <td>
-		      Call in to confirm
-		    </td>
-		  </tr>
-		</tbody>
-	      </table>
-	      <ul class="pagination">
-		<li>
-		  <a href="#">Prev</a>
-		</li>
-		<li>
-		  <a href="#">1</a>
-		</li>
-		<li>
-		  <a href="#">2</a>
-		</li>
-		<li>
-		  <a href="#">3</a>
-		</li>
-		<li>
-		  <a href="#">4</a>
-		</li>
-		<li>
-		  <a href="#">5</a>
-		</li>
-		<li>
-		  <a href="#">Next</a>
-		</li>
-	      </ul>
-	    </div>
-	  </div>
-	</div>
+          <div class="clearfix">
+            <div class="pull-left tableTools-container">
+              <span style="float: left; margin-right: 10px;">
+                <asp:DropDownList ID="ddlOrderStatus" AutoPostBack="true" CssClass="form-control" runat="server" OnTextChanged="UpdatePanel1_Load"></asp:DropDownList>
+              </span>
+              <span class="input-icon input-icon-right" style="float: left; margin-right: 10px;">
+                <input id="txtSearch" type="text" autocomplete="off" maxlength="150" style="width: 300px;" class="form-control" runat="server" placeholder="输入搜索" />
+                <asp:LinkButton ID="btnSearch" CssClass="ace-icon" runat="server"><i class="fa fa-search"></i></asp:LinkButton>
+              </span>
+            </div>
+            <div class="pull-left tableTools-container">
+              <a href="" role="button" class="btn btn-sm btn-success" title="保存"><i class="ace-icon fa fa-plus-save bigger-130"></i>保存</a>
+            </div>
+          </div>
+          <div class="row clearfix">
+            <div class="col-md-6 column">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>
+                      id
+                    </th>
+                    <th>
+                      cateId
+                    </th>
+                    <th>
+                      姓名
+                    </th>
+                    <th>
+                      分类
+                    </th>
+                    <th>
+                      操作
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      TB - Monthly
+                    </td>
+                    <td>
+                      01/04/2012
+                    </td>
+                    <td>
+                      Default
+                    </td>
+                    <td>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <span>
+                <p style="color:red">
+                  【注意】请确保分配了一对客服和一对商务!
+                </p>
+              </span>
+            </div>
+            <div class="col-md-6 column">
+              <table class="table table-bordered ">
+                <thead>
+                  <tr>
+                    <th>
+                      id
+                    </th>
+                    <th>
+                      cateId
+                    </th>
+                    <th>
+                      姓名
+                    </th>
+                    <th>
+                      分类
+                    </th>
+                    <th>
+                      操作
+                    </th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      TB - Monthly
+                    </td>
+                    <td>
+                      01/04/2012
+                    </td>
+                    <td>
+                      Default
+                    </td>
+                    <td>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <ul class="pagination">
+                <li>
+                  <a href="#">Prev</a>
+                </li>
+                <li>
+                  <a href="#">1</a>
+                </li>
+                <li>
+                  <a href="#">Next</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="row clearfix">
-	<div class="col-md-12 column">
-	  <blockquote class="pull-left">
-	    <p><small id="time"></small></p>
-	  </blockquote>
-	</div>
+        <div class="col-md-12 column">
+          <blockquote class="pull-left">
+            <p><small id="time"></small></p>
+          </blockquote>
+        </div>
       </div>
     </div>
     <form id="modal-form" class="modal fade" tabindex="-1" data-backdrop="static" autocomplete="on">
@@ -333,23 +218,23 @@
         </div>
       </div>
     </form>
-    
-    <!-- basic scripts -->
 
-    <!--[if !IE]><!-->
-        <script type="text/javascript">
-  window.jQuery || document.write("<script src='../../static/dep/assets/js/jquery.js'>" + "<" + "/script>");
+  <!-- basic scripts -->
+
+  <!--[if !IE]><!-->
+  <script type="text/javascript">
+      window.jQuery || document.write("<script src='../../static/dep/assets/js/jquery.js'>" + "<" + "/script>");
   </script>
   <!--<![endif]-->
 
   <!--[if IE]>
-      <script type="text/javascript">
-  window.jQuery || document.write("<script src='../../static/dep/assets/js/jquery1x.js'>"+"<"+"/script>");
+  <script type="text/javascript">
+      window.jQuery || document.write("<script src='../../static/dep/assets/js/jquery1x.js'>"+"<"+"/script>");
   </script>
   <![endif]-->
 
   <script type="text/javascript">
-  if ('ontouchstart' in document.documentElement) document.write("<script src='../../static/dep/assets/js/jquery.mobile.custom.js'>" + "<" + "/script>");
+      if ('ontouchstart' in document.documentElement) document.write("<script src='../../static/dep/assets/js/jquery.mobile.custom.js'>" + "<" + "/script>");
   </script>
 
   <script src="../../static/dep/assets/js/bootstrap.js"></script>
@@ -370,17 +255,17 @@
   <script src="../../static/dep/assets/js/ace/ace.submenu-hover.js"></script>
   <script src="../../static/dep/assets/js/ace/ace.settings.js"></script>
   <script src="/static/dep/assets/js/chosen.jquery.js"></script>
-  <script type="text/javascript">
-  function assortPerson(){
-    $('#modal-form').show();
-  }
-	  jQuery(function ($){
 
-var mydate = new Date();
-var t=mydate.toLocaleString();
-/*alert(t);*/
-$("#time").text(t);
-});
+  <script type="text/javascript">
+    function assortPerson(){
+      $('#modal-form').show();
+    }
+    jQuery(function ($) {
+      var mydate = new Date();
+      var t=mydate.toLocaleString();
+      /*alert(t);*/
+      $("#time").text(t);
+    });
   </script>
 </body>
 </html>
