@@ -318,5 +318,45 @@
 	</div>
       </div>
     </div>
+    <form id="modal-form" class="modal fade" tabindex="-1" data-backdrop="static" autocomplete="on">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 id ="modal-form-title" class="blue bigger">服务人员(<a id ="modal-form-title-name" style ="color:red;">###</a>)图片修改</h4>
+                    <span style="color:#abbac3">【注意】为保证上传成功，请上传不大于2M符合格式（.gif|.png|.jpg|.jpeg|.bmp）的图片！</span>
+                </div>
+
+                <input type="hidden" id="hidRoleId" name="hidRoleId" />
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12">
+                                <div class="form-group">
+                                    <div id="preview" class="col-xs-12 col-sm-3 center" style="margin-left: 40px">
+                                        <span class="profile-picture" style="max-width: 220px; margin-left: 0px">
+                                            <img class="img-responsive" alt="personImage" id="headImg" src="/static/dep/assets/avatars/avatar3.png">
+                                        </span>
+                                        <div class="space space-4"></div>
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm" data-dismiss="modal">
+                        <i class="ace-icon fa fa-times"></i>
+                        取消
+                    </button>
+
+                    <button class="btn btn-sm btn-primary">
+                        <i class="ace-icon fa fa-check"></i>
+                        确定
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
   </body>
 </html>
