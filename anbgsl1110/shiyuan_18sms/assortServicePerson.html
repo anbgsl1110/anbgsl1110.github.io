@@ -188,7 +188,7 @@
         </button>
       </div>
     </div>
-    <form id="modal-form" class="modal fade" tabindex="-1" data-backdrop="static" autocomplete="on">
+    <form id="modal-form" class="modal fade" role="dialog" tabindex="-1" data-backdrop="static" autocomplete="on">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -268,7 +268,7 @@
 
   <script type="text/javascript">
     function assortPerson(){
-      $('#modal-form').modal(options);
+      $('#modal-form').modal('show');
     }
     jQuery(function ($) {
       var mydate = new Date();
