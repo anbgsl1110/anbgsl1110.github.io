@@ -58,11 +58,10 @@
           <div class="clearfix">
             <div class="pull-left tableTools-container">
               <span style="float: left; margin-right: 10px;">
-                <asp:DropDownList ID="ddlOrderStatus" AutoPostBack="true" CssClass="form-control" runat="server" OnTextChanged="UpdatePanel1_Load"></asp:DropDownList>
+                
               </span>
               <span class="input-icon input-icon-right" style="float: left; margin-right: 10px;">
                 <input id="txtSearch" type="text" autocomplete="off" maxlength="150" style="width: 300px;" class="form-control" runat="server" placeholder="输入搜索" />
-                <asp:LinkButton ID="btnSearch" CssClass="ace-icon" runat="server"><i class="fa fa-search"></i></asp:LinkButton>
               </span>
             </div>
             <div class="pull-left tableTools-container">
@@ -71,7 +70,7 @@
           </div>
           <div class="row clearfix">
             <div class="col-md-6 column">
-              <table class="table table-bordered">
+              <table class="table table-bordered table-bordered table-hover">
                 <thead>
                   <tr>
                     <th>
@@ -117,7 +116,7 @@
               </span>
             </div>
             <div class="col-md-6 column">
-              <table class="table table-bordered ">
+              <table class="table table-striped table-bordered table-hover">
                 <thead>
                   <tr>
                     <th>
@@ -269,7 +268,7 @@
 
   <script type="text/javascript">
     function assortPerson(){
-      $('#modal-form').show();
+      $('#modal-form').modal(options);
     }
     jQuery(function ($) {
       var mydate = new Date();
