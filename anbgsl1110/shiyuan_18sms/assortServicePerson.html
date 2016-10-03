@@ -4,36 +4,27 @@
   <head>
     <title>分配服务人员</title>
     <meta charset = "UTF-8">
-    
     <!-- bootstrap & fontawesome -->
     <link rel="stylesheet" href="../../static/dep/assets/css/bootstrap.css" />
     <link rel="stylesheet" href="../../static/dep/assets/css/font-awesome.css" />
-
     <!--new add -->
-    <link href="../../static/dep/assets/css/chosen.css" rel="stylesheet" />	  
-
+    <link href="../../static/dep/assets/css/chosen.css" rel="stylesheet" />
     <!-- page specific plugin styles -->
     <link rel="stylesheet" href="../../static/dep/assets/css/jquery.gritter.css" />
-
     <!-- text fonts -->
     <link rel="stylesheet" href="../../static/dep/assets/css/ace-fonts.css" />
-
     <!-- ace styles -->
     <link rel="stylesheet" href="../../static/dep/assets/css/ace.css" class="ace-main-stylesheet" />
-
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="../../static/dep/assets/css/ace-part2.css" class="ace-main-stylesheet" />
         <![endif]-->
-
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="../../static/dep/assets/css/ace-ie.css" />
         <![endif]-->
     <!-- inline styles related to this page -->
     <link href="../../static/css/common.css" rel="stylesheet" />
-
     <!-- ace settings handler -->
     <script src="../../static/dep/assets/js/ace-extra.js"></script>
-
     <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
     <script src="../../static/dep/jquery.form.min.js"></script>
     <!--[if lte IE 8]>
@@ -55,14 +46,13 @@
           <div class="clearfix">
             <div class="pull-left tableTools-container">
               <span style="float: left; margin-right: 10px;">
-                
               </span>
               <span class="input-icon input-icon-right" style="float: left; margin-right: 10px;">
                 <input id="txtSearch" type="text" autocomplete="off" maxlength="150" style="width: 300px;" class="form-control" runat="server" placeholder="输入搜索" />
               </span>
             </div>
             <div class="pull-left tableTools-container">
-              <a href="#form-modal" role="button" class="btn btn-sm btn-success" data-toggle="modal" title="保存"><i class="ace-icon fa fa-plus-save bigger-130"></i>保存</a>
+              <a href="#form-modal" class="btn btn-sm btn-success" data-toggle="modal" title="保存" role="button"><i class="ace-icon fa fa-plus-save bigger-130"></i>保存</a>
             </div>
           </div>
           <div class="row clearfix">
@@ -178,14 +168,13 @@
           <i class="ace-icon fa fa-times"></i>
           取消
         </button>
-
         <button class="btn btn-sm btn-primary">
           <i class="ace-icon fa fa-check"></i>
           确定
         </button>
       </div>
     </div>
-    <form id="modal-form" class="modal fade" role="dialog" tabindex="-1" data-backdrop="static" autocomplete="on">
+    <form class="modal fade" id="modal-form" tabindex="-1" role="dialog" >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -193,7 +182,6 @@
             <h4 id ="modal-form-title" class="blue bigger">服务人员(<a id ="modal-form-title-name" style ="color:red;">###</a>)图片修改</h4>
             <span style="color:#abbac3">【注意】为保证上传成功，请上传不大于2M符合格式（.gif|.png|.jpg|.jpeg|.bmp）的图片！</span>
           </div>
-
           <input type="hidden" id="hidRoleId" name="hidRoleId" />
           <div class="modal-body">
             <div class="row">
@@ -210,13 +198,11 @@
               </div>
             </div>
           </div>
-
           <div class="modal-footer">
             <button type="button" class="btn btn-sm" data-dismiss="modal">
               <i class="ace-icon fa fa-times"></i>
               取消
             </button>
-
             <button class="btn btn-sm btn-primary">
               <i class="ace-icon fa fa-check"></i>
               确定
