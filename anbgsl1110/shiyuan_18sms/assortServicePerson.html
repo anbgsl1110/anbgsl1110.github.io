@@ -21,12 +21,12 @@
     <link rel="stylesheet" href="../../static/dep/assets/css/ace.css" class="ace-main-stylesheet" />
 
     <!--[if lte IE 9]>
-    <link rel="stylesheet" href="../../static/dep/assets/css/ace-part2.css" class="ace-main-stylesheet" />
-    <![endif]-->
+        <link rel="stylesheet" href="../../static/dep/assets/css/ace-part2.css" class="ace-main-stylesheet" />
+        <![endif]-->
 
     <!--[if lte IE 9]>
-    <link rel="stylesheet" href="../../static/dep/assets/css/ace-ie.css" />
-    <![endif]-->
+        <link rel="stylesheet" href="../../static/dep/assets/css/ace-ie.css" />
+        <![endif]-->
     <!-- inline styles related to this page -->
     <link href="../../static/css/common.css" rel="stylesheet" />
 
@@ -36,9 +36,9 @@
     <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
     <script src="../../static/dep/jquery.form.min.js"></script>
     <!--[if lte IE 8]>
-    <script src="../../static/dep/assets/js/html5shiv.js"></script>
-    <script src="../../static/dep/assets/js/respond.js"></script>
-    <![endif]-->
+        <script src="../../static/dep/assets/js/html5shiv.js"></script>
+        <script src="../../static/dep/assets/js/respond.js"></script>
+        <![endif]-->
   </head>
   <body>
     <div class="container">
@@ -51,22 +51,20 @@
       </div>
       <div class="row clearfix">
         <div class="col-md-12 column">
-	    <div class="clearfix">
-		    <div class="pull-left tableTools-container">
-			<span style="float: left; margin-right: 10px;">
-			    <asp:DropDownList ID="ddlOrderStatus" AutoPostBack="true" CssClass="form-control" runat="server" OnTextChanged="UpdatePanel1_Load"></asp:DropDownList>
-			</span>
-			<span class="input-icon input-icon-right" style="float: left; margin-right: 10px;">
-			    <input id="txtSearch" type="text" autocomplete="off" maxlength="150" style="width: 300px;" class="form-control" runat="server" placeholder="输入搜索：姓名、电话、微信" />
-			    <asp:LinkButton ID="btnSearch" CssClass="ace-icon" runat="server"><i class="fa fa-search"></i></asp:LinkButton>
-			</span>      
-		    </div>
-		    <div class="clearfix">
-			<div class="pull-right tableTools-container">
-			    <a href="ServiceCenterEdit.aspx?catid=<%= CategoryID %>" role="button" class="btn btn-sm btn-success" title="添加"><i class="ace-icon fa fa-plus-circle bigger-130"></i>添加</a>
-			</div>
-		    </div>
-		</div>
+	  <div class="clearfix">
+	    <div class="pull-left tableTools-container">
+	      <span style="float: left; margin-right: 10px;">
+		<asp:DropDownList ID="ddlOrderStatus" AutoPostBack="true" CssClass="form-control" runat="server" OnTextChanged="UpdatePanel1_Load"></asp:DropDownList>
+	      </span>
+	      <span class="input-icon input-icon-right" style="float: left; margin-right: 10px;">
+		<input id="txtSearch" type="text" autocomplete="off" maxlength="150" style="width: 300px;" class="form-control" runat="server" placeholder="输入搜索" />
+		<asp:LinkButton ID="btnSearch" CssClass="ace-icon" runat="server"><i class="fa fa-search"></i></asp:LinkButton>
+	      </span>
+	      <div class="pull-left tableTools-container">
+		<a href="" role="button" class="btn btn-sm btn-success" title="保存"><i class="ace-icon fa fa-plus-circle bigger-130"></i>保存</a>
+	      </div>
+	    </div>
+	  </div>
 	  <div class="row clearfix">
 	    <div class="col-md-6 column">
 	      <table class="table table-bordered">
@@ -294,86 +292,86 @@
       </div>
     </div>
     <form id="modal-form" class="modal fade" tabindex="-1" data-backdrop="static" autocomplete="on">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 id ="modal-form-title" class="blue bigger">服务人员(<a id ="modal-form-title-name" style ="color:red;">###</a>)图片修改</h4>
-                    <span style="color:#abbac3">【注意】为保证上传成功，请上传不大于2M符合格式（.gif|.png|.jpg|.jpeg|.bmp）的图片！</span>
-                </div>
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 id ="modal-form-title" class="blue bigger">服务人员(<a id ="modal-form-title-name" style ="color:red;">###</a>)图片修改</h4>
+            <span style="color:#abbac3">【注意】为保证上传成功，请上传不大于2M符合格式（.gif|.png|.jpg|.jpeg|.bmp）的图片！</span>
+          </div>
 
-                <input type="hidden" id="hidRoleId" name="hidRoleId" />
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12">
-                                <div class="form-group">
-                                    <div id="preview" class="col-xs-12 col-sm-3 center" style="margin-left: 40px">
-                                        <span class="profile-picture" style="max-width: 220px; margin-left: 0px">
-                                            <img class="img-responsive" alt="personImage" id="headImg" src="/static/dep/assets/avatars/avatar3.png">
-                                        </span>
-                                        <div class="space space-4"></div>
-                                    </div>
-                                    <div class="col-sm-1"></div>
-                                </div>
-                        </div>
-                    </div>
+          <input type="hidden" id="hidRoleId" name="hidRoleId" />
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12">
+                <div class="form-group">
+                  <div id="preview" class="col-xs-12 col-sm-3 center" style="margin-left: 40px">
+                    <span class="profile-picture" style="max-width: 220px; margin-left: 0px">
+                      <img class="img-responsive" alt="personImage" id="headImg" src="/static/dep/assets/avatars/avatar3.png">
+                    </span>
+                    <div class="space space-4"></div>
+                  </div>
+                  <div class="col-sm-1"></div>
                 </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-sm" data-dismiss="modal">
-                        <i class="ace-icon fa fa-times"></i>
-                        取消
-                    </button>
-
-                    <button class="btn btn-sm btn-primary">
-                        <i class="ace-icon fa fa-check"></i>
-                        确定
-                    </button>
-                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-sm" data-dismiss="modal">
+              <i class="ace-icon fa fa-times"></i>
+              取消
+            </button>
+
+            <button class="btn btn-sm btn-primary">
+              <i class="ace-icon fa fa-check"></i>
+              确定
+            </button>
+          </div>
         </div>
+      </div>
     </form>
     
     <!-- basic scripts -->
 
     <!--[if !IE]><!-->
-    <script type="text/javascript">
-        window.jQuery || document.write("<script src='../../static/dep/assets/js/jquery.js'>" + "<" + "/script>");
-    </script>
-    <!--<![endif]-->
+        <script type="text/javascript">
+  window.jQuery || document.write("<script src='../../static/dep/assets/js/jquery.js'>" + "<" + "/script>");
+  </script>
+  <!--<![endif]-->
 
-    <!--[if IE]>
-    <script type="text/javascript">
-        window.jQuery || document.write("<script src='../../static/dep/assets/js/jquery1x.js'>"+"<"+"/script>");
-    </script>
-    <![endif]-->
+  <!--[if IE]>
+      <script type="text/javascript">
+  window.jQuery || document.write("<script src='../../static/dep/assets/js/jquery1x.js'>"+"<"+"/script>");
+  </script>
+  <![endif]-->
 
-    <script type="text/javascript">
-        if ('ontouchstart' in document.documentElement) document.write("<script src='../../static/dep/assets/js/jquery.mobile.custom.js'>" + "<" + "/script>");
-    </script>
+  <script type="text/javascript">
+  if ('ontouchstart' in document.documentElement) document.write("<script src='../../static/dep/assets/js/jquery.mobile.custom.js'>" + "<" + "/script>");
+  </script>
 
-    <script src="../../static/dep/assets/js/bootstrap.js"></script>
+  <script src="../../static/dep/assets/js/bootstrap.js"></script>
 
-    <!-- page specific plugin scripts -->
-    <script src="../../static/dep/assets/js/jquery.gritter.js"></script>
-    <script src="../../static/dep/assets/js/bootbox.js"></script>
+  <!-- page specific plugin scripts -->
+  <script src="../../static/dep/assets/js/jquery.gritter.js"></script>
+  <script src="../../static/dep/assets/js/bootbox.js"></script>
 
-    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
-    </asp:ContentPlaceHolder>
+  <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+  </asp:ContentPlaceHolder>
 
-    <!-- ace scripts -->
-    <script src="../../static/dep/assets/js/ace/elements.scroller.js"></script>
-    <script src="../../static/dep/assets/js/ace/ace.js"></script>
-    <script src="../../static/dep/assets/js/ace/ace.touch-drag.js"></script>
-    <script src="../../static/dep/assets/js/ace/ace.sidebar.js"></script>
-    <script src="../../static/dep/assets/js/ace/ace.sidebar-scroll-1.js"></script>
-    <script src="../../static/dep/assets/js/ace/ace.submenu-hover.js"></script>
-    <script src="../../static/dep/assets/js/ace/ace.settings.js"></script>
-    
-    <script type="text/javascript">
-      function assortPerson(){
-         $('#modal-form').show();
-      }
-    </script>
-  </body>
+  <!-- ace scripts -->
+  <script src="../../static/dep/assets/js/ace/elements.scroller.js"></script>
+  <script src="../../static/dep/assets/js/ace/ace.js"></script>
+  <script src="../../static/dep/assets/js/ace/ace.touch-drag.js"></script>
+  <script src="../../static/dep/assets/js/ace/ace.sidebar.js"></script>
+  <script src="../../static/dep/assets/js/ace/ace.sidebar-scroll-1.js"></script>
+  <script src="../../static/dep/assets/js/ace/ace.submenu-hover.js"></script>
+  <script src="../../static/dep/assets/js/ace/ace.settings.js"></script>
+  
+  <script type="text/javascript">
+  function assortPerson(){
+    $('#modal-form').show();
+  }
+  </script>
+</body>
 </html>
