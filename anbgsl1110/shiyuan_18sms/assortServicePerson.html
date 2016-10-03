@@ -289,7 +289,7 @@
 	<div class="col-md-12 column">
 	  <blockquote class="pull-right">
 	    <p>
-              <small><script>$.now();</script></small>
+              <small id="time"></small>
 	  </blockquote>
 	</div>
       </div>
@@ -375,6 +375,14 @@
   function assortPerson(){
     $('#modal-form').show();
   }
+	  jQuery(function ($){
+
+var mydate = new Date();
+var t=mydate.toLocaleString();
+/*alert(t);*/
+$("#time").text(t);
+$("#time").load("Untitled-1.html"); 
+});
   </script>
 </body>
 </html>
