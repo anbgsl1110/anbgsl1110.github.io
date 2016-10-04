@@ -193,7 +193,7 @@
     </div>
     
     <form class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" autocomplete="on">
-      <div class="modal-dialog" style="width:600px;">
+      <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="true" aria-hidden="true"></button>
@@ -273,6 +273,7 @@
                             Default
                           </td>
                           <td>
+                            <a href="javascript:btnDeletePerson();" class="btn btn-sm btn-success" id="btnDelete" title="保存" role="button"><i class="ace-icon fa fa-plus-delete bigger-130"></i>去除</a>
                           </td>
                         </tr>
                         <tr>
@@ -444,8 +445,8 @@
   <script src="../../static/dep/assets/js/chosen.jquery.js"></script>
 
   <script type="text/javascript">
-    function assortPerson(){
-      $('#modal-form').modal('show');
+    function btnDeletePerson(){
+      alert("去除该服务人员。。。");
     }
     jQuery(function ($) {
       var mydate = new Date();
