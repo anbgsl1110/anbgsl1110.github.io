@@ -25,23 +25,23 @@
   width: 52rem;
 }
 
-.container li:first-child {
+.pagination li:first-child {
 float: left;
 }
 
-.container li:first-child a:after {
+.pagination li:first-child a:after {
   content: "Previous";
 }
 
-.container li:nth-child(2) {
+.pagination li:nth-child(2) {
   counter-reset: pagination;
 }
 
-.container li:last-child {
+.pagination li:last-child {
   float: right;
 }
 
-.container li:last-child a:after {
+.pagination li:last-child a:after {
   content: "Next";
 }
 
