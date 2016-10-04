@@ -69,7 +69,7 @@
               </span>
             </div>
             <div class="pull-left tableTools-container">
-              <a href="javascript:assortPerson();" class="btn btn-sm btn-success" title="保存" role="button"><i class="ace-icon fa fa-plus-save bigger-130"></i>保存</a>
+              <a href="javascript:assortPerson();" class="btn btn-sm btn-success" title="保存" style="display:none" role="button"><i class="ace-icon fa fa-plus-save bigger-130"></i>保存</a>
             </div>
           </div>
           <div class="row clearfix">
@@ -191,28 +191,154 @@
         </button>
       </div>
     </div>
+    
     <form class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" autocomplete="on">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 id ="modal-form-title" class="blue bigger">服务人员(<a id ="modal-form-title-name" style ="color:red;">###</a>)图片修改</h4>
-            <span style="color:#abbac3">【注意】为保证上传成功，请上传不大于2M符合格式（.gif|.png|.jpg|.jpeg|.bmp）的图片！</span>
+          <div class="row clearfix">
+            <div class="col-md-12 column">
+              <h3>
+                给会员分配服务人员
+              </h3>
+              <hr>
+            </div>
           </div>
-          <input type="hidden" id="hidRoleId" name="hidRoleId" />
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-xs-12 col-sm-12">
-                <div class="form-group">
-                  <div id="preview" class="col-xs-12 col-sm-3 center" style="margin-left: 40px">
-                    <span class="profile-picture" style="max-width: 220px; margin-left: 0px">
-                      <img class="img-responsive" alt="personImage" id="headImg" src="/static/dep/assets/avatars/avatar3.png">
-                    </span>
-                    <div class="space space-4"></div>
-                  </div>
-                  <div class="col-sm-1"></div>
+          <div class="row clearfix">
+            <div class="col-md-12 column">
+              <div class="clearfix">
+                <div class="pull-left tableTools-container">
+                  <span style="float:left;">
+                    <div class="dropdown">
+                      <button type="button" class="btn btn-sm dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">查看全部
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation">
+                          <a role="menuitem" tabindex="-1" href="#">客服</a>
+                        </li>
+                        <li role="presentation">
+                          <a role="menuitem" tabindex="-1" href="#">商务</a>
+                        </li>
+                        <li role="presentation">
+                          <a role="menuitem" tabindex="-1" href="#">运维</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </span>
+                  <span class="input-icon input-icon-right" style="float: left; margin-right: 10px;">
+                    <input id="txtSearch" type="text" autocomplete="off" maxlength="150" style="width: 300px;" class="form-control" runat="server" placeholder="输入搜索" />
+                  </span>
+                </div>
+                <div class="pull-left tableTools-container">
+                  <a href="javascript:assortPerson();" class="btn btn-sm btn-success" title="保存" style="display:none" role="button"><i class="ace-icon fa fa-plus-save bigger-130"></i>保存</a>
                 </div>
               </div>
+              <div class="row clearfix">
+                <div class="col-md-6 column">
+                  <table class="table table-bordered table-bordered table-hover">
+                    <thead>
+                      <tr>
+                        <th>
+                          id
+                        </th>
+                        <th>
+                          cateId
+                        </th>
+                        <th>
+                          姓名
+                        </th>
+                        <th>
+                          分类
+                        </th>
+                        <th>
+                          操作
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          1
+                        </td>
+                        <td>
+                          TB - Monthly
+                        </td>
+                        <td>
+                          01/04/2012
+                        </td>
+                        <td>
+                          Default
+                        </td>
+                        <td>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <span>
+                    <p style="color:red">
+                      【注意】请确保分配了一对客服和一对商务!
+                    </p>
+                  </span>
+                </div>
+                <div class="col-md-6 column">
+                  <table class="table table-striped table-bordered table-hover">
+                    <thead>
+                      <tr>
+                        <th>
+                          id
+                        </th>
+                        <th>
+                          cateId
+                        </th>
+                        <th>
+                          姓名
+                        </th>
+                        <th>
+                          分类
+                        </th>
+                        <th>
+                          操作
+                        </th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          1
+                        </td>
+                        <td>
+                          TB - Monthly
+                        </td>
+                        <td>
+                          01/04/2012
+                        </td>
+                        <td>
+                          Default
+                        </td>
+                        <td>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <ul class="pagination">
+                    <li>
+                      <a href="#">Prev</a>
+                    </li>
+                    <li>
+                      <a href="#">1</a>
+                    </li>
+                    <li>
+                      <a href="#">Next</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row clearfix">
+            <div class="col-md-12 column">
+              <blockquote class="pull-left">
+                <p><small id="time"></small></p>
+              </blockquote>
             </div>
           </div>
           <div class="modal-footer">
@@ -220,13 +346,12 @@
               <i class="ace-icon fa fa-times"></i>
               取消
             </button>
-            <button class="btn btn-sm btn-primary">
+            <button class="btn btn-sm btn-primary"  data-toggle="modal" data-target="#modal-form">
               <i class="ace-icon fa fa-check"></i>
               确定
             </button>
           </div>
         </div>
-      </div>
     </form>
 
   <!-- basic scripts -->
