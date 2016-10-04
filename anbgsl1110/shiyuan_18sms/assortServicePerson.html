@@ -257,10 +257,10 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td>
+                        <td style="display:none">
                           1
                         </td>
-                        <td>
+                        <td style="display:none">
                           TB - Monthly
                         </td>
                         <td>
@@ -302,10 +302,10 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td>
+                        <td style="display:none">
                           1
                         </td>
-                        <td>
+                        <td style="display:none">
                           TB - Monthly
                         </td>
                         <td>
@@ -337,7 +337,7 @@
           <div class="row clearfix">
             <div class="col-md-12 column">
               <blockquote class="pull-left">
-                <p><small id="time"></small></p>
+                <p><small id="time1"></small></p>
               </blockquote>
             </div>
           </div>
@@ -399,11 +399,11 @@
       var mydate = new Date();
       var t=mydate.toLocaleString();
       /*alert(t);*/
-      $("#time").text(t);
+      $('#time').text(t);
     });
     $('#modal-form').on('show.bs.modal',function(){
       var date =new Date();
-      $("#time").text(date.toLocaleString());
+      $("#time1").text(date.toLocaleString());
     });
   </script>
 </body>
