@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/style_paging.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+    <link rel="stylesheet" href="static/dep/assets/css/bootstrap.css" />
   </head>
   <body>
     <!--
@@ -148,9 +149,27 @@
 
     </div>
     
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+	  <!-- basic scripts -->
+
+  <!--[if !IE]><!-->
+  <script type="text/javascript">
+      window.jQuery || document.write("<script src='../../static/dep/assets/js/jquery.js'>" + "<" + "/script>");
+  </script>
+  <!--<![endif]-->
+
+  <!--[if IE]>
+  <script type="text/javascript">
+      window.jQuery || document.write("<script src='../../static/dep/assets/js/jquery1x.js'>"+"<"+"/script>");
+  </script>
+  <![endif]-->
+
+  <script type="text/javascript">
+      if ('ontouchstart' in document.documentElement) document.write("<script src='../../static/dep/assets/js/jquery.mobile.custom.js'>" + "<" + "/script>");
+  </script>
+
+  <script src="../../static/dep/assets/js/bootstrap.js"></script>
     <script type="text/javascript" src="js/jquery.transform-0.9.3.min_.js"></script>
     <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
-    <script type="text/javascript" src="js/jquery.RotateImageMenu.js"></script>
+    <script type="text/javascript" src="js/jquery.RotateImageMenu.js"></script>	
   </body>
 </html>
