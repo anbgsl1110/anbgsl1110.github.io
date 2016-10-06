@@ -433,7 +433,7 @@
 
         //分配服务人员
         function assortServicePerson(id) {
-            alert("正在完善分配客服人员信息");
+            alert("正在完善分配客服人员信息！");
         }
 
     </script>
