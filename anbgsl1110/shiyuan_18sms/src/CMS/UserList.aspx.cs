@@ -55,10 +55,10 @@ namespace Weetop.Web.CMS
                             //GetOwner();
                             break;
                         case "7":
-                            //Valid();
+                            GetJson();
                             break;
                         case "8":
-                            assortServicePerson();
+                            AssortServicePerson();
                             break;
                         default:
                             VAdmin = SiteAdmin.GetAdminView(Admin.UserId);
@@ -320,9 +320,25 @@ namespace Weetop.Web.CMS
             //Response.Write(Common.Json("OK", "帐号" + (entity.InfoValid ? " <b>已认证</b>" : " <b>未认证</b>") + ""));
             //Response.End();
         }
-        #endregion AJAX
+        
+        //根据ID获取对应的SiteUser对象信息
+        private void GetJson()
+        {
+            Response.ContentType = "application/json";
 
+            string temp = "test";
+            Response.Write(Common.Json("ok","操作成功",temp));
+            Response.End();
+        }
+        
         //分配咨询服务服务人员
+        private void AssortServicePerson()
+        {
+            Response.ContentType = "application/json";
+
+            Response.Write(Common.Json("Err","参数错误"));
+            Response.End();
+        }
 
         private void BindData()
         {

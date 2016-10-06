@@ -109,18 +109,18 @@
                                                    <i class="ace-icon fa fa-search-plus bigger-130"></i>
                                                   </a>
                                               <%}
-                                                
+
                                                 if (item2.PrivilegeCode == "SC")
                                               {%>
                                                    <a class="red" href="javascript:ConfirmDel('<%# Eval("UserId") %>');" title="删除">
                                                     <i class="ace-icon fa fa-trash-o bigger-130"></i>
                                                    </a>
-                                              <%} 
+                                              <%}
                                               if(item2.PrivilegeCode == "XG")
                                               {%>
                                                    <a class="green" href="javascript:assortServicePerson('<%# Eval("UserId") %>');" title="分配服务人员">
                                                     <i class="ace-icon fa fa-edit bigger-130"></i>
-                                                   </a>                                              
+                                                   </a>
                                               <%}
                                           } %>
                                     </td>
@@ -165,7 +165,7 @@
                     </div>
                 </div>
             </form>
-                      
+
             <form class="modal fade" id="modal-form1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" autocomplete="on">
               <div class="modal-dialog" style="width:800px">
                 <div class="modal-content">
@@ -687,7 +687,7 @@
             setTimeout(function(){
                 $('#hidUserId').val(id);
             },500);
-            
+
             $("#modal-form1").modal("show");
 
             jQuery(function($){
