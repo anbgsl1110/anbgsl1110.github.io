@@ -178,9 +178,6 @@
     <script src="/static/dep/assets/js/date-time/bootstrap-datepicker.js"></script>
     <script src="/static/dep/assets/js/date-time/daterangepicker.js"></script>
     <script src="/static/dep/jsrender.min.js"></script>
-    <%--<script src="/static/dep/validator/jquery.validator.js"></script>--%>
-    <%--<script src="/static/dep/validator/local/zh-CN.js"></script>--%>
-    <%--<script src="/static/dep/md5.min.js"></script>--%>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder4" runat="Server">
 
