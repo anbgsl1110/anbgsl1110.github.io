@@ -13,7 +13,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
 
     <div class="page-header">
-        <h1><%: Page.Title %>
+        <h1><%: Page.Title %> 
             <small>
                 <i class="ace-icon fa fa-angle-double-right"></i>
                 信息列表
@@ -166,6 +166,280 @@
                     </div>
                 </div>
             </form>
+                      
+    <form class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" autocomplete="on">
+      <div class="modal-dialog" style="width:800px">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close btn-xs" data-dismiss="modal" aria-hidden="true">x</button>
+            <h5>
+              给会员(<span id="assortUserId" style="color:red">###</span>)分配服务人员
+            </h5>
+          </div>
+          <input type="hidden" id="hidUserId" name="hidUserId" />//用于向服务器传递UerId的值
+          <div class="modal-body">
+            <div class="row clearfix">
+              <div class="col-md-12 column">
+                <div class="clearfix">
+                  <div class="pull-left tableTools-container">
+                    <span style="float:left;">
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-sm dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">查看全部
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                          <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">客服</a>
+                          </li>
+                          <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">商务</a>
+                          </li>
+                          <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">运维</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+                <div class="row clearfix">
+                  <div class="col-md-6 column">
+                    <table class="table table-bordered table-bordered table-hover table-condensed">
+                      <thead>
+                        <tr>
+                          <th style="display:none">
+                            id
+                          </th>
+                          <th style="display:none">
+                            cateId
+                          </th>
+                          <th>
+                            姓名
+                          </th>
+                          <th>
+                            分类
+                          </th>
+                          <th>
+                            操作
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="display:none">
+                            1
+                          </td>
+                          <td style="display:none">
+                            TB - Monthly
+                          </td>
+                          <td>
+                            01/04/2012
+                          </td>
+                          <td>
+                            Default
+                          </td>
+                          <td style="text-align:center">
+                            <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-warning" id="btnDelete" title="去除" role="button"><i class="ace-icon fa fa-minus bigger-130"></i>去除</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="display:none">
+                            1
+                          </td>
+                          <td style="display:none">
+                            TB - Monthly
+                          </td>
+                          <td>
+                            01/04/2012
+                          </td>
+                          <td>
+                            Default
+                          </td>
+                          <td style="text-align:center">
+                            <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-warning" id="btnDelete" title="去除" role="button"><i class="ace-icon fa fa-minus bigger-130"></i>去除</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="display:none">
+                            1
+                          </td>
+                          <td style="display:none">
+                            TB - Monthly
+                          </td>
+                          <td>
+                            01/04/2012
+                          </td>
+                          <td>
+                            Default
+                          </td>
+                          <td style="text-align:center">
+                            <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-warning" id="btnDelete" title="去除" role="button"><i class="ace-icon fa fa-minus bigger-130"></i>去除</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="display:none">
+                            1
+                          </td>
+                          <td style="display:none">
+                            TB - Monthly
+                          </td>
+                          <td>
+                            01/04/2012
+                          </td>
+                          <td>
+                            Default
+                          </td>
+                          <td style="text-align:center">
+                            <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-warning" id="btnDelete" title="去除" role="button"><i class="ace-icon fa fa-minus bigger-130"></i>去除</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <span>
+                      <p style="color:red">
+                        【注意】请确保分配了一对客服和一对商务!
+                      </p>
+                    </span>
+                    <blockquote class="pull-left">
+                      <p><small id="time1"></small></p>
+                    </blockquote>
+                  </div>
+                  <div class="col-md-6 column">
+                    <table class="table table-striped table-bordered table-hover table-condensed">
+                      <thead>
+                        <tr>
+                          <th style="display:none">
+                            id
+                          </th>
+                          <th style="display:none">
+                            cateId
+                          </th>
+                          <th>
+                            姓名
+                          </th>
+                          <th>
+                            分类
+                          </th>
+                          <th>
+                            操作
+                          </th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="display:none">
+                            1
+                          </td>
+                          <td style="display:none">
+                            TB - Monthly
+                          </td>
+                          <td>
+                            01/04/2012
+                          </td>
+                          <td>
+                            Default
+                          </td>
+                          <td style="text-align:center">
+                            <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-success" id="btnDelete" title="去除" role="button"><i class="ace-icon fa fa-plus bigger-130"></i>添加</a>
+                          </td>
+                        </tr>
+                        <tr>
+                         <td style="display:none">
+                            1
+                          </td>
+                          <td style="display:none">
+                            TB - Monthly
+                          </td>
+                          <td>
+                            01/04/2012
+                          </td>
+                          <td>
+                            Default
+                          </td>
+                          <td style="text-align:center">
+                            <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-success" id="btnDelete" title="去除" role="button"><i class="ace-icon fa fa-plus bigger-130"></i>添加</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="display:none">
+                            1
+                          </td>
+                          <td style="display:none">
+                            TB - Monthly
+                          </td>
+                          <td>
+                            01/04/2012
+                          </td>
+                          <td>
+                            Default
+                          </td>
+                          <td style="text-align:center">
+                            <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-success" id="btnDelete" title="去除" role="button"><i class="ace-icon fa fa-plus bigger-130"></i>添加</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="display:none">
+                            1
+                          </td>
+                          <td style="display:none">
+                            TB - Monthly
+                          </td>
+                          <td>
+                            01/04/2012
+                          </td>
+                          <td>
+                            Default
+                          </td>
+                          <td style="text-align:center">
+                            <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-success" id="btnDelete" title="去除" role="button"><i class="ace-icon fa fa-plus bigger-130"></i>添加</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="display:none">
+                            1
+                          </td>
+                          <td style="display:none">
+                            TB - Monthly
+                          </td>
+                          <td>
+                            01/04/2012
+                          </td>
+                          <td>
+                            Default
+                          </td>
+                          <td style="text-align:center">
+                            <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-success" id="btnDelete" title="去除" role="button"><i class="ace-icon fa fa-plus bigger-130"></i>添加</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <ul class="pagination">
+                      <li>
+                        <a href="#">Prev</a>
+                      </li>
+                      <li>
+                        <a href="#">1</a>
+                      </li>
+                      <li>
+                        <a href="#">Next</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-sm" data-dismiss="modal">
+              <i class="ace-icon fa fa-times"></i>
+              取消
+            </button>
+            <button class="btn btn-sm btn-primary"  data-toggle="modal" data-target="#modal-form">
+              <i class="ace-icon fa fa-check"></i>
+              确定
+            </button>
+          </div>
+        </div>
+    </form>
 
 
         </div>
@@ -434,9 +708,23 @@
         //分配服务人员
         function assortServicePerson(id) {
             alert("正在完善分配客服人员信息！");
+            SetTimeOut(function(){
+                $('#hidUserId').Val(id);
+            },500);
+
+            $('#modal-form1').modal('show');
+
+            jQuery(function($){
+                $('#modal-form1').on('show.bs.modal hide.bs.modal',function(e){
+                    this.reset();
+                });
+                var date = new Date();
+                $('#time1').text(date.toLocaleString());
+
+            });
         }
 
     </script>
-
+    
 </asp:Content>
 
