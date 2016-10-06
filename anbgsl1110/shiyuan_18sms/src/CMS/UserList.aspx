@@ -15,7 +15,7 @@
         <h1><%: Page.Title %> 
             <small>
                 <i class="ace-icon fa fa-angle-double-right"></i>
-                信息列表
+                信息123列表
             </small>
         </h1>
     </div>
