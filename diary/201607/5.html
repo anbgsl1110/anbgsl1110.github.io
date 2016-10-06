@@ -2,65 +2,167 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
 <head>
-<title>linux下配置emacs</title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-<meta name="title" content="linux下配置emacs"/>
-<meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2016-07-22T19:52+0800"/>
-<meta name="author" content="ALIANG"/>
-<meta name="description" content=""/>
-<meta name="keywords" content="DIARY"/>
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  html { font-family: Times, serif; font-size: 12pt; }
-  .title  { text-align: center; }
-  .todo   { color: red; }
-  .done   { color: green; }
-  .tag    { background-color: #add8e6; font-weight:normal }
-  .target { }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
-  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
-  .center {margin-left:auto; margin-right:auto; text-align:center;}
-  p.verse { margin-left: 3% }
-  pre {
-	border: 1pt solid #AEBDCC;
-	background-color: #F3F5F7;
-	padding: 5pt;
-	font-family: courier, monospace;
-        font-size: 90%;
-        overflow:auto;
-  }
-  table { border-collapse: collapse; }
-  td, th { vertical-align: top;  }
-  th.right  { text-align:center;  }
-  th.left   { text-align:center;   }
-  th.center { text-align:center; }
-  td.right  { text-align:right;  }
-  td.left   { text-align:left;   }
-  td.center { text-align:center; }
-  dt { font-weight: bold; }
-  div.figure { padding: 0.5em; }
-  div.figure p { text-align: center; }
-  div.inlinetask {
-    padding:10px;
-    border:2px solid gray;
-    margin:10px;
-    background: #ffffcc;
-  }
-  textarea { overflow-x: auto; }
-  .linenr { font-size:smaller }
-  .code-highlighted {background-color:#ffff00;}
-  .org-info-js_info-navigation { border-style:none; }
-  #org-info-js_console-label { font-size:10px; font-weight:bold;
-                               white-space:nowrap; }
-  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
-                                 font-weight:bold; }
-  /*]]>*/-->
-</style>
-<script type="text/javascript">
+  <title>linux下配置emacs</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="title" content="linux下配置emacs" />
+  <meta name="generator" content="Org-mode" />
+  <meta name="generated" content="2016-07-22T19:52+0800" />
+  <meta name="author" content="ALIANG" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="DIARY" />
+  <style type="text/css">
+    <!--
+    /*--><![CDATA[/*><!--*/
+    
+    html {
+      font-family: Times, serif;
+      font-size: 12pt;
+    }
+    
+    .title {
+      text-align: center;
+    }
+    
+    .todo {
+      color: red;
+    }
+    
+    .done {
+      color: green;
+    }
+    
+    .tag {
+      background-color: #add8e6;
+      font-weight: normal
+    }
+    
+    .target {}
+    
+    .timestamp {
+      color: #bebebe;
+    }
+    
+    .timestamp-kwd {
+      color: #5f9ea0;
+    }
+    
+    .right {
+      margin-left: auto;
+      margin-right: 0px;
+      text-align: right;
+    }
+    
+    .left {
+      margin-left: 0px;
+      margin-right: auto;
+      text-align: left;
+    }
+    
+    .center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    
+    p.verse {
+      margin-left: 3%
+    }
+    
+    pre {
+      border: 1pt solid #AEBDCC;
+      background-color: #F3F5F7;
+      padding: 5pt;
+      font-family: courier, monospace;
+      font-size: 90%;
+      overflow: auto;
+    }
+    
+    table {
+      border-collapse: collapse;
+    }
+    
+    td,
+    th {
+      vertical-align: top;
+    }
+    
+    th.right {
+      text-align: center;
+    }
+    
+    th.left {
+      text-align: center;
+    }
+    
+    th.center {
+      text-align: center;
+    }
+    
+    td.right {
+      text-align: right;
+    }
+    
+    td.left {
+      text-align: left;
+    }
+    
+    td.center {
+      text-align: center;
+    }
+    
+    dt {
+      font-weight: bold;
+    }
+    
+    div.figure {
+      padding: 0.5em;
+    }
+    
+    div.figure p {
+      text-align: center;
+    }
+    
+    div.inlinetask {
+      padding: 10px;
+      border: 2px solid gray;
+      margin: 10px;
+      background: #ffffcc;
+    }
+    
+    textarea {
+      overflow-x: auto;
+    }
+    
+    .linenr {
+      font-size: smaller
+    }
+    
+    .code-highlighted {
+      background-color: #ffff00;
+    }
+    
+    .org-info-js_info-navigation {
+      border-style: none;
+    }
+    
+    #org-info-js_console-label {
+      font-size: 10px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    
+    .org-info-js_search-highlight {
+      background-color: #ffff00;
+      color: #000000;
+      font-weight: bold;
+    }
+    /*]]>*/
+    
+    -->
+  </style>
+  <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
@@ -108,51 +210,55 @@ for the JavaScript code in this tag.
 </script>
 
 </head>
+
 <body>
 
-<div id="preamble">
+  <div id="preamble">
 
-</div>
+  </div>
 
-<div id="content">
-<h1 class="title">linux下配置emacs</h1>
+  <div id="content">
+    <h1 class="title">linux下配置emacs</h1>
 
-<p>【aliang diary】-青春无限可能，拎得清，爱生活，爱自己
-</p>
-<p>
--日期：2016-07-12；作者：阿亮；关键字：笔记、linux,emacs
-</p>
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#sec-1">1 linux下配置emacs（emacs.d）</a></li>
-</ul>
-</div>
-</div>
+    <p>【aliang diary】-青春无限可能，拎得清，爱生活，爱自己
+    </p>
+    <p>
+      -日期：2016-07-12；作者：阿亮；关键字：笔记、linux,emacs
+    </p>
+    <div id="table-of-contents">
+      <h2>Table of Contents</h2>
+      <div id="text-table-of-contents">
+        <ul>
+          <li><a href="#sec-1">1 linux下配置emacs（emacs.d）</a></li>
+        </ul>
+      </div>
+    </div>
 
-<div id="outline-container-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> linux下配置emacs（emacs.d）</h2>
-<div class="outline-text-2" id="text-1">
+    <div id="outline-container-1" class="outline-2">
+      <h2 id="sec-1"><span class="section-number-2">1</span> linux下配置emacs（emacs.d）</h2>
+      <div class="outline-text-2" id="text-1">
 
-<p>看了大神的建议：先站在巨人的肩膀上体会，我完全抄袭的大神配置
-</p>
-<p>
-参考大神的链接：
-<a href="https://github.com/redguardtoo/emacs.d/">https://github.com/redguardtoo/emacs.d/</a>
-</p>
-<p>
-<a href="http://blog.csdn.net/redguardtoo/article/details/7222501/">http://blog.csdn.net/redguardtoo/article/details/7222501/</a>
-</p></div>
-</div>
-</div>
+        <p>看了大神的建议：先站在巨人的肩膀上体会，我完全抄袭的大神配置
+        </p>
+        <p>
+          参考大神的链接：
+          <a href="https://github.com/redguardtoo/emacs.d/">https://github.com/redguardtoo/emacs.d/</a>
+        </p>
+        <p>
+          <a href="http://blog.csdn.net/redguardtoo/article/details/7222501/">http://blog.csdn.net/redguardtoo/article/details/7222501/</a>
+        </p>
+      </div>
+    </div>
+  </div>
 
-<div id="postamble">
-<p class="date">Date: 2016-07-22T19:52+0800</p>
-<p class="author">Author: ALIANG</p>
-<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
-<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+  <div id="postamble">
+    <p class="date">Date: 2016-07-22T19:52+0800</p>
+    <p class="author">Author: ALIANG</p>
+    <p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version
+      24</p>
+    <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
 
-</div>
+  </div>
 </body>
+
 </html>

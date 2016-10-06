@@ -2,65 +2,167 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
 <head>
-<title>question3</title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-<meta name="title" content="question3"/>
-<meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2016-07-21T16:06+0800"/>
-<meta name="author" content="root"/>
-<meta name="description" content=""/>
-<meta name="keywords" content=""/>
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  html { font-family: Times, serif; font-size: 12pt; }
-  .title  { text-align: center; }
-  .todo   { color: red; }
-  .done   { color: green; }
-  .tag    { background-color: #add8e6; font-weight:normal }
-  .target { }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
-  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
-  .center {margin-left:auto; margin-right:auto; text-align:center;}
-  p.verse { margin-left: 3% }
-  pre {
-	border: 1pt solid #AEBDCC;
-	background-color: #F3F5F7;
-	padding: 5pt;
-	font-family: courier, monospace;
-        font-size: 90%;
-        overflow:auto;
-  }
-  table { border-collapse: collapse; }
-  td, th { vertical-align: top;  }
-  th.right  { text-align:center;  }
-  th.left   { text-align:center;   }
-  th.center { text-align:center; }
-  td.right  { text-align:right;  }
-  td.left   { text-align:left;   }
-  td.center { text-align:center; }
-  dt { font-weight: bold; }
-  div.figure { padding: 0.5em; }
-  div.figure p { text-align: center; }
-  div.inlinetask {
-    padding:10px;
-    border:2px solid gray;
-    margin:10px;
-    background: #ffffcc;
-  }
-  textarea { overflow-x: auto; }
-  .linenr { font-size:smaller }
-  .code-highlighted {background-color:#ffff00;}
-  .org-info-js_info-navigation { border-style:none; }
-  #org-info-js_console-label { font-size:10px; font-weight:bold;
-                               white-space:nowrap; }
-  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
-                                 font-weight:bold; }
-  /*]]>*/-->
-</style>
-<script type="text/javascript">
+  <title>question3</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="title" content="question3" />
+  <meta name="generator" content="Org-mode" />
+  <meta name="generated" content="2016-07-21T16:06+0800" />
+  <meta name="author" content="root" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <style type="text/css">
+    <!--
+    /*--><![CDATA[/*><!--*/
+    
+    html {
+      font-family: Times, serif;
+      font-size: 12pt;
+    }
+    
+    .title {
+      text-align: center;
+    }
+    
+    .todo {
+      color: red;
+    }
+    
+    .done {
+      color: green;
+    }
+    
+    .tag {
+      background-color: #add8e6;
+      font-weight: normal
+    }
+    
+    .target {}
+    
+    .timestamp {
+      color: #bebebe;
+    }
+    
+    .timestamp-kwd {
+      color: #5f9ea0;
+    }
+    
+    .right {
+      margin-left: auto;
+      margin-right: 0px;
+      text-align: right;
+    }
+    
+    .left {
+      margin-left: 0px;
+      margin-right: auto;
+      text-align: left;
+    }
+    
+    .center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    
+    p.verse {
+      margin-left: 3%
+    }
+    
+    pre {
+      border: 1pt solid #AEBDCC;
+      background-color: #F3F5F7;
+      padding: 5pt;
+      font-family: courier, monospace;
+      font-size: 90%;
+      overflow: auto;
+    }
+    
+    table {
+      border-collapse: collapse;
+    }
+    
+    td,
+    th {
+      vertical-align: top;
+    }
+    
+    th.right {
+      text-align: center;
+    }
+    
+    th.left {
+      text-align: center;
+    }
+    
+    th.center {
+      text-align: center;
+    }
+    
+    td.right {
+      text-align: right;
+    }
+    
+    td.left {
+      text-align: left;
+    }
+    
+    td.center {
+      text-align: center;
+    }
+    
+    dt {
+      font-weight: bold;
+    }
+    
+    div.figure {
+      padding: 0.5em;
+    }
+    
+    div.figure p {
+      text-align: center;
+    }
+    
+    div.inlinetask {
+      padding: 10px;
+      border: 2px solid gray;
+      margin: 10px;
+      background: #ffffcc;
+    }
+    
+    textarea {
+      overflow-x: auto;
+    }
+    
+    .linenr {
+      font-size: smaller
+    }
+    
+    .code-highlighted {
+      background-color: #ffff00;
+    }
+    
+    .org-info-js_info-navigation {
+      border-style: none;
+    }
+    
+    #org-info-js_console-label {
+      font-size: 10px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    
+    .org-info-js_search-highlight {
+      background-color: #ffff00;
+      color: #000000;
+      font-weight: bold;
+    }
+    /*]]>*/
+    
+    -->
+  </style>
+  <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
@@ -108,157 +210,163 @@ for the JavaScript code in this tag.
 </script>
 
 </head>
+
 <body>
 
-<div id="preamble">
+  <div id="preamble">
 
-</div>
+  </div>
 
-<div id="content">
-<h1 class="title">question3</h1>
-
-
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#sec-1">1 阿里巴巴集团-阿里云-云市场-企业频道</a></li>
-<li><a href="#sec-2">2 对该项目的了解</a>
-<ul>
-<li><a href="#sec-2-1">2.1 关于云市场</a></li>
-<li><a href="#sec-2-2">2.2 自己的体验</a></li>
-</ul>
-</li>
-<li><a href="#sec-3">3 想去实习的原因</a></li>
-<li><a href="#sec-4">4 自己比较匹配的能力</a></li>
-<li><a href="#sec-5">5 结语</a>
-<ul>
-<li><a href="#sec-5-1">5.1 信仰</a></li>
-<li><a href="#sec-5-2">5.2 感谢</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> 阿里巴巴集团-阿里云-云市场-企业频道 &nbsp;&nbsp;&nbsp;<span class="tag"><span class="__3">问题3</span></span></h2>
-<div class="outline-text-2" id="text-1">
-
-</div>
-
-</div>
-
-<div id="outline-container-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> 对该项目的了解</h2>
-<div class="outline-text-2" id="text-2">
+  <div id="content">
+    <h1 class="title">question3</h1>
 
 
-</div>
+    <div id="table-of-contents">
+      <h2>Table of Contents</h2>
+      <div id="text-table-of-contents">
+        <ul>
+          <li><a href="#sec-1">1 阿里巴巴集团-阿里云-云市场-企业频道</a></li>
+          <li><a href="#sec-2">2 对该项目的了解</a>
+            <ul>
+              <li><a href="#sec-2-1">2.1 关于云市场</a></li>
+              <li><a href="#sec-2-2">2.2 自己的体验</a></li>
+            </ul>
+          </li>
+          <li><a href="#sec-3">3 想去实习的原因</a></li>
+          <li><a href="#sec-4">4 自己比较匹配的能力</a></li>
+          <li><a href="#sec-5">5 结语</a>
+            <ul>
+              <li><a href="#sec-5-1">5.1 信仰</a></li>
+              <li><a href="#sec-5-2">5.2 感谢</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-<div id="outline-container-2-1" class="outline-3">
-<h3 id="sec-2-1"><span class="section-number-3">2.1</span> 关于云市场</h3>
-<div class="outline-text-3" id="text-2-1">
+    <div id="outline-container-1" class="outline-2">
+      <h2 id="sec-1"><span class="section-number-2">1</span> 阿里巴巴集团-阿里云-云市场-企业频道 &nbsp;&nbsp;&nbsp;<span class="tag"><span class="__3">问题3</span></span>
+      </h2>
+      <div class="outline-text-2" id="text-1">
 
-<p>阿里云－云市场:软件交易及交付第一平台，做为2016年阿里云的战略发展点，承接着中国云生态各个链条产品的落地。目前，入驻云市场的优秀ISV遍布国内外，提供围绕云计算产品的软件应用及服务，包括但不限于基础软件、服务市场、行业软件、企业应用、建站市场等。云市场提供完备的服务监管来保证用户的利益，并把更多的产品、品牌及销售资源赋能商家。 
-</p>
-<p>
-一方面，阿里云为软件企业向云端转型提供计算能力，并对其开放阿里云百万级的用户市场;另一方面，合作伙伴帮助阿里云不断丰富产品 品类，完善垂直领域的解决方案，与阿里云现有产品与解决方案形成互补。生态伙伴间的互相协同，也将加速中国软件的云化进程，让更多企业受益。 
-    云生态在未来是一种趋势，未来的竞争不再是一个产品或是一个平台的竞争，而是生态之间的竞争。 
-</p></div>
+      </div>
 
-</div>
+    </div>
 
-<div id="outline-container-2-2" class="outline-3">
-<h3 id="sec-2-2"><span class="section-number-3">2.2</span> 自己的体验</h3>
-<div class="outline-text-3" id="text-2-2">
+    <div id="outline-container-2" class="outline-2">
+      <h2 id="sec-2"><span class="section-number-2">2</span> 对该项目的了解</h2>
+      <div class="outline-text-2" id="text-2">
 
 
+      </div>
 
+      <div id="outline-container-2-1" class="outline-3">
+        <h3 id="sec-2-1"><span class="section-number-3">2.1</span> 关于云市场</h3>
+        <div class="outline-text-3" id="text-2-1">
 
-<pre class="src src-org">- &#33258;&#24049;&#23454;&#20064;&#30340;&#20844;&#21496;&#26159;&#20570;&#20225;&#19994;&#20449;&#24687;&#21270;&#35299;&#20915;&#26041;&#26696;&#65292;&#33258;&#24049;&#22312;&#20570;&#30340;&#36807;&#31243;&#20250;&#20851;&#27880;&#38463;&#37324;&#20113;&#19978;&#38754;&#25552;&#20379;&#30340;&#19968;&#20123;&#22914;OA&#65292;CRM&#31561;&#36719;&#20214;&#12290;
-- &#24863;&#35273;&#25552;&#20379;&#30340;&#36719;&#20214;&#22823;&#22810;&#36807;&#20110;&#26631;&#20934;&#65292;&#24456;&#38590;&#30495;&#27491;&#30340;&#35299;&#20915;&#20225;&#19994;&#20449;&#24687;&#21270;&#33853;&#22320;&#65292;&#26356;&#22810;&#30340;&#25105;&#35273;&#24471;&#30446;&#21069;&#19978;&#38754;&#25552;&#20379;&#30340;&#24456;&#22810;&#26159;&#24037;&#20855;&#65292;&#32780;&#33853;&#22320;&#26159;&#36890;&#36807;&#23450;&#21046;&#21644;&#38463;&#37324;&#20113;&#21512;&#20316;&#30340;&#36719;&#20214;&#20379;&#24212;&#21830;&#23454;&#29616;&#12290;
-</pre>
+          <p>阿里云－云市场:软件交易及交付第一平台，做为2016年阿里云的战略发展点，承接着中国云生态各个链条产品的落地。目前，入驻云市场的优秀ISV遍布国内外，提供围绕云计算产品的软件应用及服务，包括但不限于基础软件、服务市场、行业软件、企业应用、建站市场等。云市场提供完备的服务监管来保证用户的利益，并把更多的产品、品牌及销售资源赋能商家。
+          </p>
+          <p>
+            一方面，阿里云为软件企业向云端转型提供计算能力，并对其开放阿里云百万级的用户市场;另一方面，合作伙伴帮助阿里云不断丰富产品 品类，完善垂直领域的解决方案，与阿里云现有产品与解决方案形成互补。生态伙伴间的互相协同，也将加速中国软件的云化进程，让更多企业受益。
+            云生态在未来是一种趋势，未来的竞争不再是一个产品或是一个平台的竞争，而是生态之间的竞争。
+          </p>
+        </div>
 
-</div>
-</div>
+      </div>
 
-</div>
-
-<div id="outline-container-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> 想去实习的原因</h2>
-<div class="outline-text-2" id="text-3">
+      <div id="outline-container-2-2" class="outline-3">
+        <h3 id="sec-2-2"><span class="section-number-3">2.2</span> 自己的体验</h3>
+        <div class="outline-text-3" id="text-2-2">
 
 
 
 
-<pre class="src src-org">1. &#33258;&#24049;&#26159;&#24544;&#23454;&#30340;&#29992;&#25143;&#65292;&#26377;&#28857;&#23567;&#23815;&#25308;
-2. &#33258;&#24049;&#23545;&#20113;&#24066;&#22330;&#24456;&#24863;&#20852;&#36259;
-3. &#21548;&#29087;&#24713;&#30340;&#20154;&#35828;&#38463;&#37324;&#30340;&#20225;&#19994;&#25991;&#21270;&#24456;&#22909;
-4. &#26410;&#26469;&#24819;&#36935;&#35265;&#26356;&#20248;&#31168;&#30340;&#33258;&#24049;
-</pre>
+          <pre class="src src-org">- &#33258;&#24049;&#23454;&#20064;&#30340;&#20844;&#21496;&#26159;&#20570;&#20225;&#19994;&#20449;&#24687;&#21270;&#35299;&#20915;&#26041;&#26696;&#65292;&#33258;&#24049;&#22312;&#20570;&#30340;&#36807;&#31243;&#20250;&#20851;&#27880;&#38463;&#37324;&#20113;&#19978;&#38754;&#25552;&#20379;&#30340;&#19968;&#20123;&#22914;OA&#65292;CRM&#31561;&#36719;&#20214;&#12290;
+            - &#24863;&#35273;&#25552;&#20379;&#30340;&#36719;&#20214;&#22823;&#22810;&#36807;&#20110;&#26631;&#20934;&#65292;&#24456;&#38590;&#30495;&#27491;&#30340;&#35299;&#20915;&#20225;&#19994;&#20449;&#24687;&#21270;&#33853;&#22320;&#65292;&#26356;&#22810;&#30340;&#25105;&#35273;&#24471;&#30446;&#21069;&#19978;&#38754;&#25552;&#20379;&#30340;&#24456;&#22810;&#26159;&#24037;&#20855;&#65292;&#32780;&#33853;&#22320;&#26159;&#36890;&#36807;&#23450;&#21046;&#21644;&#38463;&#37324;&#20113;&#21512;&#20316;&#30340;&#36719;&#20214;&#20379;&#24212;&#21830;&#23454;&#29616;&#12290;
+          </pre>
 
-</div>
+        </div>
+      </div>
 
-</div>
+    </div>
 
-<div id="outline-container-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> 自己比较匹配的能力</h2>
-<div class="outline-text-2" id="text-4">
-
-<ol>
-<li>有做企业信息化解决方案的相关经验
-</li>
-<li>有做大数据中心交互处理的相关经历
-</li>
-<li>自己的专业和个人技能与之匹配
-</li>
-</ol>
-
-</div>
-
-</div>
-
-<div id="outline-container-5" class="outline-2">
-<h2 id="sec-5"><span class="section-number-2">5</span> 结语</h2>
-<div class="outline-text-2" id="text-5">
-
-
-</div>
-
-<div id="outline-container-5-1" class="outline-3">
-<h3 id="sec-5-1"><span class="section-number-3">5.1</span> 信仰</h3>
-<div class="outline-text-3" id="text-5-1">
-
-<p>青春无限可能，相信明天会更好
-</p></div>
-
-</div>
-
-<div id="outline-container-5-2" class="outline-3">
-<h3 id="sec-5-2"><span class="section-number-3">5.2</span> 感谢</h3>
-<div class="outline-text-3" id="text-5-2">
+    <div id="outline-container-3" class="outline-2">
+      <h2 id="sec-3"><span class="section-number-2">3</span> 想去实习的原因</h2>
+      <div class="outline-text-2" id="text-3">
 
 
 
 
-<pre class="src src-org">- &#24863;&#35874;&#38463;&#37324;&#24052;&#24052;&#32473;&#25105;&#25237;&#36882;&#31616;&#21382;&#30340;&#26426;&#20250;
-- &#24863;&#35874;&#26379;&#21451;&#37329;&#26093;&#19996;&#23545;&#25105;&#30340;&#20869;&#25512;&#26426;&#20250;
-- &#24863;&#35874;&#27491;&#22312;&#30475;&#31616;&#21382;&#30340;&#20320;&#33021;&#35748;&#30495;&#30475;&#21040;&#32467;&#23614;
-- &#31069;&#20320;&#36523;&#20307;&#20581;&#24247;
-</pre>
+        <pre class="src src-org">1. &#33258;&#24049;&#26159;&#24544;&#23454;&#30340;&#29992;&#25143;&#65292;&#26377;&#28857;&#23567;&#23815;&#25308;
+          2. &#33258;&#24049;&#23545;&#20113;&#24066;&#22330;&#24456;&#24863;&#20852;&#36259; 3. &#21548;&#29087;&#24713;&#30340;&#20154;&#35828;&#38463;&#37324;&#30340;&#20225;&#19994;&#25991;&#21270;&#24456;&#22909;
+          4. &#26410;&#26469;&#24819;&#36935;&#35265;&#26356;&#20248;&#31168;&#30340;&#33258;&#24049;
+        </pre>
 
-</div>
-</div>
-</div>
-</div>
+      </div>
 
-<div id="postamble">
-<p class="date">Date: 2016-07-21T16:06+0800</p>
-<p class="author">Author: root</p>
-<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
-<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+    </div>
 
-</div>
+    <div id="outline-container-4" class="outline-2">
+      <h2 id="sec-4"><span class="section-number-2">4</span> 自己比较匹配的能力</h2>
+      <div class="outline-text-2" id="text-4">
+
+        <ol>
+          <li>有做企业信息化解决方案的相关经验
+          </li>
+          <li>有做大数据中心交互处理的相关经历
+          </li>
+          <li>自己的专业和个人技能与之匹配
+          </li>
+        </ol>
+
+      </div>
+
+    </div>
+
+    <div id="outline-container-5" class="outline-2">
+      <h2 id="sec-5"><span class="section-number-2">5</span> 结语</h2>
+      <div class="outline-text-2" id="text-5">
+
+
+      </div>
+
+      <div id="outline-container-5-1" class="outline-3">
+        <h3 id="sec-5-1"><span class="section-number-3">5.1</span> 信仰</h3>
+        <div class="outline-text-3" id="text-5-1">
+
+          <p>青春无限可能，相信明天会更好
+          </p>
+        </div>
+
+      </div>
+
+      <div id="outline-container-5-2" class="outline-3">
+        <h3 id="sec-5-2"><span class="section-number-3">5.2</span> 感谢</h3>
+        <div class="outline-text-3" id="text-5-2">
+
+
+
+
+          <pre class="src src-org">- &#24863;&#35874;&#38463;&#37324;&#24052;&#24052;&#32473;&#25105;&#25237;&#36882;&#31616;&#21382;&#30340;&#26426;&#20250;
+            - &#24863;&#35874;&#26379;&#21451;&#37329;&#26093;&#19996;&#23545;&#25105;&#30340;&#20869;&#25512;&#26426;&#20250;
+            - &#24863;&#35874;&#27491;&#22312;&#30475;&#31616;&#21382;&#30340;&#20320;&#33021;&#35748;&#30495;&#30475;&#21040;&#32467;&#23614;
+            - &#31069;&#20320;&#36523;&#20307;&#20581;&#24247;
+          </pre>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="postamble">
+    <p class="date">Date: 2016-07-21T16:06+0800</p>
+    <p class="author">Author: root</p>
+    <p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version
+      24
+    </p>
+    <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+  </div>
 </body>
+
 </html>
