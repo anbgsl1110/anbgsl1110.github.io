@@ -117,7 +117,12 @@
                                                     <i class="ace-icon fa fa-trash-o bigger-130"></i>
                                                    </a>
                                               <%} 
-                                                
+                                              if(item2.PrivilegeCode == "XG")
+                                              {%>
+                                                   <a class="green" href="javascript:assortServicePerson('<%# Eval("UserId") %>');" title="分配服务人员">
+                                                    <i class="ace-icon fa fa-edit bigger-130"></i>
+                                                   </a>                                              
+                                              <%}
                                           } %>
                                     </td>
                                 </tr>
@@ -427,6 +432,11 @@
                     }
                 }
             });
+        }
+
+        //分配服务人员
+        function assortServicePerson(id) {
+            alert("正在完善分配客服人员信息");
         }
 
     </script>
