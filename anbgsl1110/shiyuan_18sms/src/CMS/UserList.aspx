@@ -175,7 +175,7 @@
                       给会员(<span id="assortUserId" style="color:red">###</span>)分配服务人员
                     </h5>
                   </div>
-                  <input type="hidden" id="hidUserId" name="hidUserId" />//用于向服务器传递UerId的值
+                  <input type="hidden" id="hidUserId" name="hidUserId" />
                   <div class="modal-body">
                     <div class="row clearfix">
                       <div class="col-md-12 column">
@@ -685,20 +685,30 @@
         //分配服务人员
         function assortServicePerson(id) {
             setTimeout(function(){
-                $('#hidUserId').val(id);
+                $('#hidUserId').val(id);//便于向服务器传值
             },500);
 
-            $("#modal-form1").modal("show");
-
-            jQuery(function($){
-                $("#modal-form1").on('show.bs.modal hide.bs.modal',function(){
-                    this.reset();
-                });
-                var date = new Date();
-                $('#time1').text(date.toLocaleString());
-
+            $.getJSON('',action:7,id:id},function(jdata,textStatus,jqXHR){
+              if('success' == textStaus){
+                swith(jdata.code){
+                  case "OK":
+                    $('#modal-form1').modal('show');
+                    break;
+                  case "Err":
+                    showErr(jdata.message);
+                    break;
+                }
+              }
             });
         }
+           
+        jQuery(function($){ 
+          $("#modal-form1").on('show.bs.modal hide.bs.modal',function(){
+             this.reset();
+            });
+          var date = new Date();
+          $('#time1').text(date.toLocaleString()); 
+        });
     </script>
 </asp:Content>
 
