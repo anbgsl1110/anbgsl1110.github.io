@@ -57,6 +57,9 @@ namespace Weetop.Web.CMS
                         case "7":
                             //Valid();
                             break;
+                        case "8":
+                            assortServicePerson();
+                            break;
                         default:
                             VAdmin = SiteAdmin.GetAdminView(Admin.UserId);
                             GetModulePrivilegeByRoleId();
@@ -318,6 +321,8 @@ namespace Weetop.Web.CMS
             //Response.End();
         }
         #endregion AJAX
+
+        //分配咨询服务服务人员
 
         private void BindData()
         {

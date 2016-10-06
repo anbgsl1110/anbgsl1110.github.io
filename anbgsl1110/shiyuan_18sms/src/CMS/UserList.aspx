@@ -8,7 +8,6 @@
     <link href="/static/dep/assets/css/chosen.css" rel="stylesheet" />
     <link href="/static/dep/assets/css/bootstrap-datepicker3.css" rel="stylesheet" />
     <link href="/static/dep/assets/css/daterangepicker.css" rel="stylesheet" />
-    <%--<link href="/static/dep/validator/jquery.validator.css" rel="stylesheet" />--%>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
 
@@ -167,7 +166,7 @@
                 </div>
             </form>
                       
-            <form class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" autocomplete="on">
+            <form class="modal fade" id="modal-form1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" autocomplete="on">
               <div class="modal-dialog" style="width:800px">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -685,15 +684,14 @@
 
         //分配服务人员
         function assortServicePerson(id) {
-            alert("正在完善分配客服人员信息！");
-            SetTimeOut(function(){
-                $('#hidUserId').Val(id);
+            setTimeout(function(){
+                $('#hidUserId').val(id);
             },500);
-
-            $('#modal-form1').modal('show');
+            
+            $("#modal-form1").modal("show");
 
             jQuery(function($){
-                $('#modal-form1').on('show.bs.modal hide.bs.modal',function(e){
+                $("#modal-form1").on('show.bs.modal hide.bs.modal',function(){
                     this.reset();
                 });
                 var date = new Date();

@@ -57,7 +57,7 @@
             "request": "launch",
             "url": "http://localhost:10969/CMS/UserList",
             "sourceMaps": false,
-            "webRoot": "C:/Repos/shiyuan_18sms/Weetop.Web"
+            "webRoot": "C:/Repos/shiyuan_18sms/Weetop.Web/"
         },
         {
             "name": "Attach to Chrome, with sourcemaps",
