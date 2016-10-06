@@ -1,7 +1,7 @@
 windows下为实现项目文件之间一致创建硬链接
 示例：
-命令：mklink /H C:\Repos\anbgsl1110.github.io\anbgsl1110\shiyuan_18sms\src\CMS\UserList.aspx C：\Repos\shiyuan_18sms\Weetop.Web\CMS\UserList.aspx
-输出结果：为C：\Repos\shiyuan_18sms\Weetop.Web\CMS\UserList.aspx<< == >>C:\Repos\anbgsl1110.github.io\anbgsl\shiyuan_18sms\src\CMS\UserList.aspx创建了硬链接
+命令：mklink /H C:\Repos\anbgsl1110.github.io\anbgsl1110\shiyuan_18sms\src\CMS\UserList.aspx C:\Repos\shiyuan_18sms\Weetop.Web\CMS\UserList.aspx
+输出结果：为C:\Repos\shiyuan_18sms\Weetop.Web\CMS\UserList.aspx<< == >>C:\Repos\anbgsl1110.github.io\anbgsl\shiyuan_18sms\src\CMS\UserList.aspx创建了硬链接
 
 
 【方法】

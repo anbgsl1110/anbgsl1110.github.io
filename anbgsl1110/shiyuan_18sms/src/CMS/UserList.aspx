@@ -175,30 +175,28 @@
                       给会员(<span id="assortUserId" style="color:red">###</span>)分配服务人员
                     </h5>
                   </div>
-                  <input type="hidden" id="hidUserId" name="hidUserId" />
+                  <input type="hidden" id="hidUserId1" name="hidUserId" />
                   <div class="modal-body">
                     <div class="row clearfix">
                       <div class="col-md-12 column">
                         <div class="clearfix">
                           <div class="pull-left tableTools-container">
-                            <span style="float:left;">
-                              <div class="dropdown">
-                                <button type="button" class="btn btn-sm dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">查看全部
-                                  <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                                  <li role="presentation">
-                                    <a role="menuitem" tabindex="-1" href="#">客服</a>
-                                  </li>
-                                  <li role="presentation">
-                                    <a role="menuitem" tabindex="-1" href="#">商务</a>
-                                  </li>
-                                  <li role="presentation">
-                                    <a role="menuitem" tabindex="-1" href="#">运维</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </span>
+                            <div class="dropdown" style="float:left;">
+                            <button type="button" class="btn btn-sm dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">查看全部
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="#">客服</a>
+                                </li>
+                                <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="#">商务</a>
+                                </li>
+                                <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="#">运维</a>
+                                </li>
+                            </ul>
+                            </div>
                           </div>
                         </div>
                         <div class="row clearfix">
@@ -238,7 +236,7 @@
                                     Default
                                   </td>
                                   <td style="text-align:center">
-                                    <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-warning" id="btnDelete" title="去除" role="button"><i class="ace-icon fa fa-minus bigger-130"></i>去除</a>
+                                    <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-warning" id="btnDelete1" title="去除" role="button"><i class="ace-icon fa fa-minus bigger-130"></i>去除</a>
                                   </td>
                                 </tr>
                                 <tr>
@@ -255,7 +253,7 @@
                                     Default
                                   </td>
                                   <td style="text-align:center">
-                                    <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-warning" id="btnDelete" title="去除" role="button"><i class="ace-icon fa fa-minus bigger-130"></i>去除</a>
+                                    <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-warning" id="btnDelete2" title="去除" role="button"><i class="ace-icon fa fa-minus bigger-130"></i>去除</a>
                                   </td>
                                 </tr>
                                 <tr>
@@ -272,7 +270,7 @@
                                     Default
                                   </td>
                                   <td style="text-align:center">
-                                    <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-warning" id="btnDelete" title="去除" role="button"><i class="ace-icon fa fa-minus bigger-130"></i>去除</a>
+                                    <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-warning" id="btnDelete3" title="去除" role="button"><i class="ace-icon fa fa-minus bigger-130"></i>去除</a>
                                   </td>
                                 </tr>
                                 <tr>
@@ -289,16 +287,14 @@
                                     Default
                                   </td>
                                   <td style="text-align:center">
-                                    <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-warning" id="btnDelete" title="去除" role="button"><i class="ace-icon fa fa-minus bigger-130"></i>去除</a>
+                                    <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-warning" id="btnDelete4" title="去除" role="button"><i class="ace-icon fa fa-minus bigger-130"></i>去除</a>
                                   </td>
                                 </tr>
                               </tbody>
                             </table>
-                            <span>
-                              <p style="color:red">
-                                【注意】请确保分配了一对客服和一对商务!
-                              </p>
-                            </span>
+                            <p style="color:red">
+                            【注意】请确保分配了一对客服和一对商务!
+                            </p>
                             <blockquote class="pull-left">
                               <p><small id="time1"></small></p>
                             </blockquote>
@@ -322,6 +318,7 @@
                                   <th>
                                     操作
                                   </th>
+                                </tr>   
                               </thead>
                               <tbody>
                                 <tr>
@@ -338,7 +335,7 @@
                                     Default
                                   </td>
                                   <td style="text-align:center">
-                                    <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-success" id="btnDelete" title="去除" role="button"><i class="ace-icon fa fa-plus bigger-130"></i>添加</a>
+                                    <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-success" id="btnDeleteServicePerson5" title="去除" role="button"><i class="ace-icon fa fa-plus bigger-130"></i>添加</a>
                                   </td>
                                 </tr>
                                 <tr>
@@ -355,7 +352,7 @@
                                     Default
                                   </td>
                                   <td style="text-align:center">
-                                    <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-success" id="btnDelete" title="去除" role="button"><i class="ace-icon fa fa-plus bigger-130"></i>添加</a>
+                                    <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-success" id="btnDeleteServicePerson6" title="去除" role="button"><i class="ace-icon fa fa-plus bigger-130"></i>添加</a>
                                   </td>
                                 </tr>
                                 <tr>
@@ -372,7 +369,7 @@
                                     Default
                                   </td>
                                   <td style="text-align:center">
-                                    <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-success" id="btnDelete" title="去除" role="button"><i class="ace-icon fa fa-plus bigger-130"></i>添加</a>
+                                    <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-success" id="btnDeleteServicePerson7" title="去除" role="button"><i class="ace-icon fa fa-plus bigger-130"></i>添加</a>
                                   </td>
                                 </tr>
                                 <tr>
@@ -389,7 +386,7 @@
                                     Default
                                   </td>
                                   <td style="text-align:center">
-                                    <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-success" id="btnDelete" title="去除" role="button"><i class="ace-icon fa fa-plus bigger-130"></i>添加</a>
+                                    <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-success" id="btnDeleteServicePerson8" title="去除" role="button"><i class="ace-icon fa fa-plus bigger-130"></i>添加</a>
                                   </td>
                                 </tr>
                                 <tr>
@@ -406,7 +403,7 @@
                                     Default
                                   </td>
                                   <td style="text-align:center">
-                                    <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-success" id="btnDelete" title="去除" role="button"><i class="ace-icon fa fa-plus bigger-130"></i>添加</a>
+                                    <a href="javascript:btnDeletePerson();" class="btn btn-xs btn-success" id="btnDeleteServicePerson9" title="去除" role="button"><i class="ace-icon fa fa-plus bigger-130"></i>添加</a>
                                   </td>
                                 </tr>
                               </tbody>
@@ -438,6 +435,7 @@
                     </button>
                   </div>
                 </div>
+              </div>    
             </form>
         </div>
     </div>
@@ -684,21 +682,21 @@
 
         //分配服务人员
         function assortServicePerson(id) {
-            setTimeout(function(){
+            setTimeout(function () {
                 $('#hidUserId').val(id);//便于向服务器传值
-            },500);
+            }, 500);
 
-            $.getJSON('',action:7,id:id},function(jdata,textStatus,jqXHR){
-              if('success' == textStaus){
-                swith(jdata.code){
-                  case "OK":
-                    $('#modal-form1').modal('show');
-                    break;
-                  case "Err":
-                    showErr(jdata.message);
-                    break;
+            $.getJSON('', { action: 7, id: id }, function (jdata, textStatus, jqXHR) {
+                if ('success' == textStatus) {
+                    switch (jdata.code) {
+                        case "OK":
+                            $('#modal-form1').modal('show');
+                            break;
+                        case "Err":
+                            showErr(jdata.message);
+                            break;
+                    }
                 }
-              }
             });
         }
            
