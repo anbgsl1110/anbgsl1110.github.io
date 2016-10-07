@@ -11,7 +11,7 @@ body {
 
 a {
   color: DarkOrchid;
-  text-shadow: 0px 1px 1px DarkCyan;
+  /*text-shadow: 0px 1px 1px DarkCyan;*/
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
