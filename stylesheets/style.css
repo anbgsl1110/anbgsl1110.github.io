@@ -98,6 +98,7 @@ body{
 	transform:rotate(-45deg);
 }
 .rm_nav a{
+	color:red;
 	position:absolute;
 	top:225px;
 	width:38px;
