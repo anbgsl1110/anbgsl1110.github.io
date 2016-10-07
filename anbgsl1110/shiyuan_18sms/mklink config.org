@@ -1,22 +1,22 @@
 * 示远网址建设项目硬链接汇总
 ** DAL
-mklink /H C:\Repos\anbgsl1110.github.io\anbgsl1110\shiyuan_18sms\src\DAL\SiteConsultingService.cs C:\Repos\shiyuan_18sms\Weetop.DAL\SiteConsultingService
+mklink /H C:\Repos\anbgsl1110.github.io\anbgsl1110\shiyuan_18sms\src\DAL\SiteConsultingService.cs C:\Repos\shiyuan_18sms\Weetop.DAL\SiteConsultingService.cs
 
-mklink /H C:\Repos\anbgsl1110.github.io\anbgsl1110\shiyuan_18sms\src\DAL\SiteUser C:\Repos\shiyuan_18sms\Weetop.DAL\SiteUser.cs
+mklink /H C:\Repos\anbgsl1110.github.io\anbgsl1110\shiyuan_18sms\src\DAL\SiteUser.cs C:\Repos\shiyuan_18sms\Weetop.DAL\SiteUser.cs
 ** WEB\CMS
 *** ServiceCenterEdit
 mklink /H C:\Repos\anbgsl1110.github.io\anbgsl1110\shiyuan_18sms\src\CMS\ServiceCenterEdit.aspx C:\Repos\shiyuan_18sms\Weetop.Web\CMS\ServiceCenterEdit.aspx
 
 mklink /H C:\Repos\anbgsl1110.github.io\anbgsl1110\shiyuan_18sms\src\CMS\ServiceCenterEdit.aspx.cs C:\Repos\shiyuan_18sms\Weetop.Web\CMS\ServiceCenterEdit.aspx.cs
 
-mklink /H C:\Repos\anbgsl1110.github.io\anbgsl1110\shiyuan_18sms\src\CMS\ServiceCenterEdit.designer.cs C:\Repos\shiyuan_18sms\Weetop.Web\CMS\ServiceCenterEdit.designer.cs
+mklink /H C:\Repos\anbgsl1110.github.io\anbgsl1110\shiyuan_18sms\src\CMS\ServiceCenterEdit.aspx.designer.cs C:\Repos\shiyuan_18sms\Weetop.Web\CMS\ServiceCenterEdit.aspx.designer.cs
 
 *** ServiceCenterList
 mklink /H C:\Repos\anbgsl1110.github.io\anbgsl1110\shiyuan_18sms\src\CMS\ServiceCenterList.aspx C:\Repos\shiyuan_18sms\Weetop.Web\CMS\ServiceCenterList.aspx
 
 mklink /H C:\Repos\anbgsl1110.github.io\anbgsl1110\shiyuan_18sms\src\CMS\ServiceCenterList.aspx.cs C:\Repos\shiyuan_18sms\Weetop.Web\CMS\ServiceCenterList.aspx.cs
 
-mklink /H C:\Repos\anbgsl1110.github.io\anbgsl1110\shiyuan_18sms\src\CMS\ServiceCenterList.designer.cs C:\Repos\shiyuan_18sms\Weetop.Web\CMS\ServiceCenterList.designer.cs
+mklink /H C:\Repos\anbgsl1110.github.io\anbgsl1110\shiyuan_18sms\src\CMS\ServiceCenterList.aspx.designer.cs C:\Repos\shiyuan_18sms\Weetop.Web\CMS\ServiceCenterList.aspx.designer.cs
 
 *** UerList
 mklink /H C:\Repos\anbgsl1110.github.io\anbgsl1110\shiyuan_18sms\src\CMS\UserList.aspx C:\Repos\shiyuan_18sms\Weetop.Web\CMS\UserList.aspx
