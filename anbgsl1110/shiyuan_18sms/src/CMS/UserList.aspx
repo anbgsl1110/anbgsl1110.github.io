@@ -429,14 +429,13 @@
                       <i class="ace-icon fa fa-times"></i>
                       取消
                     </button>
-                    <button class="btn btn-sm btn-primary"  data-toggle="modal" data-target="#modal-form">
+                    <button href="UserAssortPerson.aspx %>" class="btn btn-sm btn-primary"  data-toggle="modal" data-target="#modal-form">
                       <i class="ace-icon fa fa-check"></i>
                       确定
                     </button>
                   </div>
                 </div>
               </div>    
-            </form>
         </div>
     </div>
 
