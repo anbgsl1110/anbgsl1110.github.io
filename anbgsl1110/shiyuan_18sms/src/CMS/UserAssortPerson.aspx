@@ -33,7 +33,7 @@
                         </span>                        
                     </div>  
                     <div class="pull-right tableTools-container">
-                        <a role="button" class="btn btn-sm btn-success" title="返回">返回</a> 
+                        <a class="btn btn-sm btn-success" role="button" href="UserList.aspx" title="返回">返回</a> 
                     </div>              
                 </div>            
                 <div class="row clearfix">
@@ -41,12 +41,12 @@
                     <div class="row clearfix">
                         <div class="col-md-6 column">
                         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-                        <asp:UpdatePanel ID="UpdatePanel1" runat="server" OnLoad="UpdatePanel1_Load">
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server" EnableViewState ="false" OnLoad="UpdatePanel1_Load">
                             <Triggers>
                             <asp:AsyncPostBackTrigger ControlID="ddlCategroy" />
                             </Triggers>
                             <ContentTemplate>
-                            <asp:Repeater ID="Repeater1" runat="server">
+                            <asp:Repeater ID="Repeater1" EnableViewState ="false" runat="server">
                                 <HeaderTemplate>
                                     <table id="mytable" class="table table-striped table-bordered table-hover">
                                         <thead>
@@ -67,7 +67,7 @@
                                                 <td ><%# Eval("Name") %></td>
                                                 <td ><%# Eval("CategroyName") %></td>
                                                 <td class="action-buttons center" id ="btnDelete">
-                                                    <a class="red"  title="去除服务人员">
+                                                    <a class="red" href="javascript:DeleteServicePerson('<%# Eval("id") %>');" title="去除服务人员">
                                                     <i class="ace-icon fa fa-minus bigger-130"></i>去除</a>
                                                 </td>
                                             </tr>
@@ -87,12 +87,12 @@
                         </blockquote>
                         </div>
                         <div class="col-md-6 column">
-                        <asp:UpdatePanel ID="UpdatePanel2" runat="server" OnLoad="UpdatePanel1_Load">
+                        <asp:UpdatePanel ID="UpdatePanel2" runat="server" EnableViewState ="false" OnLoad="UpdatePanel1_Load">
                             <Triggers>
                             <asp:AsyncPostBackTrigger ControlID="ddlCategroy" />
                             </Triggers>
                             <ContentTemplate>
-                            <asp:Repeater ID="Repeater2" runat="server">
+                            <asp:Repeater ID="Repeater2" EnableViewState ="false" runat="server">
                                 <HeaderTemplate>
                                     <table id="mytable2" class="table table-striped table-bordered table-hover">
                                         <thead>
@@ -134,11 +134,11 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button class="btn btn-sm" href="javascript:Reset('<%# Eval("id") %>');">
+                        <button class="btn btn-sm" href="javascript:Reset() %>');">
                         <i class="ace-icon fa fa-refresh"></i>
                         重置更改
                         </button>
-                        <button class="btn btn-sm btn-primary" href="javascript:Save('<%# Eval("id") %>');">
+                        <button class="btn btn-sm btn-primary" href="javascript:Save() %>');">
                         <i class="ace-icon fa fa-check"></i>
                         确定
                         </button>
@@ -162,10 +162,9 @@
         ActiveMenu('menu3');
 
 
-        //添加咨询服务人员
-        $('#btnDelete').on('click', function (e)
-        {
-            $.post('', { action: 1, id: 49 }, function (jdata) {
+        //删除咨询服务人员
+        function DeleteServicePerson(id) {
+            $.post('', { action: 1, id: id }, function (jdata) {
                 switch (jdata.code) {
                     case "OK":
                         showInfo(jdata.message);
@@ -175,15 +174,31 @@
                         break;
                 }
             }, 'json');
-        });
+        }
+
+        //添加咨询服务人员
+        function AddServicePerson(id)
+        {
+            $.post('', { action: 2, id: id }, function (jdata) {
+                switch (jdata.code) {
+                    case "OK":
+                        showInfo(jdata.message);
+                        break;
+                    case "Err":
+                        showErr(jdata.message);
+                        break;
+                }
+            }, 'json');
+        }
 
         //重置更改
         function Reset (id)
         {
-            $.getJSON('', { action: 3, id: id }, function (jdata, textStatus, jqXHR) {
+            $.getJSON('', { action: 3}, function (jdata, textStatus, jqXHR) {
                 if ('success' == textStatus) {
                     switch (jdata.code) {
                         case "Ok":
+                            window.location.reload();
                             showInfo(jdata.message);
                             break;
                         case "Err":
@@ -197,10 +212,11 @@
         //保存确定
         function Save (id)
         {
-            $.getJSON('', { action: 4, id: id }, function (jdata, textStatus, jqXHR) {
+            $.getJSON('', { action: 4}, function (jdata, textStatus, jqXHR) {
                 if ('success' == textStatus) {
                     switch (jdata.code) {
                         case "Ok":
+                            window.location.reload();
                             showInfo(jdata.message);
                             break;
                         case "Err":

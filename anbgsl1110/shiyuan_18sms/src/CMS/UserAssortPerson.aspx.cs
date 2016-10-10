@@ -59,7 +59,7 @@ namespace Weetop.Web.CMS
             }
             else
             {
-                //不是第一次post时执行
+                //第一次post时执行
             }
         }
 
@@ -68,8 +68,23 @@ namespace Weetop.Web.CMS
         {
             Response.ContentType = "application/json";
 
-            List<ConsultingService> listTemp1 = (List<ConsultingService>)Session["AssignedListTemp"];
-            List<ConsultingService> listTemp2 = (List<ConsultingService>)Session["NotAssignedListTemp"];
+            List<ConsultingService> list1 = (List<ConsultingService>)Session["AssignedListTemp"];
+            List<ConsultingService> list2 = (List<ConsultingService>)Session["NotAssignedListTemp"];
+
+            List<ConsultingService> listTemp1 = new List<ConsultingService>();
+            List<ConsultingService> listTemp2 = new List<ConsultingService>();
+            foreach (ConsultingService cs1 in list1)
+            {
+                listTemp1.Add(cs1);
+            }
+            foreach (ConsultingService cs2 in list2)
+            {
+                listTemp2.Add(cs2);
+            }
+            Repeater1.DataSource = null;
+            Repeater2.DataSource = null;
+            Repeater1.DataSource = listTemp1.ToList();
+            Repeater2.DataSource = listTemp2.ToList();
             //数据逻辑处理
             int id = int.Parse(Request["id"]);
             if (!(string.IsNullOrWhiteSpace((id.ToString()))))
@@ -77,9 +92,9 @@ namespace Weetop.Web.CMS
                 ConsultingService cs = SiteConsultingService.GetConsultingServiceInfo(id);
                 //因为刚刚获得的ConsultingService cs是个新的对象，不能使用Remove()方法进行移除，故采用RemoveAt()方法;
                 int index = 0;
-                foreach(ConsultingService cs1 in listTemp1)
+                foreach(ConsultingService cs3 in listTemp1)
                 {
-                    if (cs1.id == id)
+                    if (cs3.id == id)
                     {
                         break;
                     }
@@ -96,6 +111,7 @@ namespace Weetop.Web.CMS
             Session["AssignedListTemp"] = listTemp1;
             Session["NotAssignedListTemp"] = listTemp2;
             Response.Write(Common.Json("OK","去除成功"));
+            Response.End();
         }
 
         //添加咨询服务人员
@@ -128,30 +144,55 @@ namespace Weetop.Web.CMS
                 Response.End();
             }
             Session["AssignedListTemp"] = listTemp1;
-            Session["NotAssignedListTemp"] = listTemp2;
-            Response.Write(Common.Json("OK","添加成功"));
+            Session["NotAssignedListTemp"] = listTemp2;         
+            BindTempData();
+            Response.Write(Common.Json("OK", "添加成功"));
+            //Response.End();
         }
 
         //保存确定
         private void Save()
         {
+            Response.ContentType = "application/json";
 
+            //删除原始分配人员，增加最新分配人员
+            List<ConsultingService> list1 = (List<ConsultingService>)Session["AssignedList"];
+            List<ConsultingService> listTemp1 = (List<ConsultingService>)Session["AssignedListTemp"];
+            foreach (ConsultingService cs1 in list1)
+            {
+                SiteConsultingServiceNexus.DeleteNexusBycid(cs1.id);
+            }
+            foreach (ConsultingService cs2 in listTemp1)
+            {
+                Model.ConsultingServiceNexus entity = new Model.ConsultingServiceNexus()
+                {
+                    cid = cs2.id,
+                    UserId = Guid.Parse(Request["userId"]),
+                };
+                SiteConsultingServiceNexus.AddConsultingServiceNexus(entity);
+            }
             //分配完成删除关联的Session数据
             Session["AssignedList"] = null;
             Session["NotAssignedList"] = null;
             Session["AssignedListTemp"] = null;
             Session["NotAssignedListTemp"] = null;
+            BindInitData();
+            Response.Write(Common.Json("OK", "保存确定成功！"));
+            Response.End();
         }
 
         //重置更改
         private void Reset()
         {
-
+            Response.ContentType = "application/json";
+                     
             //重置更改之后删除临时Seesion中的数据
             Session["AssignedList"] = null;
             Session["NotAssignedList"] = null;
             Session["AssignedListTemp"] = null;
             Session["NotAssignedListTemp"] = null;
+            BindInitData();
+            Response.Write(Common.Json("OK", "重置更改成功！"));
         }
 
         //绑定初始数据
