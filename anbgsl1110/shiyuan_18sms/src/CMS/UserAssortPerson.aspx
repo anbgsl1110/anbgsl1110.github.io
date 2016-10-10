@@ -15,7 +15,9 @@
         <h1><%: Page.Title %> 
             <small>
                 <i class="ace-icon fa fa-angle-double-right"></i>
-                <span id="assortUserId" style="color:red"><b>###</b></span>
+                <span id="assortUserId" style="color:red"><b>
+                     <% = Request["phone"] %>
+                    </b></span>
             </small>
         </h1>
     </div>
@@ -51,21 +53,21 @@
                                             <tr>
                                                 <th style="display:none">id</th>
                                                 <th style="display:none">cateId</th>
-                                                <th class="hidden-480 hidden-xs hidden-sm hidden-md">姓名</th>
-                                                <th class="center hidden-480 hidden-xs hidden-sm hidden-md">分类</th>
-                                                <th class="hidden-480 hidden-xs">操作</th>
+                                                <th>姓名</th>
+                                                <th>分类</th>
+                                                <th class="center">操作</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                 </HeaderTemplate>
                                 <ItemTemplate>
-                                            <tr id="<%# Eval("UserId") %>">
-                                                <td style="display:none"><%# Eval("UserId") %></td>
-                                                <td style="display:none" ><%# Eval("UserId") %></td>
-                                                <td class="hidden-480 hidden-xs hidden-sm hidden-md"><%# Eval("UserId") %></td>
-                                                <td class="hidden-480 hidden-xs hidden-sm hidden-md"><%# Eval("UserId") %></td>
-                                                <td class="action-buttons hidden-480 hidden-xs center">
-                                                    <a class="red" href="javascript:assortServicePerson('<%# Eval("UserId") %>');" title="去除服务人员">
+                                            <tr id="<%# Eval("id") %>">
+                                                <td style="display:none"><%# Eval("id") %></td>
+                                                <td style="display:none" ><%# Eval("cateId") %></td>
+                                                <td ><%# Eval("Name") %></td>
+                                                <td ><%# Eval("CategroyName") %></td>
+                                                <td class="action-buttons center" id ="btnDelete">
+                                                    <a class="red"  title="去除服务人员">
                                                     <i class="ace-icon fa fa-minus bigger-130"></i>去除</a>
                                                 </td>
                                             </tr>
@@ -97,21 +99,21 @@
                                             <tr>
                                                 <th style="display:none">id</th>
                                                 <th style="display:none">cateId</th>
-                                                <th class="hidden-480 hidden-xs hidden-sm hidden-md">姓名</th>
-                                                <th class="center hidden-480 hidden-xs hidden-sm hidden-md">分类</th>
-                                                <th class="hidden-480 hidden-xs">操作</th>
+                                                <th>姓名</th>
+                                                <th>分类</th>
+                                                <th class="center">操作</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                 </HeaderTemplate>
                                 <ItemTemplate>
-                                    <tr id="<%# Eval("UserId") %>">
-                                        <td style="display:none"><%# Eval("UserId") %></td>
-                                        <td style="display:none" ><%# Eval("UserId") %></td>
-                                        <td class="hidden-480 hidden-xs hidden-sm hidden-md"><%# Eval("UserId") %></td>
-                                        <td class="hidden-480 hidden-xs hidden-sm hidden-md"><%# Eval("UserId") %></td>
-                                        <td class="action-buttons hidden-480 hidden-xs center">
-                                            <a class="green" href="javascript:assortServicePerson('<%# Eval("UserId") %>');" title="添加服务人员">
+                                    <tr id="<%# Eval("id") %>">
+                                        <td style="display:none"><%# Eval("id") %></td>
+                                        <td style="display:none" ><%# Eval("cateId") %></td>
+                                        <td><%# Eval("Name") %></td>
+                                        <td><%# Eval("CategroyName") %></td>
+                                        <td class="action-buttons center" id ="btnAdd">
+                                            <a class="green" href="javascript:AddServicePerson('<%# Eval("id") %>');" title="添加服务人员">
                                             <i class="ace-icon fa fa-plus bigger-130"></i>添加</a>
                                         </td>
                                     </tr>
@@ -126,24 +128,26 @@
                                         NextPageText="下一页" OnPageChanging="AspNetPager1_PageChanging" AlwaysShow="true" CurrentPageButtonClass="active"
                                         PrevPageText="上一页" TextAfterPageIndexBox="页" TextBeforePageIndexBox="跳转到第">
                                     </webdiyer:AspNetPager>
-                            </div>   
+                                </div>   
                             </contenttemplate>
                         </asp:UpdatePanel>                                                    
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-sm" data-dismiss="modal">
-                        <i class="ace-icon fa fa-times"></i>
-                        取消
+                        <button class="btn btn-sm" href="javascript:Reset('<%# Eval("id") %>');">
+                        <i class="ace-icon fa fa-refresh"></i>
+                        重置更改
                         </button>
-                        <button href="UserAssortPerson.aspx %>" class="btn btn-sm btn-primary"  data-toggle="modal" data-target="#modal-form">
+                        <button class="btn btn-sm btn-primary" href="javascript:Save('<%# Eval("id") %>');">
                         <i class="ace-icon fa fa-check"></i>
                         确定
                         </button>
                     </div> 
-                </div>  
+                    </div> 
+                </div> 
             </form>
-
+        </div>
+    </div>
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="Server">
@@ -154,19 +158,33 @@
     <script src="/static/dep/jsrender.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder4" runat="Server">
-    <script>
+    <script type="text/javascript">
         ActiveMenu('menu3');
-        //分配服务人员
-        function assortServicePerson(id) {
-            setTimeout(function () {
-                $('#hidUserId1').val(id);//便于向服务器传值
-            }, 500);
 
-            $.getJSON('', { action: 2, id: id }, function (jdata, textStatus, jqXHR) {
+
+        //添加咨询服务人员
+        $('#btnDelete').on('click', function (e)
+        {
+            $.post('', { action: 1, id: 49 }, function (jdata) {
+                switch (jdata.code) {
+                    case "OK":
+                        showInfo(jdata.message);
+                        break;
+                    case "Err":
+                        showErr(jdata.message);
+                        break;
+                }
+            }, 'json');
+        });
+
+        //重置更改
+        function Reset (id)
+        {
+            $.getJSON('', { action: 3, id: id }, function (jdata, textStatus, jqXHR) {
                 if ('success' == textStatus) {
                     switch (jdata.code) {
-                        case "OK":
-                            $('#modal-form1').modal('show');
+                        case "Ok":
+                            showInfo(jdata.message);
                             break;
                         case "Err":
                             showErr(jdata.message);
@@ -175,10 +193,28 @@
                 }
             });
         }
-           
+
+        //保存确定
+        function Save (id)
+        {
+            $.getJSON('', { action: 4, id: id }, function (jdata, textStatus, jqXHR) {
+                if ('success' == textStatus) {
+                    switch (jdata.code) {
+                        case "Ok":
+                            showInfo(jdata.message);
+                            break;
+                        case "Err":
+                            showErr(jdata.message);
+                            break;
+                    }
+                }
+            });
+        }
+
         jQuery(function ($) {
             var date = new Date();
-            $('#time1').text(date.toLocaleString());     
+            $('#time1').text(date.toLocaleString());
+
         });
     </script>
 </asp:Content>

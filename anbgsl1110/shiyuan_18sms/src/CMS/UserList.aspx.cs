@@ -324,7 +324,7 @@ namespace Weetop.Web.CMS
         private void GetJson()
         {
             Response.ContentType = "application/json";
-            var item = SiteUser.GetOne(Guid.Parse(Request["id"]));
+            var item = SiteUser.GetUserInfo(Guid.Parse(Request["id"]));
             if (item == null)
             {
                 Response.Write(Common.Json("Err", "参数错误"));
