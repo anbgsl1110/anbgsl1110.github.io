@@ -147,7 +147,7 @@ namespace Weetop.Web.CMS
             Session["NotAssignedListTemp"] = listTemp2;         
             BindTempData();
             Response.Write(Common.Json("OK", "添加成功"));
-            //Response.End();
+            Response.End();
         }
 
         //保存确定
@@ -193,6 +193,7 @@ namespace Weetop.Web.CMS
             Session["NotAssignedListTemp"] = null;
             BindInitData();
             Response.Write(Common.Json("OK", "重置更改成功！"));
+            Response.End();
         }
 
         //绑定初始数据

@@ -192,7 +192,7 @@
         }
 
         //重置更改
-        function Reset (id)
+        function Reset ()
         {
             $.getJSON('', { action: 3}, function (jdata, textStatus, jqXHR) {
                 if ('success' == textStatus) {
@@ -210,7 +210,7 @@
         }
 
         //保存确定
-        function Save (id)
+        function Save ()
         {
             $.getJSON('', { action: 4}, function (jdata, textStatus, jqXHR) {
                 if ('success' == textStatus) {
