@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>手机流量充值</title>
+		<style type="text/css">
+			body{
+				font-size: 12px;
+				background: #efeff4;
+			}
+			body,h1,h2,h3,h4,p,ul,li,input{
+				margin: 0;
+				padding: 0;
+				font-family: arial,"微软雅黑";
+			    color: #000;
+			    /*font-size: 100px;*/
+			}
+			h1,h2,h3,h4{
+				font-weight: normal;
+			}
+			ul,li{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+				color: #000;
+			}
+			#telbox{
+				width: 100%;
+				height: 60px;
+				padding: 15px 0;
+				overflow: hidden;
+				position: relative;
+			}
+			#telbox i{
+				position: absolute;
+				display: none;
+				width: 24px;
+				height: 24px;
+				background: url(x.png) no-repeat center;
+				background-size: cover;
+				right: 30px;
+				top: 35px;
+			}
+			#tel{
+				display: block;
+				width: 100%;
+				height: 60px;
+				border: none;
+				outline: none;
+				padding-left: 20px;
+				font-size: 24px;
+				color: #000;
+			}
+			#desc{
+				padding: 0 10px 10px;
+				color: #b2b2b2;
+			}
+			ul{
+				width: 100%;
+				border-top: 1px solid #ececec;
+				background: #fff;
+			}
+			li{
+				width: 100%;
+				height: 60px;
+				line-height: 60px;
+				border-bottom: 1px solid #ececec;
+			}
+			li span{
+				padding: 0 10px;
+				font-size: 18px;
+			}
+			li div{
+				float: right;
+				border: 1px solid #62be85;
+				width: 60px;
+				height: 25px;
+				color: #62BE85;
+				text-align: center;
+				line-height: 25px;
+				border-radius: 5px;
+				margin-top: 17px;
+				margin-right: 10px;
+			}
+			#lt,#dx{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="telbox">
+			<input type="text" maxlength="11" id="tel"/>
+			<i id="del"></i>
+		</div>
+		<p id="desc">全国流量，即时生效，月底失效。<span id="co"></span></p>
+		<ul id="yd">
+			<li>
+				<span>10M</span>
+				<div>2.85元</div>
+			</li>
+			<li>
+				<span>30M</span>
+				<div>4.75元</div>
+			</li>
+			<li>
+				<span>70M</span>
+				<div>9.50元</div>
+			</li>
+			<li>
+				<span>150M</span>
+				<div>19.00元</div>
+			</li>
+			<li>
+				<span>500M</span>
+				<div>28.50元</div>
+			</li>
+			<li>
+				<span>1G</span>
+				<div>47.50元</div>
+			</li>
+		</ul>
+		<ul id="lt">
+			<li>
+				<span>20M</span>
+				<div>2.94元</div>
+			</li>
+			<li>
+				<span>50M</span>
+				<div>5.88元</div>
+			</li>
+			<li>
+				<span>100M</span>
+				<div>9.80元</div>
+			</li>
+			<li>
+				<span>200M</span>
+				<div>14.70元</div>
+			</li>
+			<li>
+				<span>500M</span>
+				<div>29.40元</div>
+			</li>
+		</ul>
+		<ul id="dx">
+			<li>
+				<span>10M</span>
+				<div>1.90元</div>
+			</li>
+			<li>
+				<span>30M</span>
+				<div>4.75元</div>
+			</li>
+			<li>
+				<span>50M</span>
+				<div>6.65元</div>
+			</li>
+			<li>
+				<span>100M</span>
+				<div>9.50元</div>
+			</li>
+			<li>
+				<span>200M</span>
+				<div>14.25元</div>
+			</li>
+			<li>
+				<span>500M</span>
+				<div>28.50元</div>
+			</li>
+			<li>
+				<span>1G</span>
+				<div>47.50元</div>
+			</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		window.onload=function(){
+			function regCo(tel){
+				var regx=/^(134|135|136|137|138|139|150|151|152|157|158|159|183|187|188)/;
+				var regy=/^(130|131|132|155|156|185|186)/;
+				var regz=/^(133|153|189|180|181)/;
+				if(regx.test(tel)){
+					return 1;
+				}else if(regy.test(tel)){
+					return 2;
+				}else if(regz.test(tel)){
+					return 3;
+				}else{
+					return 0;
+				}
+			}
+			var oTel=document.getElementById("tel");
+			var oCo=document.getElementById("co");
+			var oYd=document.getElementById("yd");
+			var oLt=document.getElementById("lt");
+			var oDx=document.getElementById("dx");
+			var oDel=document.getElementById("del");
+			var aYd=oYd.getElementsByTagName("div");
+			var aLt=oLt.getElementsByTagName("div");
+			var aDx=oDx.getElementsByTagName("div");
+			oTel.focus();
+			oDel.onclick=function(){
+				oTel.value="";
+				oDel.style.display="none";
+				oCo.innerHTML="";
+				oYd.style.display="block";
+				oLt.style.display="none";
+				oDx.style.display="none";
+				oTel.focus();
+			}
+			oTel.onfocus=function(){
+				if(oTel.value=="请输入手机号码"){
+					oTel.value="";
+					oTel.style.color="#000";
+				}
+				if(oTel.value.length!=0 && oTel.value!="请输入手机号码"){
+					oDel.style.display="block";
+				}
+			}
+			oTel.onblur=function(){
+				if(oTel.value==""){
+					oTel.value="请输入手机号码";
+					oTel.style.color="#62BE85";
+				}
+			}
+			var x;
+			document.onkeyup=function(){
+				x=regCo(oTel.value);
+				switch (x){
+					case 1:oCo.innerHTML="移动用户享95折优惠";
+							oYd.style.display="block";
+							oLt.style.display="none";
+							oDx.style.display="none";
+						break;
+					case 2:oCo.innerHTML="联通用户享98折优惠,同面值产品每月限充3次，不同面值产品可叠加一次";
+							oLt.style.display="block";
+							oYd.style.display="none";
+							oDx.style.display="none";
+						break;
+					case 3:oCo.innerHTML="电信用户享95折优惠";
+							oDx.style.display="block";
+							oLt.style.display="none";
+							oYd.style.display="none";
+						break;
+					default:oCo.innerHTML="";
+							oYd.style.display="block";
+							oLt.style.display="none";
+							oDx.style.display="none";
+						break;
+				}
+				if(oTel.value.length!=0 && oTel.value!="请输入手机号码"){
+					oDel.style.display="block";
+				}else{
+					oDel.style.display="none";
+				}
+			}
+			for(var i=0;i<aYd.length;i++){
+				aYd[i].index=i;
+				aYd[i].onclick=function(){
+					if(regCo(oTel.value)&&oTel.value.length==11){
+						console.log(oTel.value,aYd[this.index].innerHTML);
+					}
+				}
+			}
+			for(var i=0;i<aLt.length;i++){
+				aLt[i].index=i;
+				aLt[i].onclick=function(){
+					if(regCo(oTel.value)&&oTel.value.length==11){
+						console.log(oTel.value,aLt[this.index].innerHTML);
+					}
+				}
+			}
+			for(var i=0;i<aDx.length;i++){
+				aDx[i].index=i;
+				aDx[i].onclick=function(){
+					if(regCo(oTel.value)&&oTel.value.length==11){
+						console.log(oTel.value,aDx[this.index].innerHTML);
+					}
+				}
+			}
+		}
+	</script>
+</html>

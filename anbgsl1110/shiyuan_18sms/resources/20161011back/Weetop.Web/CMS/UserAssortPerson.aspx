@@ -1,0 +1,193 @@
+﻿<%@ Page Title="分配服务人员" Language="C#" MasterPageFile="~/CMS/BasePage.Master" AutoEventWireup="true" CodeBehind="UserAssortPerson.aspx.cs" Inherits="Weetop.Web.CMS.UserAssortPerson" %>
+
+<%@ Import Namespace="Weetop.DAL" %>
+
+<%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <link href="/static/dep/assets/css/chosen.css" rel="stylesheet" />
+    <link href="/static/dep/assets/css/bootstrap-datepicker3.css" rel="stylesheet" />
+    <link href="/static/dep/assets/css/daterangepicker.css" rel="stylesheet" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
+
+    <div class="page-header">
+        <h1><%: Page.Title %> 
+            <small>
+                <i class="ace-icon fa fa-angle-double-right"></i>
+                <span id="assortUserId" style="color:red"><b>
+                     <% = Request["phone"] %>
+                    </b></span>
+            </small>
+        </h1>
+    </div>
+    <!-- /.page-header -->
+    <div class="row">
+        <div class="col-xs-12">
+            <form runat="server" autocomplete="off">
+                <input type="hidden" id="hidUserId1" name="hidUserId" />
+                <div class="clearfix">
+                    <div class="pull-left tableTools-container dropdown">
+                        <span style="float: left; margin-right: 10px;">
+                            <asp:DropDownList ID="ddlCategroy" AutoPostBack="true" CssClass="form-control" runat="server"></asp:DropDownList>
+                        </span>                        
+                    </div>  
+                    <div class="pull-right tableTools-container">
+                        <a class="btn btn-sm btn-success" role="button" href="UserList.aspx" title="返回">返回</a> 
+                    </div>              
+                </div>            
+                <div class="row clearfix">
+                    <div class="col-md-12 column">
+                    <div class="row clearfix">
+                        <div class="col-md-6 column">
+                        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server" EnableViewState ="false" OnLoad="UpdatePanel1_Load">
+                            <Triggers>
+                            <asp:AsyncPostBackTrigger ControlID="ddlCategroy" />
+                            </Triggers>
+                            <ContentTemplate>
+                            <asp:Repeater ID="Repeater1" EnableViewState ="false" runat="server">
+                                <HeaderTemplate>
+                                    <table id="mytable" class="table table-striped table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th style="display:none">id</th>
+                                                <th style="display:none">cateId</th>
+                                                <th>姓名</th>
+                                                <th>分类</th>
+                                                <th class="center">操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                </HeaderTemplate>
+                                <ItemTemplate>
+                                            <tr id="<%# Eval("id") %>">
+                                                <td style="display:none"><%# Eval("id") %></td>
+                                                <td style="display:none" ><%# Eval("cateId") %></td>
+                                                <td ><%# Eval("Name") %></td>
+                                                <td ><%# Eval("CategroyName") %></td>
+                                                <td class="action-buttons center" id ="btnDelete">
+                                                    <a class="red" href="javascript:DeleteServicePerson('<%# Eval("id") %>');" title="去除服务人员">
+                                                    <i class="ace-icon fa fa-minus bigger-130"></i>去除</a>
+                                                </td>
+                                            </tr>
+                                </ItemTemplate>
+                                <FooterTemplate>
+                                        </tbody>
+                                        </table>
+                                </FooterTemplate>
+                                </asp:Repeater>    
+                            </contenttemplate>
+                        </asp:UpdatePanel>
+                        <p style="color:red">
+                        【注意】请确保分配了一个客服和一个商务!
+                        </p>
+                        <blockquote class="pull-left">
+                            <p><small id="time1"></small></p>
+                        </blockquote>
+                        </div>
+                        <div class="col-md-6 column">
+                        <asp:UpdatePanel ID="UpdatePanel2" runat="server" EnableViewState ="false" OnLoad="UpdatePanel1_Load">
+                            <Triggers>
+                            <asp:AsyncPostBackTrigger ControlID="ddlCategroy" />
+                            </Triggers>
+                            <ContentTemplate>
+                            <asp:Repeater ID="Repeater2" EnableViewState ="false" runat="server">
+                                <HeaderTemplate>
+                                    <table id="mytable2" class="table table-striped table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th style="display:none">id</th>
+                                                <th style="display:none">cateId</th>
+                                                <th>姓名</th>
+                                                <th>分类</th>
+                                                <th class="center">操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                </HeaderTemplate>
+                                <ItemTemplate>
+                                    <tr id="<%# Eval("id") %>">
+                                        <td style="display:none"><%# Eval("id") %></td>
+                                        <td style="display:none" ><%# Eval("cateId") %></td>
+                                        <td><%# Eval("Name") %></td>
+                                        <td><%# Eval("CategroyName") %></td>
+                                        <td class="action-buttons center" id ="btnAdd">
+                                            <a class="green" href="javascript:AddServicePerson('<%# Eval("id") %>');" title="添加服务人员">
+                                            <i class="ace-icon fa fa-plus bigger-130"></i>添加</a>
+                                        </td>
+                                    </tr>
+                                </ItemTemplate>
+                                <FooterTemplate>
+                                        </tbody>
+                                    </table>
+                                </FooterTemplate>
+                                </asp:Repeater>
+                                <div class="pagination center">
+                                    <webdiyer:AspNetPager ID="AspNetPager1" runat="server" FirstPageText="首页" LastPageText="尾页"
+                                        NextPageText="下一页" OnPageChanging="AspNetPager1_PageChanging" AlwaysShow="true" CurrentPageButtonClass="active"
+                                        PrevPageText="上一页" TextAfterPageIndexBox="页" TextBeforePageIndexBox="跳转到第">
+                                    </webdiyer:AspNetPager>
+                                </div>   
+                            </contenttemplate>
+                        </asp:UpdatePanel>                                                    
+                        </div>
+                    </div> 
+                    </div> 
+                </div> 
+            </form>
+        </div>
+    </div>
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="Server">
+    <script src="/static/dep/assets/js/chosen.jquery.js"></script>
+    <script src="/static/dep/assets/js/date-time/moment.js"></script>
+    <script src="/static/dep/assets/js/date-time/bootstrap-datepicker.js"></script>
+    <script src="/static/dep/assets/js/date-time/daterangepicker.js"></script>
+    <script src="/static/dep/jsrender.min.js"></script>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder4" runat="Server">
+    <script type="text/javascript">
+        ActiveMenu('menu3');
+
+
+        //咨询服务人员
+        function DeleteServicePerson(id) {
+            $.post('', { action: 1, id: id }, function (jdata) {
+                switch (jdata.code) {
+                    case "OK":
+                        showInfo(jdata.message);
+                        window.location.reload();
+                        break;
+                    case "Err":
+                        showErr(jdata.message);
+                        break;
+                }
+            }, 'json');
+        }
+
+        //添加咨询服务人员
+        function AddServicePerson(id)
+        {
+            $.post('', { action: 2, id: id }, function (jdata) {
+                switch (jdata.code) {
+                    case "OK":
+                        showInfo(jdata.message);
+                        window.location.reload();
+                        break;
+                    case "Err":
+                        showErr(jdata.message);
+                        break;
+                }
+            }, 'json');
+        }
+
+        jQuery(function ($) {
+            var date = new Date();
+            $('#time1').text(date.toLocaleString());
+
+        });
+    </script>
+</asp:Content>
+

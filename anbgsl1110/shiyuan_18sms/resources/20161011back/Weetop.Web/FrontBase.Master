@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FrontBase.master.cs" Inherits="Weetop.Web.FrontBase" %>
+
+<%@ Register Src="~/NavTop.ascx" TagPrefix="uc1" TagName="NavTop" %>
+<%@ Register Src="~/NavBottom.ascx" TagPrefix="uc1" TagName="NavBottom" %>
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1160, initial-scale=0.9" />
+    <meta name="baidu-site-verification" content="gJTHLLuVcg" />
+
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/animate.min.css">
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script src="/js/jquery.SuperSlide.2.1.1.js"></script>
+    
+    <script src="/static/dep/layer-v2.2/layer/layer.js"></script>
+    <script src="/js/lay.js"></script>
+
+   
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <uc1:NavTop runat="server" ID="NavTop" />
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+        
+        <div class="slide_right">
+            <ul>
+                <li class="chatgt">
+                    <a class="chat" href="javascript:;">
+                        <i class="chat_icon"></i>
+                        <div class="u_chat">在线业务咨询</div>
+                    </a>
+                </li>
+                <li>
+                    <div class="tel">
+                        <a href="javascript:;"></a>
+                        <div class="u_tel">400-776-1818</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="top_rim">
+                        <a href="javascript:;"></a>
+                        <div class="u_top">返回顶部</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!--backTop js-->
+        <script>
+            $(window).scroll(function () {
+                //获取滚动条的滑动距离
+                var scroH = $("body").scrollTop();
+                //滚动条的滑动距离大于等于定位元素距离浏览器顶部的距离，就固定，反之就不固定
+                if (scroH > 0) {
+                    $(".top_rim").css({ "display": "block" });
+                }
+            })
+            $(".top_rim").click(function () {
+                $("html,body").animate({ scrollTop: 0 }, 400)
+            })
+        </script>
+    
+    <uc1:NavBottom runat="server" ID="NavBottom" />
+
+        <script>
+            $(".chatgt").click(function () {
+                window.open('http://tb.53kf.com/code/client/10140387/1][img]http://tb.53kf.com/kfimg.php?arg=10140387&style=1[/img]超酷签名，点击这里和我直接沟通', "_blank", "width=720,height=550,top=80,left=80,scrollbars=yes,resizable=1,modal=false,alwaysRaised=yes");
+            });
+
+    </script>
+</body>
+</html>
