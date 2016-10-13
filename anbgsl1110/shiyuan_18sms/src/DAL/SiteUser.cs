@@ -116,7 +116,13 @@ namespace Weetop.DAL
                 }
             }
         }
-
+        public static List<UserInfo> GetAllUserInfoList()
+        {
+            using (DataClassesDataContext db = new DataClassesDataContext())
+            {
+                return db.UserInfo.Where(w => !w.IsDeleted).ToList();
+            }
+        }
 
         /// <summary>
         /// 获取用户信息
@@ -186,16 +192,6 @@ namespace Weetop.DAL
                 db.SubmitChanges();
             }
         }
-
-        /// <summary>
-        ///根据id获取客服人员信息 
-        /// </summary>
-        public static UserInfo GetOne(Guid id)
-        {
-            using (DataClassesDataContext db = new DataClassesDataContext())
-            {
-                return db.UserInfo.SingleOrDefault(w => w.UserId == id);
-            }
-        }
+        
     }
 }

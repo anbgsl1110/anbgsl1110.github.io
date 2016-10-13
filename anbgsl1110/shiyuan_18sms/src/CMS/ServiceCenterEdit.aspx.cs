@@ -96,6 +96,9 @@ namespace Weetop.Web.CMS
             }
         }
 
+        /// <summary>
+        /// 上传图片
+        /// </summary>
         private void UploadImg()
         {
             #region 上传图片
@@ -158,7 +161,9 @@ namespace Weetop.Web.CMS
             #endregion 上传图片
         }
         
-        //保存服务人员信息到数据库
+        /// <summary>
+        /// 保存服务人员信息到数据库
+        /// </summary>
         protected void AddOrSave()
         {
             Response.ContentType = "application/json";
@@ -246,6 +251,21 @@ namespace Weetop.Web.CMS
                     CategroyName = Request["ServiceType"],
                 };
                 SiteConsultingService.Add(entity);
+                //插入日志
+                //Model.Log log = new Model.Log()
+                //{
+                //    UserName = Admin.UserName,
+                //    RealName = Admin.RealName,
+                //    ClientIP = SiteLog.GetClientIP(),
+                //    ClientMAC = SiteLog.GetClientMAC(),
+                //    ModuletId = int.Parse(""),
+                //    ModuleName = "咨询服务管理",
+                //    ModuleObject = "咨询服务管理",
+                //    Action = "添加",
+                //    ActionTime = DateTime.Now,
+                //};
+                //SiteLog.Add(log);
+
                 Response.Write(Common.Json("OK", "添加成功"));
                 Response.End();
             }

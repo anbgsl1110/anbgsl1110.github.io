@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/CMS/BasePage.Master" AutoEventWireup="true" CodeBehind="ServiceCenterList.aspx.cs" Inherits="Weetop.Web.CMS.ServiceCenterList" %>
+﻿<%@ Page Title="咨询服务管理" Language="C#" MasterPageFile="~/CMS/BasePage.Master" AutoEventWireup="true" CodeBehind="ServiceCenterList.aspx.cs" Inherits="Weetop.Web.CMS.ServiceCenterList" %>
 
 <%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
 
@@ -594,17 +594,6 @@
                     success: function (response, newValue) {
                     }
                 })
-
-                /**
-                //let's display edit mode by default?
-                $('#avatar').editable('show').on('hidden', function(e, reason) {
-                    if(reason == 'onblur') {
-                        $('#avatar').editable('show');
-                        return;
-                    }
-                    $('#avatar').off('hidden');
-                })
-                */
 
             } catch (e) { }
 

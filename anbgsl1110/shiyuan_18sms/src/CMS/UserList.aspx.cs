@@ -9,7 +9,11 @@ using System.Web.UI.WebControls;
 using Weetop.DAL;
 using Weetop.Model;
 using Wuqi.Webdiyer;
-
+using OctoLib;
+using System.IO;
+using NPOI.SS.UserModel;
+using NPOI.HSSF.UserModel;
+using NPOI.SS.Util;
 namespace Weetop.Web.CMS
 {
     public partial class UserList : CmsBase
@@ -18,7 +22,7 @@ namespace Weetop.Web.CMS
         protected View_AdminInfo VAdmin = null;//包含角色信息
         public bool isState = false;
         protected List<View_AdminInfo> VAdminList = new List<View_AdminInfo>();
-
+        protected static string baseFilePath = Common.IfNullOrWhiteThen(Common.AppSettings["DownloadFilePath"], "File/xlsfiles/");
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!BLL.PrivManager.HasPrivFWForModule("HYGL"))
@@ -59,6 +63,9 @@ namespace Weetop.Web.CMS
                         break;
                     case "8":
                         AssortServicePerson();
+                        break;
+                    case "export"://toggle
+                        ExportData();
                         break;
                     default:
                         VAdmin = SiteAdmin.GetAdminView(Admin.UserId);
@@ -102,6 +109,113 @@ namespace Weetop.Web.CMS
                 //PostBack时会执行，第一执行
                 //string title = Page.Title;
             }
+        }
+        private void ExportData()
+        {
+            List<UserInfo> ui = SiteUser.GetAllUserInfoList();
+            string strFileName = Server.MapPath(baseFilePath);
+            if (!Directory.Exists(strFileName))
+            {
+                Directory.CreateDirectory(strFileName);
+            }
+            string fileName = DateTime.Today.ToString("yyyyMMdd") + new Random(DateTime.Now.Millisecond).Next(10000).ToString() + ".xls";
+            string strFilePath = strFileName + fileName;
+            string sName = ExportToList(ui, "用户信息", strFilePath);
+            Response.AddHeader("Content-Disposition", "attachment; filename=" + Server.UrlEncode(fileName));
+            Response.ContentType = "application/ms-excel";// 指定返回的是一个不能被客户端读取的流，必须被下载 
+            Response.WriteFile(sName); // 把文件流发送到客户端 
+            Response.End();
+        }
+        public static string ExportToList(List<UserInfo> list, string strHeaderText, string strFilePath)
+        {
+            using (MemoryStream ms = UserInfoExprotToList(list, strHeaderText))
+            {
+                using (FileStream fs = new FileStream(strFilePath, FileMode.Create, FileAccess.Write))
+                {
+                    byte[] data = ms.ToArray();
+                    fs.Write(data, 0, data.Length);
+                    fs.Flush();
+                }
+                return strFilePath;
+            }
+        }
+        public static MemoryStream UserInfoExprotToList(List<UserInfo> list, string strHeaderName)
+        {
+
+            HSSFWorkbook workbook = new HSSFWorkbook();
+            ISheet sheet = workbook.CreateSheet();
+
+            //创建样式
+
+            ICellStyle cellStyle = workbook.CreateCellStyle();
+            IDataFormat dataFormat = workbook.CreateDataFormat();
+            cellStyle.DataFormat = dataFormat.GetFormat("yyyy-MM-dd");
+
+            //IRow headerRow = sheet.CreateRow(0);
+            //headerRow.CreateCell(0).SetCellValue(strHeaderName);
+
+            //表头样式
+            IRow headerRow = sheet.CreateRow(0);
+            headerRow.HeightInPoints = 25;
+            headerRow.CreateCell(0).SetCellValue(strHeaderName); //填充填表
+
+            ICellStyle headerStyle = workbook.CreateCellStyle();
+            headerStyle.Alignment = NPOI.SS.UserModel.HorizontalAlignment.Center;
+            IFont font = workbook.CreateFont();
+            font.FontHeightInPoints = 20;
+            font.Boldweight = 700;
+            headerStyle.SetFont(font);
+
+            headerRow.GetCell(0).CellStyle = headerStyle;
+            sheet.AddMergedRegion(new CellRangeAddress(0, 0, 0, list[0].GetType().GetProperties().Length - 1));
+
+
+            IRow rows = sheet.CreateRow(1);
+            rows.CreateCell(0).SetCellValue("昵称");
+            rows.CreateCell(1).SetCellValue("真实姓名");
+            rows.CreateCell(2).SetCellValue("性别");
+            rows.CreateCell(3).SetCellValue("电话");
+            rows.CreateCell(4).SetCellValue("邮箱");
+            rows.CreateCell(5).SetCellValue("邮箱是否验证");
+            rows.CreateCell(6).SetCellValue("QQ");
+            rows.CreateCell(7).SetCellValue("最后登录");
+            rows.CreateCell(8).SetCellValue("注册时间");
+            rows.CreateCell(9).SetCellValue("公司名称");
+            rows.CreateCell(10).SetCellValue("公司电话");
+            rows.CreateCell(11).SetCellValue("公司地址");
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                IRow rowtemp = sheet.CreateRow(i + 2);
+                rowtemp.CreateCell(0).SetCellValue(list[i].NickName);
+                rowtemp.CreateCell(1).SetCellValue(list[i].RealName);
+                rowtemp.CreateCell(2).SetCellValue(list[i].Sex);
+                rowtemp.CreateCell(3).SetCellValue(list[i].Phone);
+                rowtemp.CreateCell(4).SetCellValue(list[i].Email);
+                rowtemp.CreateCell(5).SetCellValue(list[i].EmailValid);
+                rowtemp.CreateCell(6).SetCellValue(list[i].QQ);
+                rowtemp.CreateCell(7).SetCellValue(list[i].LastLogin.ToString());
+                rowtemp.CreateCell(8).SetCellValue(list[i].CreateDate.ToString());
+                rowtemp.CreateCell(9).SetCellValue(list[i].CompanyName);
+                rowtemp.CreateCell(10).SetCellValue(list[i].CompanyMobile);
+                rowtemp.CreateCell(11).SetCellValue(list[i].CompanyAddr);
+            }
+
+            //宽度自适应
+            for (int i = 0; i < list.Count; i++)
+            {
+                sheet.AutoSizeColumn(i);
+            }
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                workbook.Write(ms);
+                ms.Flush();
+                ms.Position = 0;
+                return ms;
+            }
+
+
         }
 
         private void GetModulePrivilegeByRoleId()

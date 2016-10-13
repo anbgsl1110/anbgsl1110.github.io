@@ -96,7 +96,9 @@ namespace Weetop.Web.CMS
             }
         }
 
-        //把修改后的服务人员信息同步到数据库
+        /// <summary>
+        /// 把修改后的服务人员信息同步到数据库
+        /// </summary>
         private void UpdateConsultingService()
         {
             Response.ContentType = "application/json";
@@ -157,7 +159,9 @@ namespace Weetop.Web.CMS
             Response.End();
         }
 
-        //删除服务人员信息
+        /// <summary>
+        /// 删除服务人员信息
+        /// </summary>
         private void Delete()
         {
             Response.ContentType = "application/json";
@@ -185,7 +189,9 @@ namespace Weetop.Web.CMS
             }
         }
 
-        //上传图片
+        /// <summary>
+        /// 上传图片
+        /// </summary>
         private void UpLoadImg()
         {
             #region 上传图片
@@ -237,9 +243,6 @@ namespace Weetop.Web.CMS
 
                 //保存信息
                 string imgfile = Server.MapPath("~/" + baseConsultingServiceImagePath + dbPathName);
-                //await Task.Factory.StartNew(() => {
-                //if (File.Exists(imgfile)) File.Delete(imgfile);
-                //});
                 Session["dbPathName"] = baseConsultingServiceImagePath + dirPath + "/" + newFileName;
 
                 Response.Write(Common.Json("OK", baseConsultingServiceImagePath + dirPath + "/" + newFileName));
@@ -248,7 +251,9 @@ namespace Weetop.Web.CMS
             #endregion 上传图片
         }
 
-        //获取选中id对应SiteConsultingService对象
+        /// <summary>
+        /// 获取选中id对应SiteConsultingService对象
+        /// </summary>
         private void GetJson()
         {
             Response.ContentType = "application/json";
@@ -272,7 +277,9 @@ namespace Weetop.Web.CMS
             Response.End();
         }
 
-        //修改人员图片
+        /// <summary>
+        /// 修改人员图片
+        /// </summary>
         private void modifyImg()
         {
             Response.ContentType = "application/json";
@@ -297,7 +304,9 @@ namespace Weetop.Web.CMS
             Response.End();
         }
 
-        //修改分类信息
+        /// <summary>
+        /// 修改分类信息
+        /// </summary>
         private void Toggle()
         {
             Response.ContentType = "application/json";
@@ -345,7 +354,9 @@ namespace Weetop.Web.CMS
             }
         }
 
-        //绑定数据
+        /// <summary>
+        /// 绑定数据
+        /// </summary>
         private void BindData()
         {
             GetModulePrivilegeByRoleId();
@@ -371,47 +382,41 @@ namespace Weetop.Web.CMS
                     break;
             }
             string searchText = txtSearch.Value.Trim();
-
-            //SiteConsultingService.GetList();
             var list = SiteConsultingService.GetList(ref pp, servicePersonType, searchText);
-            //转变分类ID方便前端呈现
-            //foreach (var item in list)
-            //{
-            //    if (item.cateId == 1)
-            //    {
-            //        item.CategroyName = "客服";
-            //    }
-            //    if (item.cateId == 2)
-            //    {
-            //        item.CategroyName = "商务";
-            //    }
-            //    if (item.cateId == 3)
-            //    {
-            //        item.CategroyName = "运维";
-            //    }
-            //}
             AspNetPager1.PageSize = pp.PageSize;
             AspNetPager1.RecordCount = pp.TotalCount;
             AspNetPager1.CurrentPageIndex = pp.PageIndex;
-
             Repeater1.DataSource = list;
             Repeater1.DataBind();
         }
 
+        /// <summary>
+        /// 第三执行
+        /// </summary>
+        /// <param name="src"></param>
+        /// <param name="e"></param>
         protected void AspNetPager1_PageChanging(object src, PageChangingEventArgs e)
         {
-            //第三执行
             AspNetPager1.CurrentPageIndex = e.NewPageIndex;
             BindData();
         }
 
-        //可用于前端JS调用PostBack时执行
+        /// <summary>
+        /// 可用于前端JS调用PostBack时执行
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void UpdatePanel1_Load(object sender, EventArgs e)
         {
             //不管是不是PostBack都会执行，第二执行
             BindData();
         }
 
+        /// <summary>
+        /// 人员分类下拉框绑定数据
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Repeater1_OnItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             Repeater rep = e.Item.FindControl("Repeater2") as Repeater;

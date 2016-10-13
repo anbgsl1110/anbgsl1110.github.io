@@ -9,7 +9,11 @@ namespace Weetop.DAL
     public sealed class SiteConsultingService
     {
         private SiteConsultingService() { }
-        //根据id获取客服人员信息
+        /// <summary>
+        /// 根据id获取客服人员信息
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static ConsultingService GetOne(int id)
         {
             using (DataClassesDataContext db = new DataClassesDataContext())
@@ -18,16 +22,10 @@ namespace Weetop.DAL
             }
         }
 
-        //根据主键id获取客服人员相关表信息
-        public static List<ConsultingServiceNexus> GetList(Guid id)
-        {
-            using (DataClassesDataContext db = new DataClassesDataContext())
-            {
-                return db.ConsultingServiceNexus.Where(w => w.UserId == id).ToList();
-            }
-        }
-
-        //获取服务人员信息List
+        /// <summary>
+        /// 获取服务人员信息List
+        /// </summary>
+        /// <returns></returns>
         public static List<ConsultingService> GetList()
         {
             using (DataClassesDataContext db = new DataClassesDataContext())
@@ -36,7 +34,13 @@ namespace Weetop.DAL
             }
         }
 
-        //服务人员信息模糊查询
+        /// <summary>
+        /// 服务人员信息模糊查询
+        /// </summary>
+        /// <param name="pp"></param>
+        /// <param name="servicePersonType"></param>
+        /// <param name="searchText"></param>
+        /// <returns></returns>
         public static List<ConsultingService> GetList(ref PageParams pp,int servicePersonType,string searchText = null)
         {
             using (DataClassesDataContext db = new DataClassesDataContext())
@@ -91,7 +95,10 @@ namespace Weetop.DAL
 
         }
 
-        //根据ID删除服务人员信息
+        /// <summary>
+        /// 根据ID删除服务人员信息
+        /// </summary>
+        /// <param name="id"></param>
         public static void Delete(int id)
         {
             using (DataClassesDataContext db = new DataClassesDataContext())
@@ -99,14 +106,17 @@ namespace Weetop.DAL
                 var temp = db.ConsultingService.SingleOrDefault(w => w.id == id);
                 if (temp != null)
                 {
-                    SiteConsultingServiceNexus.DeleteNexusBycid(temp.id);
+                    SiteConsultingServiceNexus.DeleteBycid(temp.id);
                     db.ConsultingService.DeleteOnSubmit(temp);
                     db.SubmitChanges();
                 }
             }
         }
 
-        //更新服务人员信息
+        /// <summary>
+        /// 更新服务人员信息
+        /// </summary>
+        /// <param name="entity"></param>
         public static void Update(ConsultingService entity)
         {
             using (DataClassesDataContext db = new DataClassesDataContext())
@@ -153,7 +163,11 @@ namespace Weetop.DAL
             }
         }
 
-        //获取人员信息
+        /// <summary>
+        /// 获取人员信息
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static ConsultingService GetConsultingServiceInfo(int id)
         {
             using (DataClassesDataContext db = new DataClassesDataContext())
@@ -162,281 +176,78 @@ namespace Weetop.DAL
             }
         }
 
-        //根据userID获取已分配服务人员信息
-        public static List<ConsultingService> GetAssignedConsultingServiceListByUserId(Guid UserId, int cateId)
+        /// <summary>
+        /// 根据userID获取已分配服务人员信息
+        /// </summary>
+        /// <param name="UserId"></param>
+        /// <param name="cateId"></param>
+        /// <returns></returns>
+        public static List<ConsultingService> GetByBoundListUserId(Guid UserId, int cateId)
         {
             using (DataClassesDataContext db = new DataClassesDataContext())
             {
-                List<ConsultingService> temp1 = db.ConsultingService.ToList();
-                if (!("-1".Equals(cateId)))
+                List<ConsultingService> list = new List<ConsultingService>();
+                string sql = "select * from ConsultingService where id in(select cid from ConsultingServiceNexus where UserId = '"+UserId.ToString()+"')";
+                switch (cateId)
                 {
-                    if(cateId == 0)//显示全部
-                    {
-                        var temp2 = from consultingService in db.ConsultingService
-                        join consultingServiceNexus in db.ConsultingServiceNexus
-                        on consultingService.id equals consultingServiceNexus.cid
-                        where (consultingServiceNexus.UserId == UserId)
-                        orderby consultingService.cateId
-                        select consultingService;
-
-                        return temp2.ToList();
-                    }
-                    else//根据服务人员分类显示
-                    {
-                        var temp2 = from consultingService in db.ConsultingService
-                        join consultingServiceNexus in db.ConsultingServiceNexus
-                        on consultingService.id equals consultingServiceNexus.cid
-                        where (consultingServiceNexus.UserId == UserId&&consultingService.cateId == cateId)
-                        orderby consultingService.cateId
-                        select consultingService;
-                        return temp2.ToList();                       
-                    }
-                    
+                    case 1:
+                        sql += "and cateId = 1";
+                        break;
+                    case 2:
+                        sql += "and cateId = 2";
+                        break;
+                    default:
+                        break;
                 }
-                else
-                {
-                    return null;
-                }
+                IEnumerable<ConsultingService> emps = db.ExecuteQuery<ConsultingService>(sql);
+                return emps.ToList();
             }
         }
 
-        //根据userId获取未分配服务人员信息（包含分页）
-        public static List<ConsultingService> GetNotAssignedConsultingServiceListByUserId(ref PageParams pp, Guid UserId, int cateId)
+        /// <summary>
+        /// 根据userID获取已分配服务人员信息
+        /// </summary>
+        /// <param name="UserId"></param>
+        /// <returns></returns>
+        public static List<ConsultingService> GetByBoundListUserId(Guid UserId)
         {
             using (DataClassesDataContext db = new DataClassesDataContext())
             {
-                List<ConsultingService> temp1 = db.ConsultingService.ToList();
-                if(!("-1".Equals(cateId)))
-                {
-                    if(cateId == 0)//显示全部
-                    {
-                        var temp2 = SiteConsultingServiceNexus.GetAllConsultServiceNexusByUserId(UserId);
-                        List<ConsultingService> temp3 = new List<ConsultingService>();
-                        foreach (ConsultingService ConsultingService1 in temp1)
-                        {
-                            temp3.Add(ConsultingService1);
-                        }
-                        foreach (ConsultingService consultingService2 in temp3)
-                        {
-                            foreach (ConsultingServiceNexus ConsultingServiceNexus1 in temp2)
-                            {
-                                if(consultingService2.id == ConsultingServiceNexus1.cid)
-                                {
-                                    temp1.Remove(consultingService2);
-                                    continue;
-                                }
-                            }
-                        }
-                        if(pp.AllowPaging)
-                        {
-                            pp.TotalCount = temp1.Count();
-                            return temp1.Skip(pp.PageSize * (pp.PageIndex - 1)).Take(pp.PageSize).ToList();
-                        }
-                        else
-                        {
-                            return temp1.ToList();                        
-                        }
-                    }
-                    else//根据服务人员分类显示
-                    {
-                        var temp2 = SiteConsultingServiceNexus.GetAllConsultServiceNexusByUserId(UserId);
-                        List<ConsultingService> temp3 = new List<ConsultingService>();
-                        foreach (ConsultingService ConsultingService1 in temp1)
-                        {
-                            temp3.Add(ConsultingService1);
-                        }
-                        foreach (ConsultingService consultingService2 in temp3)
-                        {
-                            if(temp2.Count == 0)//显示全部
-                            {
-                                if (consultingService2.cateId != cateId)
-                                {
-                                    temp1.Remove(consultingService2);
-                                    continue;
-                                }
-                            }
-                            else//根据服务人员分类显示
-                            {
-                                foreach (ConsultingServiceNexus ConsultingServiceNexus1 in temp2)
-                                {
-                                    if(consultingService2.id == ConsultingServiceNexus1.cid || consultingService2.cateId != cateId)
-                                    {
-                                        temp1.Remove(consultingService2);
-                                        continue;
-                                    }
-                                }
-                            }
-                        }
-                        if(pp.AllowPaging)
-                        {
-                            pp.TotalCount = temp1.Count();
-                            return temp1.Skip(pp.PageSize * (pp.PageIndex - 1)).Take(pp.PageSize).ToList();
-                        }
-                        else
-                        {
-                            return temp1.ToList();                        
-                        }
-                    }                    
-                }
-                if(pp.AllowPaging)
-                {
-                    pp.TotalCount = temp1.Count();
-                    return temp1.Skip(pp.PageSize * (pp.PageIndex - 1)).Take(pp.PageSize).ToList();
-                }
-                else
-                {
-                    return temp1.ToList();
-                }
+                List<ConsultingService> list = new List<ConsultingService>();
+                string sql = "select * from ConsultingService where id in(select cid from ConsultingServiceNexus where UserId = '"+UserId.ToString()+"')";
+                IEnumerable<ConsultingService> emps = db.ExecuteQuery<ConsultingService>(sql);
+                return emps.ToList();
             }
         }
 
-        //根据userId获取未分配服务人员信息（不包含分页）
-        public static List<ConsultingService> GetNotAssignedConsultingServiceListByUserId(Guid UserId, int cateId)
+        /// <summary>
+        /// 根据userId获取未分配服务人员信息（包含分页）
+        /// </summary>
+        /// <param name="pp"></param>
+        /// <param name="UserId"></param>
+        /// <param name="cateId"></param>
+        /// <returns></returns>
+        public static List<ConsultingService> GetBoundListByUserId(ref PageParams pp, Guid UserId, int cateId)
         {
             using (DataClassesDataContext db = new DataClassesDataContext())
             {
-                List<ConsultingService> temp1 = db.ConsultingService.ToList();
-                if(!("-1".Equals(cateId)))
+                List<ConsultingService> list = new List<ConsultingService>();
+                string sql = "select * from ConsultingService where id not in(select cid from ConsultingServiceNexus where UserId = '" + UserId.ToString() + "') ";
+                switch (cateId)
                 {
-                    if(cateId == 0)//显示全部
-                    {
-                        var temp2 = SiteConsultingServiceNexus.GetAllConsultServiceNexusByUserId(UserId);
-                        List<ConsultingService> temp3 = new List<ConsultingService>();
-                        foreach (ConsultingService ConsultingService1 in temp1)
-                        {
-                            temp3.Add(ConsultingService1);
-                        }
-                        foreach (ConsultingService consultingService2 in temp3)
-                        {
-                            foreach (ConsultingServiceNexus ConsultingServiceNexus1 in temp2)
-                            {
-                                if(consultingService2.id == ConsultingServiceNexus1.cid)
-                                {
-                                    temp1.Remove(consultingService2);
-                                    continue;
-                                }
-                            }
-                        }                   
-                        return temp1.ToList();                        
-                    }               
-                    else//根据服务人员分类显示
-                    {
-                        var temp2 = SiteConsultingServiceNexus.GetAllConsultServiceNexusByUserId(UserId);
-                        List<ConsultingService> temp3 = new List<ConsultingService>();
-                        foreach (ConsultingService ConsultingService1 in temp1)
-                        {
-                            temp3.Add(ConsultingService1);
-                        }
-                        foreach (ConsultingService consultingService2 in temp3)
-                        {
-                            if(temp2.Count == 0)//显示全部
-                            {
-                                if (consultingService2.cateId != cateId)
-                                {
-                                    temp1.Remove(consultingService2);
-                                    continue;
-                                }
-                            }
-                            else//根据服务人员分类显示
-                            {
-                                foreach (ConsultingServiceNexus ConsultingServiceNexus1 in temp2)
-                                {
-                                    if(consultingService2.id == ConsultingServiceNexus1.cid || consultingService2.cateId != cateId)
-                                    {
-                                        temp1.Remove(consultingService2);
-                                        continue;
-                                    }
-                                }
-                            }
-                        }
-                        return temp1.ToList();                        
-                    }                    
+                    case 1:
+                        sql += " AND cateId = 1";
+                        break;
+                    case 2:
+                        sql += " AND cateId = 2";
+                        break;
+                    default:
+                        break;
                 }
-                else
-                {
-                    return temp1.ToList();
-                }
+                IEnumerable<ConsultingService> emps = db.ExecuteQuery<ConsultingService>(sql);
+                return emps.Skip(pp.PageSize * (pp.PageIndex - 1)).Take(pp.PageSize).ToList();
             }
-        }
-
-        //根据临时更改结果listTemp1获取已分配服务人员信息
-        public static List<ConsultingService> GetAssignedConsultingServiceListByListTemp(int cateId,List<ConsultingService> listTemp)
-        {
-            List<ConsultingService> temp1 = listTemp.ToList();
-            if (!("-1".Equals(cateId)))
-            {
-                if(cateId == 0)//显示全部
-                {
-                    return temp1;
-                }
-                else//根据服务人员分类显示
-                {
-                    List<ConsultingService> temp2 = new List<ConsultingService>();
-                    foreach(ConsultingService cs in temp1)
-                    {
-                        if(cs.cateId == cateId)
-                        {
-                            temp2.Add(cs);
-                        }
-                    }
-                    return temp2.ToList();                       
-                }
-            }
-            else
-            {
-                return temp1;    
-            }
-        }
-
-        //根据临时更改结果ListTemp2获取未分配服务人员信息
-        public static List<ConsultingService> GetNotAssignedConsultingServiceListByListTemp(ref PageParams pp, int cateId, List<ConsultingService> listTemp)
-        {
-            List<ConsultingService> temp1 = listTemp.ToList();
-            if(!("-1".Equals(cateId)))
-            {
-                if(cateId == 0)//显示全部
-                {
-                    if(pp.AllowPaging)
-                    {
-                        pp.TotalCount = temp1.Count();
-                        return temp1.Skip(pp.PageSize * (pp.PageIndex - 1)).Take(pp.PageSize).ToList();
-                    }
-                    else
-                    {
-                        return temp1.ToList();                        
-                    }
-                }
-                else//根据服务人员分类显示
-                {
-                    List<ConsultingService> temp2 = new List<ConsultingService>();
-                    foreach (ConsultingService ConsultingService1 in temp1)
-                    {
-                        if(ConsultingService1.cateId == cateId)
-                        {
-                            temp2.Add(ConsultingService1);
-                        }
-                    }
-                    if(pp.AllowPaging)
-                    {
-                        pp.TotalCount = temp2.Count();
-                        return temp1.Skip(pp.PageSize * (pp.PageIndex - 1)).Take(pp.PageSize).ToList();
-                    }
-                    else
-                    {
-                        return temp2.ToList();                        
-                    }
-                }                    
-            }
-            if(pp.AllowPaging)
-            {
-                pp.TotalCount = temp1.Count();
-                return temp1.Skip(pp.PageSize * (pp.PageIndex - 1)).Take(pp.PageSize).ToList();
-            }
-            else
-            {
-                return temp1.ToList();
-            }
-        }
+        }       
          
     }
 }

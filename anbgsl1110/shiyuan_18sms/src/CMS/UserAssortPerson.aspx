@@ -80,7 +80,7 @@
                             </contenttemplate>
                         </asp:UpdatePanel>
                         <p style="color:red">
-                        【注意】请确保分配了一对客服和一对商务!
+                        【注意】请确保分配了一个客服和一个商务!
                         </p>
                         <blockquote class="pull-left">
                             <p><small id="time1"></small></p>
@@ -132,16 +132,6 @@
                             </contenttemplate>
                         </asp:UpdatePanel>                                                    
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-sm" href="javascript:Reset() %>');">
-                        <i class="ace-icon fa fa-refresh"></i>
-                        重置更改
-                        </button>
-                        <button class="btn btn-sm btn-primary" href="javascript:Save() %>');">
-                        <i class="ace-icon fa fa-check"></i>
-                        确定
-                        </button>
                     </div> 
                     </div> 
                 </div> 
@@ -162,12 +152,13 @@
         ActiveMenu('menu3');
 
 
-        //删除咨询服务人员
+        //咨询服务人员
         function DeleteServicePerson(id) {
             $.post('', { action: 1, id: id }, function (jdata) {
                 switch (jdata.code) {
                     case "OK":
                         showInfo(jdata.message);
+                        window.location.reload();
                         break;
                     case "Err":
                         showErr(jdata.message);
@@ -183,48 +174,13 @@
                 switch (jdata.code) {
                     case "OK":
                         showInfo(jdata.message);
+                        window.location.reload();
                         break;
                     case "Err":
                         showErr(jdata.message);
                         break;
                 }
             }, 'json');
-        }
-
-        //重置更改
-        function Reset ()
-        {
-            $.getJSON('', { action: 3}, function (jdata, textStatus, jqXHR) {
-                if ('success' == textStatus) {
-                    switch (jdata.code) {
-                        case "Ok":
-                            window.location.reload();
-                            showInfo(jdata.message);
-                            break;
-                        case "Err":
-                            showErr(jdata.message);
-                            break;
-                    }
-                }
-            });
-        }
-
-        //保存确定
-        function Save ()
-        {
-            $.getJSON('', { action: 4}, function (jdata, textStatus, jqXHR) {
-                if ('success' == textStatus) {
-                    switch (jdata.code) {
-                        case "Ok":
-                            window.location.reload();
-                            showInfo(jdata.message);
-                            break;
-                        case "Err":
-                            showErr(jdata.message);
-                            break;
-                    }
-                }
-            });
         }
 
         jQuery(function ($) {

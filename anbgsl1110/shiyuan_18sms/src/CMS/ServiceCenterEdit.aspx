@@ -274,17 +274,6 @@
                     }
                 })
 
-                /**
-                //let's display edit mode by default?
-                $('#avatar').editable('show').on('hidden', function(e, reason) {
-                    if(reason == 'onblur') {
-                        $('#avatar').editable('show');
-                        return;
-                    }
-                    $('#avatar').off('hidden');
-                })
-                */
-
             } catch (e) { }
 
         });

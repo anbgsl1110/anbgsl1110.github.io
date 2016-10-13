@@ -39,6 +39,9 @@
                             <asp:LinkButton ID="btnSearch" CssClass="ace-icon" runat="server"><i class="fa fa-search"></i></asp:LinkButton>
                         </span>
                     </div>
+                    <div class="pull-right tableTools-container">
+                        <a class="btn btn-sm btn-success" role="button" href="/cms/UserList?action=export" title="导出用户信息">导出用户信息</a> 
+                    </div> 
                 </div>
 
                 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
@@ -118,7 +121,7 @@
                                               <%}
                                               if(item2.PrivilegeCode == "XG")
                                               {%>
-                                                   <a class="green" href="UserAssortPerson.aspx?userId=<%# Eval("UserId") %>&phone=<%# Eval("Phone") %>" title="分配服务人员">
+                                                   <a class="green" href="UserAssortPerson.aspx?userId=<%# Eval("UserId") %>&phone=<%# Eval("NickName") %>" title="分配服务人员">
                                                      <i class="ace-icon fa fa-edit bigger-130"></i>
                                                    </a>
                                               <%}
