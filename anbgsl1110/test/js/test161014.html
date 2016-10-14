@@ -1,0 +1,243 @@
+<%@ page language="Java" import="java.util.*" pageEncoding="utf-8"%>
+
+<%
+
+String path = request.getContextPath();
+
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+  <head>
+
+  <base href="<%=basePath%>">
+
+  <script src="js/jquery.js" type="text/JavaScript"></script>
+
+    <!--
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+     -->
+
+    <title> 获取或设置元素的内容</title>
+
+    <style type="text/css">
+
+       body{font-size:15px;text-align:center}
+
+       div{border:solid 0px #666;padding:5px;width:220px;margin:5px}
+
+    </style>
+
+    <script type="text/javascript">
+
+       $(function() {
+
+           var strHTML = $("#divShow").html();// 获取HTML 内容(包含div下面的两个格式)
+
+           var strHTML2 = $("#divShow b i").html(); //获取HTML内容
+
+           var strHTML3 = $("div").html();
+
+           var strText = $("#divShow").text();// 获取文本内容
+
+           var strText2 = $("div").text();
+
+          
+
+           $("#divHTML").html(strHTML);// 设置HTML 内容
+
+           $("#divHTML2").html(strHTML2); //设置HTML内容
+
+           $("#divHTML3").html(strHTML3); //设置HTML内容
+
+           $("p").html(strHTML);
+
+          
+
+           $("#divText").text(strText);// 设置文本内容
+
+           $("#divText2").text(strText2);// 设置文本内容
+
+           $("a").text(strText);
+
+          
+
+           $("select").change(function() { // 设置列表框change 事件
+
+           // 获取列表框所选中的全部选项的值
+
+              alert($("select").val());
+
+              var strSel = $("select").val().join(",");
+
+              $("input").val(strSel); // 显示列表框所选中的全部选项的值
+
+           })
+
+       })
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <table border="1" bordercolor="#A9A9A9" cellspacing="0">
+
+    <tr><td>******************************</td><td>*******************************************</td></tr>
+
+    <tr>
+
+    <td><div id="divShow"><b><i>Write Less Do More</i></b></div></td>
+
+       <td>这是原内容</td>
+
+    </tr>
+
+    <tr>
+
+    <td><div id="divShow"><b><i>Write XXXX Do XXXX</i></b></div></td>
+
+       <td>这是原内容</td>
+
+    </tr>
+
+<tr><td>******************************</td><td>*******************************************</td></tr>
+
+    <tr>
+
+       <td><div id="divHTML">1</div></td>
+
+        <td>获取原内容(连带内容的格式)后以html方式输出</td>
+
+    </tr>
+
+    <tr>
+
+        <td><div id="divHTML2">2</div></td>
+
+        <td>获取原内容(不带内容的格式)后以html方式输出</td>
+
+    </tr>
+
+    <tr>
+
+        <td><div id="divHTML3">3</div></td>
+
+        <td>获取原内容(获取第一个匹配元素的内容)后以html方式输出</td>
+
+    </tr>
+
+    <tr>
+
+        <td><p></p></td>
+
+        <td>HTML方式设置段落的文本</td>
+
+    </tr>
+
+    <tr>
+
+        <td><p></p></td>
+
+        <td>如果这个也有内容了，就是设置每个匹配元素的内容</td>
+
+    </tr>
+
+<tr><td>******************************</td><td>*******************************************</td></tr>
+
+    <tr>
+
+    <td><div id="divText">4</div></td>
+
+    <td>获取原内容后以text方式输出</td>
+
+    </tr>
+
+    <tr>
+
+    <td><div id="divText2"></div></td>
+
+    <td>获取原内容(获取所有匹配元素的内容)后以text方式输出</td>
+
+    </tr>
+
+    <tr>
+
+        <td><a></a></td>
+
+        <td>TEXT方式设置段落的文本</td>
+
+    </tr>
+
+    <tr>
+
+        <td><a></a></td>
+
+        <td>如果这个也有内容了，就是设置每个匹配元素的内容</td>
+
+    </tr>
+
+    <tr><td>******************************</td><td>*******************************************</td></tr>
+
+    <tr>
+
+    <td>
+
+   
+
+    <select multiple="multiple"style="height:96px;width:85px">
+
+           <option value="1">Item 1</option>
+
+           <option value="2">Item 2</option>
+
+           <option value="3">Item 3</option>
+
+           <option value="4">Item 4</option>
+
+           <option value="5">Item 5</option>
+
+           <option value="6">Item 6</option>
+
+       </select>
+
+       <select>
+
+           <option value="7">Item 7</option>
+
+           <option value="8">Item 8</option>
+
+           <option value="9" selected>Item 9</option>
+
+          
+
+       </select>
+
+    </td>
+
+    <td>
+
+    </td>
+
+    </tr>
+
+    <tr>
+
+    <td><input ></input></td>
+
+    <td><input ></input></td>
+
+    </tr>
+
+    </table>
+
+  </body>
+
+</html>
