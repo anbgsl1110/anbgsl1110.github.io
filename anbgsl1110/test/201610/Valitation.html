@@ -1,0 +1,271 @@
+//CompareValidator
+<!DOCTYPE>
+<html>
+<body>
+    <form runat="server">
+        <table border="0" bgcolor="#b0c4de">
+            <tr valign="top">
+                <td colspan="4"><h4>Compare two values</h4></td>
+            </tr>
+            <tr valign="top">
+                <td><asp:TextBox id="txt1" runat="server" /></td>
+                <td>=</td>
+                <td><asp:TextBox id="txt2" runat="server" /></td>
+                <td><asp:Button Text="Validate" runat="server" /></td>
+            </tr>
+        </table>
+        <br>
+        <asp:CompareValidator
+        id="compval"
+        Display="dynamic"
+        ControlToValidate="txt1"
+        ControlToCompare="txt2"
+        ForeColor="red"
+        BackColor="yellow"
+        Type="string"
+        EnableClientScript="false"
+        Text="Valitation Failed"
+        runat="server" />
+    </form>
+</dody>        
+</html>
+
+//CompareValidator2
+<script runat="server">
+sub check_oprator(sender As Object,e As EventArgs)
+    compval.Oprator=CType(listSelectedIndex,ValidationCompareOperator)
+    compval.validate()
+end sub
+</script>
+
+<!DOCTYPE>
+<html>
+<body>
+    <form runat="server">
+        <table border="0" bgcolor="b0c4de">
+            <tr valign="top">
+                <td colspan="4"><h4>Compare two Values</h4></td>
+            </tr>
+            <tr valign="top">
+                <td><asp:TextBox id="txt1" runat="server" /></td>
+                <td>=</td>
+                <td>
+                    <asp:ListBox id="list" rows="2" OnSelectIndexChanged="check_oprator" runat="server">
+                        <asp:ListItem value="Equal" selected>=</aspListItem>
+                        <asp:ListItem value="NoEqual"><></asp:ListItem>
+                    </asp:ListBox>
+                </td>
+                <td><asp:TextBox id="txt2" runat="server" /></td>
+                <td><asp:Button Text="Validate" /></td>
+            </tr>
+        </table>
+        <br>
+        <asp:CompareValidator>
+        id="compval"
+        Display="dynamic"
+        ControlToCompare="txt1"
+        ControlToValidate="txt2"
+        ForeColor="red"
+        BackColor="yellow"
+        Text="Validation Failed"
+        runat="server" />
+    </form>
+</body>
+</html>
+
+//CustomValidate
+<script>
+    sub user(source as object,args as ServerValidateEventArgs )
+        if len(args.Value)<8 or len(args.Value)>16
+            args.IsValid=false
+        else
+            args.IsValid=true
+        end if
+    end sub
+</script>
+
+<!DOCTYPE>
+<html>
+<body>
+    <form runat="server">
+        <asp:Lable runat="server" Text="Enter a userName" />
+        <asp:TextBox id="txt1" runat="server" />
+        <asp:Button Text="Submit" runat="server">
+        <br>
+        <asp:Lable id="mess" runat="server" />
+        <br>
+        <asp:CustomValidator 
+        ControlToValidate="txt1"
+        OnServerValidate="user"
+        Text="Validattion Failed"
+        runat="server"
+        />
+    </form>
+    
+</body>
+</html>
+
+//RangeValidator
+<!DOCTYPE>
+<html>
+<body>
+    <form runat="server">
+        Enter a date between 2016-01-01 and 2016-12-31:
+        <br>
+        <asp:TextBox id="txt1" runat="server" />
+        <br><br>
+        <asp:Button Text="Submit" runat="server" />
+        <br><br>
+        <asp:RangeValidator 
+        ControlToValidate="txt1"
+        MinimumValue="2016-01-01"
+        MaximumValue="2016-12-31"
+        Type="Date"
+        EnableClientScript="false"
+        Text="The date must be between 2016-01-01 and 2016-12-31!"
+        runat="server"
+        />
+    </form>
+</body>
+</html>
+
+//RangeValidator2
+<script runat="server">
+sub submit(sender as Object,e as EventArgs)
+    if Page.IsValid then
+        lbl1.Text="page is valid"
+    else
+        lbl1.Text="page is not valid"
+    end if
+end sub
+</script>
+
+<!DOCTYPE>
+
+<html>
+<body>
+    <form runat="server">
+        Enter a number from 1 to 100.
+        <asp:TextBox id="txt1" runat="server" />
+        <br><br>
+        <asp:button Text="Submit" OnClick="submit" runat="server" />
+        <br><br>
+        <asp:Lable id="lbl1" runat="server" />
+        <br>
+        <asp:RangeValidator 
+        ControlToValidate="txt1"
+        MinimumValue="1"
+        MaximumValue="100"
+        Type="Integer"
+        Text="The value must be from 1 to 100"
+        runat="server"
+        />
+    </form>
+</body>
+</html>
+
+//RegularExpressionValidator
+<script runat="server">
+    sub submit(sender as object,e as EventArgs)
+    if Page.IsValid then
+        lbl1.Text="Page is valid"
+    else
+        lbl1.Text="Page is not valid"
+    end if
+    end sub
+</script>
+
+<!DOCTYPE>
+
+<html>
+<body>
+    <form action="" runat="server">
+        Enter a US zip:
+        <asp:TextBox id="txt1" runat="server" />
+        <br><br>
+        <asp:Button Text="Submit" OnClick="submit" runat="server" />
+        <br><br>
+        <asp:Lable id="lbl1" runat="server" />
+        <asp:RegularExpressionValidator 
+        ControlToValidate="txt1"
+        ValidationExpression="\d{5}"
+        EnableClientScript="false"
+        ErrorMessage="the zip code must be 5 numeric digits"
+        runat="server"
+        />
+    </form>
+</body>
+</html>
+
+//RequiredFieldValidator
+<!DOCTYPE>
+<html>
+<body>
+    <form action="" runat="server">
+        Name:<asp:TextBox id="name" runat="server" />
+        <br><br>
+        Age:<asp:TextBox id="age" runat="server" />
+        <br><br>
+        <asp:Button Text="Submit" runat="server" />
+        <br><br>
+        <asp:RequiredFieldValidator
+        ControlToValidate="name"
+        Text="the name field is required"
+        runat="server"
+        />
+    </form>
+</body>
+</html>
+
+//ValidationSummary
+<!DOCTYPE>
+<html>
+    <body>
+        <form action="" runat="server">
+            <table bgcolor="b0c4de" cellspacing="10">
+                <tr>
+                    <td align="right">Name:</td>
+                    <td><asp:TextBox id="txt_name" runat="server" /></td>
+                    <td><asp:RequiredValidator
+                    ControlToValidate="txt_name"
+                    ErrorMessage="Name"
+                    Text="*"
+                    runat="server" /></td>
+                </tr>
+                <tr>
+                    <td align="right">Card Type</td>
+                    <td>
+                        <asp:RadioButtonList id="rlist_type" RepeatLayout="Flow" runat="server">
+                            <asp:ListItem>Diners</asp:ListItem>
+                            <asp:ListItem>Master</asp:ListItem>
+                            <asp:ListItem>Visa</asp:ListItem>
+                        </asp:RadioButtonList>
+                    </td>
+                    <td>
+                        <asp:RequiredFieldValidator 
+                        ControlToValidate="rlist_type"
+                        ErrorMessage="Card Type"
+                        InitalValue=""
+                        Text="*"
+                        runat="server"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><asp:Button id="btn1" runat="server" /></td>
+                    <td></td>
+                </tr>
+            </table>
+            <br>
+            <asp:ValidationSummary
+            HeaderText="you must be enter a value in the following fields:"
+            DisplayMode="BulletList"
+            EnableClientScript="true"
+            runat="server"
+            />
+        </form>
+    </body>
+</html>
+
+2016-10-17 anbgsl1110
