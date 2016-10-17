@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<countries>
+    <country>
+        <text>China</text>
+        <value>C</value>
+    </country>
+    <country>
+        <text>Sweden</text>
+        <value>S</value>
+    </country>
+    <country>
+        <text>Frach</text>
+        <value>F</value>
+    </country>
+    <coutry>
+        <text>Italy</text>
+        <value>I</value>
+    </country>
+</countries>

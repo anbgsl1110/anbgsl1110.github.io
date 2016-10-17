@@ -1,0 +1,22 @@
+//Repeater练习
+<html>
+<body>
+    <form runat="server">
+        <asp:Repeater id="cdcatalog" runat="server">
+            <HeaderTemplate>
+            ...
+            </HeaderTemplate>
+            <ItemTemplate>
+            ...
+            </ItemTemplate>
+            <FooterTemplate>
+            ...
+            </FooterTemplate>
+        </asp:Repeater>
+    </form>
+</body>
+</html>
+
+<AlternatingItemTemplate>//可以在<ItemTemplate>元素后添加<AlternatingItemTemplate>元素，这样就可以描述交替行的外观了。
+<SeparatorTempalte>//该元素能够用于描述每个记录之间的分割符
+        

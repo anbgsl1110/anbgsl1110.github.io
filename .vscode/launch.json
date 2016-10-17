@@ -49,15 +49,14 @@
             "request": "attach",
             "processId": "${command.pickProcess}"
         },
-
         //chrom
         {
             "name": "Launch Chrome against localhost, with sourcemaps",
             "type": "chrome",
             "request": "launch",
-            "url": "http://localhost:10969/CMS/UserList",
+            "url": "C:/Repos/anbgsl1110.github.io/anbgsl1110/test/201610/webform-xml.aspx",
             "sourceMaps": false,
-            "webRoot": "C:/Repos/shiyuan_18sms/Weetop.Web/"
+            "webRoot": ""
         },
         {
             "name": "Attach to Chrome, with sourcemaps",
@@ -65,9 +64,8 @@
             "request": "attach",
             "port": 9222,
             "sourceMaps": true,
-            "webRoot": "C:/Repos/anbgsl1110.github.io/js/jquery-3.1.1.js"
+            "webRoot": "C:/Repos/anbgsl1110.github.io/anbgsl1110/test/201610/webform-xml.aspx"
         },
-
         //node.js
         {
             "name": "启动",
@@ -110,7 +108,6 @@
             "sourceMaps": false,
             "outDir": null
         },
-
         //vscode扩展开发
         {
             "name": "启动扩展",
