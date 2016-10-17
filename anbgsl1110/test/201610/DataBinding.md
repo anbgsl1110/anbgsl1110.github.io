@@ -13,7 +13,7 @@
 SortedList对象包含用键值对表示的项目，SortedList对象按照字母顺序或者数字顺序自动的对项目进行排序。
 ## DataList
 DataList对象类似于Repeater,用于显示绑定在该控件上的项目的重复列表。不过DataList控件会默认的在数据项目中添加表格。
-' <form id="myform" runat="server">
+<code><form id="myform" runat="server">
 <asp:DataList id="DataList1" runat="server">
     <HeaderTemplate>
     </HeaderTemplate>
@@ -22,5 +22,5 @@ DataList对象类似于Repeater,用于显示绑定在该控件上的项目的重
     <FooterTemplate>
     </FooterTemplate>
 </asp:DataList>
-</form> '
+</form></code>
 
