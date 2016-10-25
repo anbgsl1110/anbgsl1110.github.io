@@ -14,13 +14,8 @@
     </div>
     <!-- /.page-header -->
 
-
-
     <div class="row">
         <div class="col-xs-12">
-
-
-
             <form class="form-horizontal" enctype="multipart/form-data" runat="server">
                 <asp:HiddenField ID="hidId" runat="server" />
 
@@ -71,11 +66,8 @@
                 </div>
             </form>
 
-
-
         </div>
     </div>
-
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
@@ -84,11 +76,9 @@
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder4" runat="server">
 
-
     <script type="text/javascript">
         SetSecondCrumb('<%: Page.Title %>');
         ActiveSubMenu('menu64');
-
 
         var maxImageByte = <%= maxImageByte %>;
         $('#inputImg').ace_file_input({
@@ -111,7 +101,6 @@
                 showWarn('图片大小不能超过 ' + (maxImageByte / 1024 / 1024) + 'M');
             }
         });
-
 
         $('form').on('submit', function (event) {
             event.preventDefault();
@@ -151,6 +140,5 @@
 
         });
     </script>
-
 
 </asp:Content>
