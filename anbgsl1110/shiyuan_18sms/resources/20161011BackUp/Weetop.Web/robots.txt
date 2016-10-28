@@ -1,9 +1,0 @@
-# robots.txt
-User-agent:*
-Allow: /
-
-Disallow: /member
-Disallow: /login
-Disallow: /zhuce
-Disallow: /wjmm
-Sitemap:http://www.18sms.com//sitemap.xml
