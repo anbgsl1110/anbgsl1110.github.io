@@ -72,6 +72,7 @@
 ****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1099-20161115.html][CLR学习（4)]]
 ****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1098-20161115.html][CLR学习（5)]]
 ****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1097-20161118.html][C#单元测试（1）]]
+****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1096-20161118.html][C#单元测试（2）]]
 ** 【技能】-数据库：Mysql||Sqlserver
 暂无。
 ** 【技能】-前端：Web
@@ -91,6 +92,7 @@
 ****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1099-20161115.html][CLR学习（4)]]
 ****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1098-20161115.html][CLR学习（5)]]
 ****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1097-20161118.html][C#单元测试（1）]]
+****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1096-20161118.html][C#单元测试（2）]]
 ** 【2016年09月】
 **** [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201609/1.html][2016秋季找工作杂谈]]
 ** 【2016年07月】
