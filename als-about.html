@@ -1,65 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>【关于】-阿亮的空间说明文档</title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-<meta name="title" content="【关于】-阿亮的空间说明文档"/>
-<meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2016-11-22"/>
-<meta name="author" content="alaing"/>
-<meta name="description" content=""/>
-<meta name="keywords" content=""/>
+<!-- 2017-01-18 Wed 11:11 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="alaing" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
-  html { font-family: Times, serif; font-size: 12pt; }
   .title  { text-align: center; }
-  .todo   { color: red; }
+  .todo   { font-family: monospace; color: red; }
   .done   { color: green; }
-  .tag    { background-color: #add8e6; font-weight:normal }
-  .target { }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
   .timestamp { color: #bebebe; }
   .timestamp-kwd { color: #5f9ea0; }
-  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
-  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
-  .center {margin-left:auto; margin-right:auto; text-align:center;}
-  p.verse { margin-left: 3% }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
   pre {
-	border: 1pt solid #AEBDCC;
-	background-color: #F3F5F7;
-	padding: 5pt;
-	font-family: courier, monospace;
-        font-size: 90%;
-        overflow:auto;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
   }
-  table { border-collapse: collapse; }
-  td, th { vertical-align: top;  }
-  th.right  { text-align:center;  }
-  th.left   { text-align:center;   }
-  th.center { text-align:center; }
-  td.right  { text-align:right;  }
-  td.left   { text-align:left;   }
-  td.center { text-align:center; }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
   dt { font-weight: bold; }
-  div.figure { padding: 0.5em; }
-  div.figure p { text-align: center; }
-  div.inlinetask {
-    padding:10px;
-    border:2px solid gray;
-    margin:10px;
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
     background: #ffffcc;
   }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
   textarea { overflow-x: auto; }
-  .linenr { font-size:smaller }
-  .code-highlighted {background-color:#ffff00;}
-  .org-info-js_info-navigation { border-style:none; }
-  #org-info-js_console-label { font-size:10px; font-weight:bold;
-                               white-space:nowrap; }
-  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
-                                 font-weight:bold; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
   /*]]>*/-->
 </style>
+<link rel = "stylesheet" type = "text/css" href = "http://www.anbgsl1110-dms-aliang.space/css/org.css" />
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -106,626 +135,338 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
-
 </head>
 <body>
-
-<div id="preamble">
-
-</div>
-
 <div id="content">
 <h1 class="title">【关于】-阿亮的空间说明文档</h1>
-
-
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-</ul></li>
-</ul></li>
-</ul>
-</li>
-<li><a href="#sec-1">1 网站说明</a>
+<li><a href="#sec-1">1. 网站说明</a>
 <ul>
-<li><a href="#sec-1-1">1.1 【初衷】</a></li>
-<li><a href="#sec-1-2">1.2 【个人介绍】</a></li>
-<li><a href="#sec-1-3">1.3 【建站记录】</a></li>
+<li><a href="#sec-1-1">1.1. 【初衷】</a></li>
+<li><a href="#sec-1-2">1.2. 【个人介绍】</a></li>
+<li><a href="#sec-1-3">1.3. 【建站记录】</a></li>
 </ul>
 </li>
-<li><a href="#sec-2">2 博文目录-按标签</a>
+<li><a href="#sec-2">2. 博文目录-按标签</a>
 <ul>
-<li><a href="#sec-2-1">2.1 【笔记】-心灵||信仰（善良&amp;&amp;真诚）</a></li>
-<li><a href="#sec-2-2">2.2 【笔记】-面试准备</a></li>
-<li><a href="#sec-2-3">2.3 【热爱】-逻辑||思维</a></li>
-<li><a href="#sec-2-4">2.4 【热爱】-Linux</a></li>
-<li><a href="#sec-2-5">2.5 【热爱】-Emacs||Github</a></li>
-<li><a href="#sec-2-6">2.6 【必备】-算法||数据结构</a></li>
-<li><a href="#sec-2-7">2.7 【技能】-后端：C#</a></li>
-<li><a href="#sec-2-8">2.8 【技能】-数据库：Mysql||Sqlserver</a></li>
-<li><a href="#sec-2-9">2.9 【技能】-前端：Web</a></li>
-<li><a href="#sec-2-10">2.10 【必备】-计算机网络</a></li>
-<li><a href="#sec-2-11">2.11 【必备】-操作系统||服务器</a></li>
+<li><a href="#sec-2-1">2.1. 【笔记】-心灵||信仰（善良&amp;&amp;真诚）</a></li>
+<li><a href="#sec-2-2">2.2. 【笔记】-面试准备</a></li>
+<li><a href="#sec-2-3">2.3. 【热爱】-逻辑||思维</a></li>
+<li><a href="#sec-2-4">2.4. 【热爱】-Linux</a></li>
+<li><a href="#sec-2-5">2.5. 【热爱】-Emacs||Github</a></li>
+<li><a href="#sec-2-6">2.6. 【必备】-算法||数据结构</a></li>
+<li><a href="#sec-2-7">2.7. 【技能】-后端：C#</a></li>
+<li><a href="#sec-2-8">2.8. 【技能】-数据库：Mysql||Sqlserver</a></li>
+<li><a href="#sec-2-9">2.9. 【技能】-前端：Web</a></li>
+<li><a href="#sec-2-10">2.10. 【必备】-计算机网络</a></li>
+<li><a href="#sec-2-11">2.11. 【必备】-操作系统||服务器</a></li>
 </ul>
 </li>
-<li><a href="#sec-3">3 博文目录-按年月</a>
+<li><a href="#sec-3">3. 博文目录-按年月</a>
 <ul>
-<li><a href="#sec-3-1">3.1 【2016年11月】</a></li>
-<li><a href="#sec-3-2">3.2 【2016年09月】</a></li>
-<li><a href="#sec-3-3">3.3 【2016年07月】</a></li>
+<li><a href="#sec-3-1">3.1. 【2016年11月】</a></li>
+<li><a href="#sec-3-2">3.2. 【2016年09月】</a></li>
+<li><a href="#sec-3-3">3.3. 【2016年07月】</a></li>
 </ul>
 </li>
-<li><a href="#sec-4">4 事件记录</a>
+<li><a href="#sec-4">4. 事件记录</a>
 <ul>
-<li><a href="#sec-4-1">4.1 【版本记录】</a></li>
-<li><a href="#sec-4-2">4.2 【架构记录】</a></li>
+<li><a href="#sec-4-1">4.1. 【版本记录】</a></li>
+<li><a href="#sec-4-2">4.2. 【架构记录】</a></li>
 </ul>
 </li>
-<li><a href="#sec-5">5 感谢</a></li>
-<li><a href="#sec-6">6 链接</a></div>
+<li><a href="#sec-5">5. 感谢</a></li>
+<li><a href="#sec-6">6. 链接</a></li>
+</ul>
 </div>
-<ul>
-<li id="sec-1">INFO<br/>
-日期: 2016-07-09;作者: 阿亮;关键字:网站说明、事件记录、博文目录说明
-
-</li>
-</ul>
-
-<div id="outline-container-1" class="outline-2">
+</div>
+<div id="outline-container-sec-1" class="outline-2">
 <h2 id="sec-1"><span class="section-number-2">1</span> 网站说明</h2>
 <div class="outline-text-2" id="text-1">
-
-<p>不想拖延，不想因为想的太多而做的太少而痛苦，一直觉得大多时候忙碌的时候总是让心变简单。
+<p>
+不想拖延，不想因为想的太多而做的太少而痛苦，一直觉得大多时候忙碌的时候总是让心变简单。
 刚刚完成了网站我希望达到的最基本的功能，写个说明文档。开个头，后面不断的补充。
 </p>
 </div>
-
-<div id="outline-container-1-1" class="outline-3">
+<div id="outline-container-sec-1-1" class="outline-3">
 <h3 id="sec-1-1"><span class="section-number-3">1.1</span> 【初衷】</h3>
 <div class="outline-text-3" id="text-1-1">
-
-<p>现在2016-07-09，外面夜很宁静，喜欢这种大城市喧嚣背后这种寂静的心境。
+<p>
+现在2016-07-09，外面夜很宁静，喜欢这种大城市喧嚣背后这种寂静的心境。
 大三结束了，接下来60多天的暑假，然后准备校园招聘会。之前一直忙于2014年11月大二上开始的实习，
 做着实习单位所谓的大学生软件服务外包的项目，都是项目需要什么学习什么，学校课上安排什么学习什么。
 </p>
+
 <p>
 2016年06月27日，正式从待了21个月的实习单位离职。暑假两个月，打算系统的梳理复习一下大学期间打算学到的知识，
 最初在CSDN上花一天折腾了一个博客，打算记录学习的知识。后面想着自己还要准备个简历，我觉得青春充满无限幻想，
 喜欢折腾，相信明天会更好。结合博客和简历两个需求，便产生了现在这个阿亮的空间。
 </p>
+
 <p>
 后续的完善，只有起点，没有终点。
-</p></div>
-
+</p>
 </div>
-
-<div id="outline-container-1-2" class="outline-3">
+</div>
+<div id="outline-container-sec-1-2" class="outline-3">
 <h3 id="sec-1-2"><span class="section-number-3">1.2</span> 【个人介绍】</h3>
 <div class="outline-text-3" id="text-1-2">
-
-<p>记录总数：1
-</p><ul>
-<li id="sec-1-2-1">2016-07-09<br/>
-</li>
-</ul>
+<p>
+记录总数：1
+</p>
 </div>
-
+<ol class="org-ol"><li><a id="sec-1-2-0-1" name="sec-1-2-0-1"></a>2016-07-09<br  /></li></ol>
 </div>
-
-<div id="outline-container-1-3" class="outline-3">
+<div id="outline-container-sec-1-3" class="outline-3">
 <h3 id="sec-1-3"><span class="section-number-3">1.3</span> 【建站记录】</h3>
 <div class="outline-text-3" id="text-1-3">
-
-<p>记录总数：2
-</p><ul>
-<li id="sec-1-3-1">2016-07-09<br/>
+<p>
+记录总数：3
+</p>
+</div>
+<ol class="org-ol"><li><a id="sec-1-3-0-1" name="sec-1-3-0-1"></a>2016-07-09<br  /><div class="outline-text-5" id="text-1-3-0-1">
+<p>
 上个月27日离职，放松思考了几天。月初开始边学边做，中间继续上着专业数据库设计的短学期，学着驾校。1周完成了1.0的版本.
+</p>
 
 <p>
 因为需求只是自己一个人写博客，展示简历和过往经验，也就做的很简单。现在也只是做了显示博文这一个功能.
-</p></li>
-</ul>
-<ul>
-<li id="sec-1-3-2">2016-10-05<br/>
-精简内容，优化布局。
+</p>
+</div>
 </li>
-</ul>
+<li><a id="sec-1-3-0-2" name="sec-1-3-0-2"></a>2016-10-05<br  /><div class="outline-text-5" id="text-1-3-0-2">
+<p>
+精简内容，优化布局。
+</p>
+</div>
+</li>
+<li><a id="sec-1-3-0-3" name="sec-1-3-0-3"></a>2017-01-18<br  /><div class="outline-text-5" id="text-1-3-0-3">
+<p>
+更新Css
+</p>
+</div>
+</li></ol>
 </div>
 </div>
-
-</div>
-
-<div id="outline-container-2" class="outline-2">
+<div id="outline-container-sec-2" class="outline-2">
 <h2 id="sec-2"><span class="section-number-2">2</span> 博文目录-按标签</h2>
 <div class="outline-text-2" id="text-2">
-
-<p>文档总数：26
+<p>
+文档总数：26
 </p>
 </div>
-
-<div id="outline-container-2-1" class="outline-3">
+<div id="outline-container-sec-2-1" class="outline-3">
 <h3 id="sec-2-1"><span class="section-number-3">2.1</span> 【笔记】-心灵||信仰（善良&amp;&amp;真诚）</h3>
 <div class="outline-text-3" id="text-2-1">
-
-<ul>
-<li id="sec-2-1-1"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/1.html">关于代码整洁</a><br/>
-</li>
-</ul>
+</div><ol class="org-ol"><li><a id="sec-2-1-0-1" name="sec-2-1-0-1"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/1.html">关于代码整洁</a><br  /></li></ol>
 </div>
-
-</div>
-
-<div id="outline-container-2-2" class="outline-3">
+<div id="outline-container-sec-2-2" class="outline-3">
 <h3 id="sec-2-2"><span class="section-number-3">2.2</span> 【笔记】-面试准备</h3>
 <div class="outline-text-3" id="text-2-2">
-
-<ul>
-<li id="sec-2-2-1"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/22.html">2016秋招远程查看项目说明</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-2-2"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/23.html">问题1</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-2-3"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/24.html">问题2</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-2-4"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/25.html">问题3</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-2-5"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201609/1.html">2016秋季找工作杂谈</a><br/>
-</li>
-</ul>
+</div><ol class="org-ol"><li><a id="sec-2-2-0-1" name="sec-2-2-0-1"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/22.html">2016秋招远程查看项目说明</a><br  /></li>
+<li><a id="sec-2-2-0-2" name="sec-2-2-0-2"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/23.html">问题1</a><br  /></li>
+<li><a id="sec-2-2-0-3" name="sec-2-2-0-3"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/24.html">问题2</a><br  /></li>
+<li><a id="sec-2-2-0-4" name="sec-2-2-0-4"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/25.html">问题3</a><br  /></li>
+<li><a id="sec-2-2-0-5" name="sec-2-2-0-5"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201609/1.html">2016秋季找工作杂谈</a><br  /></li></ol>
 </div>
-
-</div>
-
-<div id="outline-container-2-3" class="outline-3">
+<div id="outline-container-sec-2-3" class="outline-3">
 <h3 id="sec-2-3"><span class="section-number-3">2.3</span> 【热爱】-逻辑||思维</h3>
 <div class="outline-text-3" id="text-2-3">
-
-<p>暂无。
-</p></div>
-
-</div>
-
-<div id="outline-container-2-4" class="outline-3">
-<h3 id="sec-2-4"><span class="section-number-3">2.4</span> 【热爱】-Linux</h3>
-<div class="outline-text-3" id="text-2-4">
-
-<ul>
-<li id="sec-2-4-1"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/3.html">linux常用命令</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-4-2"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/4.html">linux下安装emacs</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-4-3"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/5.html">linux下配置emacs</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-4-4"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/11.html">linux下安装texlive2016</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-4-5"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/12.html">解决latex转pdf时不兼容中文</a><br/>
-</li>
-</ul>
-</div>
-
-</div>
-
-<div id="outline-container-2-5" class="outline-3">
-<h3 id="sec-2-5"><span class="section-number-3">2.5</span> 【热爱】-Emacs||Github</h3>
-<div class="outline-text-3" id="text-2-5">
-
-<ul>
-<li id="sec-2-5-1"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/6.html">emacs常用快捷键</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-5-2"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/7.html">emacs解除read-only时buffer的锁定</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-5-3"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/8.html">emacs的多窗口操作</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-5-4"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/9.html">org常用快捷键</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-5-5"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/10.html">org参考文档</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-5-6"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/13.html">利用github创建个人博客</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-5-7"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/14.html">github添加deploy keys</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-5-8"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/15.html">git常用bash命令</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-5-9"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/16.html">github提交代码到github仓库</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-5-10"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/17.html">删除github上的repository</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-5-11"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/18.html">单独删除github仓库中的某个文件</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-5-12"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/19.html">解决git push时non-fast-forward的问题</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-5-13"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/20.html">github上创建分支</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-5-14"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/21.html">github插件octotree</a><br/>
-</li>
-</ul>
-</div>
-
-</div>
-
-<div id="outline-container-2-6" class="outline-3">
-<h3 id="sec-2-6"><span class="section-number-3">2.6</span> 【必备】-算法||数据结构</h3>
-<div class="outline-text-3" id="text-2-6">
-
-<p>暂无。
-</p></div>
-
-</div>
-
-<div id="outline-container-2-7" class="outline-3">
-<h3 id="sec-2-7"><span class="section-number-3">2.7</span> 【技能】-后端：C#</h3>
-<div class="outline-text-3" id="text-2-7">
-
-<ul>
-<li id="sec-2-7-1"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1104-20161108.html">CLR学习（1)</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-7-2"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1103-20161108.html">CLR学习（2)</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-7-3"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1102-20161108.html">JIT编译器</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-7-4"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1101-20161108.html">高级语言虚拟机</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-7-5"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1100-20161109.html">CLR学习（3)</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-7-6"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1099-20161115.html">CLR学习（4)</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-7-7"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1098-20161115.html">CLR学习（5)</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-7-8"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1097-20161118.html">C#单元测试（1）</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-7-9"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1096-20161118.html">C#单元测试（2）</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-2-7-10"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1095-20161123.html">C#单元测试（3）</a><br/>
-</li>
-</ul>
-</div>
-
-</div>
-
-<div id="outline-container-2-8" class="outline-3">
-<h3 id="sec-2-8"><span class="section-number-3">2.8</span> 【技能】-数据库：Mysql||Sqlserver</h3>
-<div class="outline-text-3" id="text-2-8">
-
-<p>暂无。
-</p></div>
-
-</div>
-
-<div id="outline-container-2-9" class="outline-3">
-<h3 id="sec-2-9"><span class="section-number-3">2.9</span> 【技能】-前端：Web</h3>
-<div class="outline-text-3" id="text-2-9">
-
-<p>暂无。
-</p></div>
-
-</div>
-
-<div id="outline-container-2-10" class="outline-3">
-<h3 id="sec-2-10"><span class="section-number-3">2.10</span> 【必备】-计算机网络</h3>
-<div class="outline-text-3" id="text-2-10">
-
-<p>暂无。
-</p></div>
-
-</div>
-
-<div id="outline-container-2-11" class="outline-3">
-<h3 id="sec-2-11"><span class="section-number-3">2.11</span> 【必备】-操作系统||服务器</h3>
-<div class="outline-text-3" id="text-2-11">
-
-<ul>
-<li id="sec-2-11-1"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/2.html">win10快捷键</a><br/>
-</li>
-</ul>
-</div>
-</div>
-
-</div>
-
-<div id="outline-container-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> 博文目录-按年月</h2>
-<div class="outline-text-2" id="text-3">
-
-<p>文档总数：27
+<p>
+暂无。
 </p>
 </div>
-
-<div id="outline-container-3-1" class="outline-3">
+</div>
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> 【热爱】-Linux</h3>
+<div class="outline-text-3" id="text-2-4">
+</div><ol class="org-ol"><li><a id="sec-2-4-0-1" name="sec-2-4-0-1"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/3.html">linux常用命令</a><br  /></li>
+<li><a id="sec-2-4-0-2" name="sec-2-4-0-2"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/4.html">linux下安装emacs</a><br  /></li>
+<li><a id="sec-2-4-0-3" name="sec-2-4-0-3"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/5.html">linux下配置emacs</a><br  /></li>
+<li><a id="sec-2-4-0-4" name="sec-2-4-0-4"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/11.html">linux下安装texlive2016</a><br  /></li>
+<li><a id="sec-2-4-0-5" name="sec-2-4-0-5"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/12.html">解决latex转pdf时不兼容中文</a><br  /></li></ol>
+</div>
+<div id="outline-container-sec-2-5" class="outline-3">
+<h3 id="sec-2-5"><span class="section-number-3">2.5</span> 【热爱】-Emacs||Github</h3>
+<div class="outline-text-3" id="text-2-5">
+</div><ol class="org-ol"><li><a id="sec-2-5-0-1" name="sec-2-5-0-1"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/6.html">emacs常用快捷键</a><br  /></li>
+<li><a id="sec-2-5-0-2" name="sec-2-5-0-2"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/7.html">emacs解除read-only时buffer的锁定</a><br  /></li>
+<li><a id="sec-2-5-0-3" name="sec-2-5-0-3"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/8.html">emacs的多窗口操作</a><br  /></li>
+<li><a id="sec-2-5-0-4" name="sec-2-5-0-4"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/9.html">org常用快捷键</a><br  /></li>
+<li><a id="sec-2-5-0-5" name="sec-2-5-0-5"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/10.html">org参考文档</a><br  /></li>
+<li><a id="sec-2-5-0-6" name="sec-2-5-0-6"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/13.html">利用github创建个人博客</a><br  /></li>
+<li><a id="sec-2-5-0-7" name="sec-2-5-0-7"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/14.html">github添加deploy keys</a><br  /></li>
+<li><a id="sec-2-5-0-8" name="sec-2-5-0-8"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/15.html">git常用bash命令</a><br  /></li>
+<li><a id="sec-2-5-0-9" name="sec-2-5-0-9"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/16.html">github提交代码到github仓库</a><br  /></li>
+<li><a id="sec-2-5-0-10" name="sec-2-5-0-10"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/17.html">删除github上的repository</a><br  /></li>
+<li><a id="sec-2-5-0-11" name="sec-2-5-0-11"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/18.html">单独删除github仓库中的某个文件</a><br  /></li>
+<li><a id="sec-2-5-0-12" name="sec-2-5-0-12"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/19.html">解决git push时non-fast-forward的问题</a><br  /></li>
+<li><a id="sec-2-5-0-13" name="sec-2-5-0-13"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/20.html">github上创建分支</a><br  /></li>
+<li><a id="sec-2-5-0-14" name="sec-2-5-0-14"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/21.html">github插件octotree</a><br  /></li></ol>
+</div>
+<div id="outline-container-sec-2-6" class="outline-3">
+<h3 id="sec-2-6"><span class="section-number-3">2.6</span> 【必备】-算法||数据结构</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+暂无。
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-7" class="outline-3">
+<h3 id="sec-2-7"><span class="section-number-3">2.7</span> 【技能】-后端：C#</h3>
+<div class="outline-text-3" id="text-2-7">
+</div><ol class="org-ol"><li><a id="sec-2-7-0-1" name="sec-2-7-0-1"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1104-20161108.html">CLR学习（1)</a><br  /></li>
+<li><a id="sec-2-7-0-2" name="sec-2-7-0-2"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1103-20161108.html">CLR学习（2)</a><br  /></li>
+<li><a id="sec-2-7-0-3" name="sec-2-7-0-3"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1102-20161108.html">JIT编译器</a><br  /></li>
+<li><a id="sec-2-7-0-4" name="sec-2-7-0-4"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1101-20161108.html">高级语言虚拟机</a><br  /></li>
+<li><a id="sec-2-7-0-5" name="sec-2-7-0-5"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1100-20161109.html">CLR学习（3)</a><br  /></li>
+<li><a id="sec-2-7-0-6" name="sec-2-7-0-6"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1099-20161115.html">CLR学习（4)</a><br  /></li>
+<li><a id="sec-2-7-0-7" name="sec-2-7-0-7"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1098-20161115.html">CLR学习（5)</a><br  /></li>
+<li><a id="sec-2-7-0-8" name="sec-2-7-0-8"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1097-20161118.html">C#单元测试（1）</a><br  /></li>
+<li><a id="sec-2-7-0-9" name="sec-2-7-0-9"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1096-20161118.html">C#单元测试（2）</a><br  /></li>
+<li><a id="sec-2-7-0-10" name="sec-2-7-0-10"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1095-20161123.html">C#单元测试（3）</a><br  /></li></ol>
+</div>
+<div id="outline-container-sec-2-8" class="outline-3">
+<h3 id="sec-2-8"><span class="section-number-3">2.8</span> 【技能】-数据库：Mysql||Sqlserver</h3>
+<div class="outline-text-3" id="text-2-8">
+<p>
+暂无。
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-9" class="outline-3">
+<h3 id="sec-2-9"><span class="section-number-3">2.9</span> 【技能】-前端：Web</h3>
+<div class="outline-text-3" id="text-2-9">
+<p>
+暂无。
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-10" class="outline-3">
+<h3 id="sec-2-10"><span class="section-number-3">2.10</span> 【必备】-计算机网络</h3>
+<div class="outline-text-3" id="text-2-10">
+<p>
+暂无。
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-11" class="outline-3">
+<h3 id="sec-2-11"><span class="section-number-3">2.11</span> 【必备】-操作系统||服务器</h3>
+<div class="outline-text-3" id="text-2-11">
+</div><ol class="org-ol"><li><a id="sec-2-11-0-1" name="sec-2-11-0-1"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/2.html">win10快捷键</a><br  /></li></ol>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> 博文目录-按年月</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+文档总数：27
+</p>
+</div>
+<div id="outline-container-sec-3-1" class="outline-3">
 <h3 id="sec-3-1"><span class="section-number-3">3.1</span> 【2016年11月】</h3>
 <div class="outline-text-3" id="text-3-1">
-
-<ul>
-<li id="sec-3-1-1"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1104-20161108.html">CLR学习（1)</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-1-2"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1103-20161108.html">CLR学习（2)</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-1-3"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1102-20161108.html">JIT编译器</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-1-4"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1101-20161108.html">高级语言虚拟机</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-1-5"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1100-20161109.html">CLR学习（3)</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-1-6"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1099-20161115.html">CLR学习（4)</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-1-7"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1098-20161115.html">CLR学习（5)</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-1-8"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1097-20161118.html">C#单元测试（1）</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-1-9"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1096-20161118.html">C#单元测试（2）</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-1-10"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1095-20161123.html">C#单元测试（3）</a><br/>
-</li>
-</ul>
+</div><ol class="org-ol"><li><a id="sec-3-1-0-1" name="sec-3-1-0-1"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1104-20161108.html">CLR学习（1)</a><br  /></li>
+<li><a id="sec-3-1-0-2" name="sec-3-1-0-2"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1103-20161108.html">CLR学习（2)</a><br  /></li>
+<li><a id="sec-3-1-0-3" name="sec-3-1-0-3"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1102-20161108.html">JIT编译器</a><br  /></li>
+<li><a id="sec-3-1-0-4" name="sec-3-1-0-4"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1101-20161108.html">高级语言虚拟机</a><br  /></li>
+<li><a id="sec-3-1-0-5" name="sec-3-1-0-5"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1100-20161109.html">CLR学习（3)</a><br  /></li>
+<li><a id="sec-3-1-0-6" name="sec-3-1-0-6"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1099-20161115.html">CLR学习（4)</a><br  /></li>
+<li><a id="sec-3-1-0-7" name="sec-3-1-0-7"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1098-20161115.html">CLR学习（5)</a><br  /></li>
+<li><a id="sec-3-1-0-8" name="sec-3-1-0-8"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1097-20161118.html">C#单元测试（1）</a><br  /></li>
+<li><a id="sec-3-1-0-9" name="sec-3-1-0-9"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1096-20161118.html">C#单元测试（2）</a><br  /></li>
+<li><a id="sec-3-1-0-10" name="sec-3-1-0-10"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1095-20161123.html">C#单元测试（3）</a><br  /></li></ol>
 </div>
-
-</div>
-
-<div id="outline-container-3-2" class="outline-3">
+<div id="outline-container-sec-3-2" class="outline-3">
 <h3 id="sec-3-2"><span class="section-number-3">3.2</span> 【2016年09月】</h3>
 <div class="outline-text-3" id="text-3-2">
-
-<ul>
-<li id="sec-3-2-1"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201609/1.html">2016秋季找工作杂谈</a><br/>
-</li>
-</ul>
+</div><ol class="org-ol"><li><a id="sec-3-2-0-1" name="sec-3-2-0-1"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201609/1.html">2016秋季找工作杂谈</a><br  /></li></ol>
 </div>
-
-</div>
-
-<div id="outline-container-3-3" class="outline-3">
+<div id="outline-container-sec-3-3" class="outline-3">
 <h3 id="sec-3-3"><span class="section-number-3">3.3</span> 【2016年07月】</h3>
 <div class="outline-text-3" id="text-3-3">
-
-<ul>
-<li id="sec-3-3-1"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/1.html">关于代码整洁</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-2"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/2.html">win10快捷键</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-3"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/3.html">linux常用命令</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-4"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/4.html">linux下安装emacs</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-5"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/5.html">linux下配置emacs</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-6"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/6.html">emacs常用快捷键</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-7"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/7.html">emacs解除read-only时buffer的锁定</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-8"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/8.html">emacs的多窗口操作</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-9"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/9.html">org常用快捷键</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-10"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/10.html">org参考文档</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-11"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/11.html">linux下安装texlive2016</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-12"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/12.html">解决latex转pdf时不兼容中文</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-13"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/13.html">利用github创建个人博客</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-14"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/14.html">github添加deploy keys</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-15"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/15.html">git常用bash命令</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-16"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/16.html">github提交代码到github仓库</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-17"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/17.html">删除github上的repository</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-18"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/18.html">单独删除github仓库中的某个文件</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-19"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/19.html">解决git push时non-fast-forward的问题</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-20"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/20.html">github上创建分支</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-21"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/21.html">github插件octotree</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-22"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/22.html">2016秋招远程查看项目说明</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-23"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/23.html">问题1</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-24"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/24.html">问题2</a><br/>
-</li>
-</ul>
-<ul>
-<li id="sec-3-3-25"><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/25.html">问题3</a><br/>
-</li>
-</ul>
+</div><ol class="org-ol"><li><a id="sec-3-3-0-1" name="sec-3-3-0-1"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/1.html">关于代码整洁</a><br  /></li>
+<li><a id="sec-3-3-0-2" name="sec-3-3-0-2"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/2.html">win10快捷键</a><br  /></li>
+<li><a id="sec-3-3-0-3" name="sec-3-3-0-3"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/3.html">linux常用命令</a><br  /></li>
+<li><a id="sec-3-3-0-4" name="sec-3-3-0-4"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/4.html">linux下安装emacs</a><br  /></li>
+<li><a id="sec-3-3-0-5" name="sec-3-3-0-5"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/5.html">linux下配置emacs</a><br  /></li>
+<li><a id="sec-3-3-0-6" name="sec-3-3-0-6"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/6.html">emacs常用快捷键</a><br  /></li>
+<li><a id="sec-3-3-0-7" name="sec-3-3-0-7"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/7.html">emacs解除read-only时buffer的锁定</a><br  /></li>
+<li><a id="sec-3-3-0-8" name="sec-3-3-0-8"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/8.html">emacs的多窗口操作</a><br  /></li>
+<li><a id="sec-3-3-0-9" name="sec-3-3-0-9"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/9.html">org常用快捷键</a><br  /></li>
+<li><a id="sec-3-3-0-10" name="sec-3-3-0-10"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/10.html">org参考文档</a><br  /></li>
+<li><a id="sec-3-3-0-11" name="sec-3-3-0-11"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/11.html">linux下安装texlive2016</a><br  /></li>
+<li><a id="sec-3-3-0-12" name="sec-3-3-0-12"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/12.html">解决latex转pdf时不兼容中文</a><br  /></li>
+<li><a id="sec-3-3-0-13" name="sec-3-3-0-13"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/13.html">利用github创建个人博客</a><br  /></li>
+<li><a id="sec-3-3-0-14" name="sec-3-3-0-14"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/14.html">github添加deploy keys</a><br  /></li>
+<li><a id="sec-3-3-0-15" name="sec-3-3-0-15"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/15.html">git常用bash命令</a><br  /></li>
+<li><a id="sec-3-3-0-16" name="sec-3-3-0-16"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/16.html">github提交代码到github仓库</a><br  /></li>
+<li><a id="sec-3-3-0-17" name="sec-3-3-0-17"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/17.html">删除github上的repository</a><br  /></li>
+<li><a id="sec-3-3-0-18" name="sec-3-3-0-18"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/18.html">单独删除github仓库中的某个文件</a><br  /></li>
+<li><a id="sec-3-3-0-19" name="sec-3-3-0-19"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/19.html">解决git push时non-fast-forward的问题</a><br  /></li>
+<li><a id="sec-3-3-0-20" name="sec-3-3-0-20"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/20.html">github上创建分支</a><br  /></li>
+<li><a id="sec-3-3-0-21" name="sec-3-3-0-21"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/21.html">github插件octotree</a><br  /></li>
+<li><a id="sec-3-3-0-22" name="sec-3-3-0-22"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/22.html">2016秋招远程查看项目说明</a><br  /></li>
+<li><a id="sec-3-3-0-23" name="sec-3-3-0-23"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/23.html">问题1</a><br  /></li>
+<li><a id="sec-3-3-0-24" name="sec-3-3-0-24"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/24.html">问题2</a><br  /></li>
+<li><a id="sec-3-3-0-25" name="sec-3-3-0-25"></a><a href="http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/25.html">问题3</a><br  /></li></ol>
 </div>
 </div>
-
-</div>
-
-<div id="outline-container-4" class="outline-2">
+<div id="outline-container-sec-4" class="outline-2">
 <h2 id="sec-4"><span class="section-number-2">4</span> 事件记录</h2>
 <div class="outline-text-2" id="text-4">
-
-
-</div>
-
-<div id="outline-container-4-1" class="outline-3">
+</div><div id="outline-container-sec-4-1" class="outline-3">
 <h3 id="sec-4-1"><span class="section-number-3">4.1</span> 【版本记录】</h3>
 <div class="outline-text-3" id="text-4-1">
-
-<p>记录总数：2
-</p><ul>
-<li id="sec-4-1-1">V1.0&mdash;2016-07-09<br/>
+<p>
+记录总数：3
+</p>
+</div>
+<ol class="org-ol"><li><a id="sec-4-1-0-1" name="sec-4-1-0-1"></a>V1.0&#x2014;2016-07-09<br  /><div class="outline-text-5" id="text-4-1-0-1">
+<p>
 完成基本的功能。。
+</p>
+</div>
 </li>
-</ul>
-<ul>
-<li id="sec-4-1-2">V2.0&mdash;2016-10-05<br/>
+<li><a id="sec-4-1-0-2" name="sec-4-1-0-2"></a>V2.0&#x2014;2016-10-05<br  /><div class="outline-text-5" id="text-4-1-0-2">
+<p>
 改变布局和风格。。
+</p>
+</div>
 </li>
-</ul>
+<li><a id="sec-4-1-0-3" name="sec-4-1-0-3"></a>V3.0&#x2014;2017-01-18<br  /><div class="outline-text-5" id="text-4-1-0-3">
+<p>
+更新Css文件。。
+</p>
 </div>
-
+</li></ol>
 </div>
-
-<div id="outline-container-4-2" class="outline-3">
+<div id="outline-container-sec-4-2" class="outline-3">
 <h3 id="sec-4-2"><span class="section-number-3">4.2</span> 【架构记录】</h3>
 <div class="outline-text-3" id="text-4-2">
-
-<p>记录总数：1
-</p><ul>
-<li id="sec-4-2-1">A1.0&mdash;2016-07-09<br/>
-</li>
-</ul>
-<ul>
-<li id="sec-4-2-1">【其他记录】<br/>
+<p>
+记录总数：1
+</p>
+</div>
+<ol class="org-ol"><li><a id="sec-4-2-0-0-1" name="sec-4-2-0-0-1"></a>A1.0&#x2014;2016-07-09<br  /></li>
+<li><a id="sec-4-2-0-1" name="sec-4-2-0-1"></a>【其他记录】<br  /><div class="outline-text-5" id="text-4-2-0-1">
+<p>
 暂无其他事件记录。
-
-</li>
-</ul>
+</p>
+</div>
+</li></ol>
 </div>
 </div>
 
-</div>
-
-<div id="outline-container-5" class="outline-2">
+<div id="outline-container-sec-5" class="outline-2">
 <h2 id="sec-5"><span class="section-number-2">5</span> 感谢</h2>
-<div class="outline-text-2" id="text-5">
-
 </div>
-
-</div>
-
-<div id="outline-container-6" class="outline-2">
+<div id="outline-container-sec-6" class="outline-2">
 <h2 id="sec-6"><span class="section-number-2">6</span> 链接</h2>
-<div class="outline-text-2" id="text-6">
-
 </div>
-</div>
-</div>
-
-<div id="postamble">
-<p class="date">Date: 2016-11-22</p>
-<p class="author">Author: alaing</p>
-<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
-<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
-
 </div>
 </body>
 </html>
