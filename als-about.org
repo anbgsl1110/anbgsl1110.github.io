@@ -1,6 +1,21 @@
 #+title:【关于】-阿亮的空间说明文档
 #+author:alaing
-#+date:2016-11-22
+#+date:2017-02-18
+#+description:anbgsl1110
+#+keywords:anbgsl1110
+#+options: h:6
+* *座右铭*
++ 拎的清，爱自己，爱生活
++ 生命生生不息，希望随风而涨。
++ 相信明天会更好
++ 爱与不爱是一个人的事，相爱才是两个人的事
++ 长恨人生不如水，等闲平地起波澜
++ 一蓑烟雨任平生，也无风雨也无情
++ 事业第一，恋爱第二
++ 小桥流水畔，有烟火人家
++ 昨夜西风凋碧树。独上高楼，望尽天涯路。
++ 浪费人生，热泪盈眶
++ 情深不寿，强极则辱。谦谦君子，温润如玉
 * 网站说明
 不想拖延，不想因为想的太多而做的太少而痛苦，一直觉得大多时候忙碌的时候总是让心变简单。
 刚刚完成了网站我希望达到的最基本的功能，写个说明文档。开个头，后面不断的补充。
@@ -28,7 +43,7 @@
 **** 2017-01-18
 更新Css
 * 博文目录-按标签
-文档总数：26
+文档总数：29
 ** 【笔记】-心灵||信仰（善良&&真诚）
 **** [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/1.html][关于代码整洁]]
 ** 【笔记】-面试准备
@@ -76,13 +91,17 @@
 ** 【技能】-数据库：Mysql||Sqlserver
 暂无。
 ** 【技能】-前端：Web
-暂无。
+****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201702/d1093-20170218.html][Html5总结参考]]
+****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201702/d1094-20170218.html][Html总结参考]]
 ** 【必备】-计算机网络
 暂无。
 ** 【必备】-操作系统||服务器
 **** [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/2.html][win10快捷键]]
 * 博文目录-按年月
-文档总数：27
+文档总数：29
+** 【2017年02月】
+****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201702/d1093-20170218.html][Html5总结参考]]
+****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201702/d1094-20170218.html][Html总结参考]]
 ** 【2016年11月】
 ****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1104-20161108.html][CLR学习（1)]]
 ****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1103-20161108.html][CLR学习（2)]]
@@ -91,9 +110,9 @@
 ****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1100-20161109.html][CLR学习（3)]]
 ****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1099-20161115.html][CLR学习（4)]]
 ****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1098-20161115.html][CLR学习（5)]]
-****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1097-20161118.html][C#单元测试（1）]]
-****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1096-20161118.html][C#单元测试（2）]]
-****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1095-20161123.html][C#单元测试（3）]]
+****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1097-20161118.html][C#单元测试（1)]]
+****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1096-20161118.html][C#单元测试（2)]]
+****  [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201611/d1095-20161123.html][C#单元测试（3)]]
 ** 【2016年09月】
 **** [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201609/1.html][2016秋季找工作杂谈]]
 ** 【2016年07月】
@@ -118,10 +137,10 @@
 **** [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/19.html][解决git push时non-fast-forward的问题]]
 **** [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/20.html][github上创建分支]]
 **** [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/21.html][github插件octotree]]
-**** [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/22.html][2016秋招远程查看项目说明]]
 **** [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/23.html][问题1]]
 **** [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/24.html][问题2]]
 **** [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/25.html][问题3]]
+**** [[file:http://www.anbgsl1110-dms-aliang.space/anbgsl1110.github.io/diary/201607/22.html][2016秋招远程查看项目说明]]
 * 事件记录
 ** 【版本记录】
 记录总数：3
@@ -136,6 +155,5 @@
 ***** A1.0---2016-07-09
 **** 【其他记录】
 暂无其他事件记录。
-
 * 感谢
 * 链接
