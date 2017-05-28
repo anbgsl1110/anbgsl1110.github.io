@@ -2,7 +2,7 @@
 #+Author:贾永亮
 #+date:2016-11-05
 * 远程链接地址
-链接地址：https//www.anbgsl1110-dms-aliang.space
+链接地址：//www.anbgsl1110-dms-aliang.space
 * 文档结构
 - Anbgsl:私人文件夹
 - anbgsl1110.github.io:阿亮的空间项目文件夹
