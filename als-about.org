@@ -1,4 +1,4 @@
-.#+title:【关于】-阿亮的空间说明文档
+#+title:【关于】-阿亮的空间说明文档
 #+author:alaing
 #+date:2017-02-14
 #+description:anbgsl1110
