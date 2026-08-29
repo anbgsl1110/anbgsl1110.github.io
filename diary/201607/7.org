@@ -1,9 +1,0 @@
-#+TITLE:emacs解除read-only时buffer的锁定
-#+AUTHOR:ALIANG
-#+EMAIL:anbgsl1110@gmail.com
-#+KEYWORDS:DIARY
-【aliang diary】-青春无限可能，拎得清，爱生活，爱自己
-
--日期：2016-07-12；作者：阿亮；关键字：笔记、emacs
-* emacs解除read-only时buffer的锁定
-在Emacs中提示(buffer为read-only),使用C-x，C-q就可以解除锁定。
